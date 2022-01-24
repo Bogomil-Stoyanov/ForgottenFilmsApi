@@ -46,3 +46,18 @@ dependencies {
 
     dokkaHtmlPlugin("org.jetbrains.dokka:kotlin-as-java-plugin:1.6.10")
 }
+
+jar {
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    manifest {
+        attributes(
+                'Implementation-Title': 'Ktor Server',
+                "Main-Class": mainClassName
+        )
+    }
+    destinationDirectory = file("$rootDir/release")
+    archivesBaseName = 'app'
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
