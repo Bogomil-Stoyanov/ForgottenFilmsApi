@@ -9,7 +9,7 @@ import org.bson.types.ObjectId
  * @param email user's email
  * @param password user's password
  * @param nickname user's nickname
- * @param interests a list of user's favourite genres
+ * @param genres a list of user's favourite genres
  * @param totalWatchTimeByGenre a list of [GenreWatchTimePair] that contains the genre and its watch time in SECONDS
  * @param filmList user's watch later list
  */

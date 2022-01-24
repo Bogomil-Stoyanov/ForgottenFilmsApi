@@ -86,10 +86,10 @@ interface DataAccessObject {
     suspend fun getMovieWithId(id: String): Movie
 
     /**
-     * Checks if a movie is likde by a user with email
+     * Checks if a movie is likde by a user with id
      * @return true if the movie is liked by the user else false
      */
-    suspend fun isMovieLikedBy(movieId: String, email: String): Boolean
+    suspend fun isMovieLikedBy(movieId: String, userId: String): Boolean
 
     /**
      * Checks if a movie is disliked by a user with email

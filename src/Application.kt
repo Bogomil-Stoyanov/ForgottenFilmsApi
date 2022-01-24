@@ -1,5 +1,7 @@
 package eu.bbsapps.forgottenfilmsapi
 
+import eu.bbsapps.forgottenfilmsapi.data.DataAccessObject
+import eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase
 import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.features.*
@@ -9,6 +11,8 @@ import io.ktor.response.*
 import io.ktor.routing.*
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
+
+val database: DataAccessObject = KmongoDatabase()
 
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
@@ -41,8 +45,9 @@ private fun Authentication.Configuration.configureAuth() {
         validate { credentials ->
             val email = credentials.name
             val password = credentials.password
-            //TODO validate email and password
-            null
+            if (database.checkPasswordForEmail(email, password)) {
+                UserIdPrincipal(email)
+            } else null
         }
     }
 }
