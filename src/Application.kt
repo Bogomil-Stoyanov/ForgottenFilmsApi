@@ -2,6 +2,7 @@ package eu.bbsapps.forgottenfilmsapi
 
 import eu.bbsapps.forgottenfilmsapi.data.DataAccessObject
 import eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase
+import eu.bbsapps.forgottenfilmsapi.routes.registerRoute
 import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.features.*
@@ -28,6 +29,8 @@ fun Application.module(testing: Boolean = false) {
         configureAuth()
     }
     install(Routing) {
+        registerRoute()
+
         route("/") {
             get {
                 call.respond(HttpStatusCode.OK, "Server is up!")
@@ -41,7 +44,7 @@ fun Application.module(testing: Boolean = false) {
  */
 private fun Authentication.Configuration.configureAuth() {
     basic {
-        realm = "Movies Server"
+        realm = "Forgotten Films Server"
         validate { credentials ->
             val email = credentials.name
             val password = credentials.password
