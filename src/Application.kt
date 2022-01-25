@@ -2,6 +2,7 @@ package eu.bbsapps.forgottenfilmsapi
 
 import eu.bbsapps.forgottenfilmsapi.data.DataAccessObject
 import eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase
+import eu.bbsapps.forgottenfilmsapi.routes.loginRoute
 import eu.bbsapps.forgottenfilmsapi.routes.registerRoute
 import io.ktor.application.*
 import io.ktor.auth.*
@@ -30,6 +31,7 @@ fun Application.module(testing: Boolean = false) {
     }
     install(Routing) {
         registerRoute()
+        loginRoute()
 
         route("/") {
             get {
