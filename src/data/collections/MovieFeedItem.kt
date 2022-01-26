@@ -1,4 +1,4 @@
-package eu.bbsapps.data.collections
+package eu.bbsapps.forgottenfilmsapi.data.collections
 
 import org.bson.codecs.pojo.annotations.BsonId
 import org.bson.types.ObjectId

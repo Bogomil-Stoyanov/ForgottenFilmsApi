@@ -2,7 +2,7 @@ package eu.bbsapps.forgottenfilmsapi
 
 import eu.bbsapps.forgottenfilmsapi.data.DataAccessObject
 import eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase
-import eu.bbsapps.forgottenfilmsapi.routes.accountManagementRoute
+import eu.bbsapps.forgottenfilmsapi.data.TestDatabase
 import eu.bbsapps.forgottenfilmsapi.routes.loginRoute
 import eu.bbsapps.forgottenfilmsapi.routes.registerRoute
 import io.ktor.application.*
@@ -15,7 +15,9 @@ import io.ktor.routing.*
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
-val database: DataAccessObject = KmongoDatabase()
+val productionDatabase: DataAccessObject = KmongoDatabase()
+val testDatabase: DataAccessObject = TestDatabase()
+var database: DataAccessObject = productionDatabase
 
 @Suppress("unused") // Referenced in application.conf
 @kotlin.jvm.JvmOverloads
@@ -33,7 +35,8 @@ fun Application.module(testing: Boolean = false) {
     install(Routing) {
         registerRoute()
         loginRoute()
-        accountManagementRoute()
+        //accountManagementRoute()
+        //movieAdminRoute()
 
         route("/") {
             get {

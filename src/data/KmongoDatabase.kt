@@ -48,7 +48,7 @@ class KmongoDatabase : DataAccessObject {
         users.updateOne(User::email eq email, setValue(User::genres, emptyList()))
     }
 
-    override suspend fun getUserInterests(email: String): List<String> {
+    override suspend fun getUserGenres(email: String): List<String> {
         return users.findOne(User::email eq email)?.genres ?: emptyList()
     }
 
@@ -174,13 +174,14 @@ class KmongoDatabase : DataAccessObject {
     override suspend fun addWatchTime(email: String, watchTimePair: GenreWatchTimePair): Boolean {
         val watchTimeByGenres = users.findOne(User::email eq email)?.totalWatchTimeByGenre ?: emptyList()
         var pairIndex = -1
-        if (watchTimeByGenres.isNotEmpty())
+        if (watchTimeByGenres.isNotEmpty()) {
             for (i in watchTimeByGenres.indices) {
                 if (watchTimeByGenres[i].genre == watchTimePair.genre) {
                     pairIndex = i
                     break
                 }
             }
+        }
         return if (pairIndex != -1) {
             val totalTime = watchTimeByGenres[pairIndex].totalWatchTimeInSeconds + watchTimePair.totalWatchTimeInSeconds
             val insertTimePair = GenreWatchTimePair(watchTimePair.genre, totalTime)

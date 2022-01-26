@@ -1,8 +1,8 @@
 package eu.bbsapps.forgottenfilmsapi.routes
 
-import eu.bbsapps.forgottenfilmsapi.data.operations.LoginOperations
+import eu.bbsapps.forgottenfilmsapi.data.modules.LoginModule
 import eu.bbsapps.forgottenfilmsapi.data.requests.user.login.LoginAccountRequest
-import eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse
+import eu.bbsapps.forgottenfilmsapi.security.LOGIN_API_KEY
 import io.ktor.application.*
 import io.ktor.http.*
 import io.ktor.request.*
@@ -19,13 +19,12 @@ fun Route.loginRoute() {
                 return@post
             }
 
-            val isPasswordCorrect = LoginOperations.isPasswordCorrect(request.email, request.password)
-
-            if (isPasswordCorrect) {
-                call.respond(HttpStatusCode.OK, SimpleResponse(true, "Влязохте в системата"))
-            } else {
-                call.respond(HttpStatusCode.OK, SimpleResponse(false, "Грешен имейл или парола"))
+            if (request.apiKey != LOGIN_API_KEY) {
+                call.respond(HttpStatusCode.Forbidden)
             }
+
+            val response = LoginModule.login(request)
+            call.respond(response.statusCode, response.data)
         }
     }
 

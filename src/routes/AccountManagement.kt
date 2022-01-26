@@ -1,11 +1,11 @@
 package eu.bbsapps.forgottenfilmsapi.routes
 
-import data.requests.user.management.GenreWatchTimeRequest
-import data.requests.user.management.UserGenresRequest
-import eu.bbsapps.data.*
-import eu.bbsapps.forgottenfilmsapi.data.operations.AccountManagementOperations
+import eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController
+import eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest
+import eu.bbsapps.forgottenfilmsapi.data.requests.user.management.UserGenresRequest
 import eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair
 import eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse
+import eu.bbsapps.forgottenfilmsapi.security.ACCOUNT_MANAGEMENT_API_KEY
 import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.http.*
@@ -18,10 +18,15 @@ fun Route.accountManagementRoute() {
     route("/v1/nickname") {
         authenticate {
             patch {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                }
+
                 val newNickname = call.request.queryParameters["newNickname"] ?: ""
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                if (AccountManagementOperations.changeNickname(email, newNickname)) {
+                if (AccountManagementController.changeNickname(email, newNickname)) {
                     call.respond(HttpStatusCode.OK, SimpleResponse(true, "Успешно смени името си"))
                 } else {
                     call.respond(
@@ -43,7 +48,7 @@ fun Route.accountManagementRoute() {
                     return@post
                 }
                 val email = call.principal<UserIdPrincipal>()!!.name
-                AccountManagementOperations.addUserGenres(email, request.genres)
+                AccountManagementController.addUserGenres(email, request.genres)
                 call.respond(HttpStatusCode.NoContent)
             }
 
@@ -61,8 +66,8 @@ fun Route.accountManagementRoute() {
                 }
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                AccountManagementOperations.deleteAllUserGenres(email)
-                AccountManagementOperations.addUserGenres(email, request.genres)
+                AccountManagementController.deleteAllUserGenres(email)
+                AccountManagementController.addUserGenres(email, request.genres)
                 call.respond(HttpStatusCode.NoContent)
             }
         }
@@ -71,8 +76,13 @@ fun Route.accountManagementRoute() {
     route("/v1/genres") {
         authenticate {
             get {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                }
+
                 val email = call.principal<UserIdPrincipal>()!!.name
-                call.respond(HttpStatusCode.OK, AccountManagementOperations.getUserGenres(email))
+                call.respond(HttpStatusCode.OK, AccountManagementController.getUserGenres(email))
             }
         }
     }
@@ -80,10 +90,15 @@ fun Route.accountManagementRoute() {
     route("/v1/filmList") {
         authenticate {
             post {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                }
+
                 val movieId = call.request.queryParameters["id"] ?: ""
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                if (AccountManagementOperations.addFilmToUserList(email, movieId)) {
+                if (AccountManagementController.addFilmToUserList(email, movieId)) {
                     call.respond(HttpStatusCode.OK, SimpleResponse(true, "Филмът е добавен към списъка ти"))
                 } else {
                     call.respond(
@@ -98,11 +113,16 @@ fun Route.accountManagementRoute() {
     route("/v1/filmList") {
         authenticate {
             delete {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                }
+
                 val movieId = call.request.queryParameters["id"] ?: ""
 
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                if (AccountManagementOperations.removeFilmFromUserList(email, movieId)) {
+                if (AccountManagementController.removeFilmFromUserList(email, movieId)) {
                     call.respond(HttpStatusCode.OK, SimpleResponse(true, "Филмът е премахнат от списъка ти"))
                 } else {
                     call.respond(HttpStatusCode.OK, SimpleResponse(false, "Филмът не е в списъка ти"))
@@ -114,8 +134,13 @@ fun Route.accountManagementRoute() {
     route("/v1/filmList") {
         authenticate {
             get {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                }
+
                 val email = call.principal<UserIdPrincipal>()!!.name
-                call.respond(HttpStatusCode.OK, AccountManagementOperations.getUserFilmList(email))
+                call.respond(HttpStatusCode.OK, AccountManagementController.getUserFilmList(email))
             }
         }
     }
@@ -132,7 +157,7 @@ fun Route.accountManagementRoute() {
                 }
 
                 val pair = GenreWatchTimePair(request.genre, request.additionalWatchTimeInSeconds)
-                if (AccountManagementOperations.addWatchTime(email, pair)) {
+                if (AccountManagementController.addWatchTime(email, pair)) {
                     call.respond(HttpStatusCode.OK, SimpleResponse(true, "Успешно обновено време за гледане"))
                 } else {
                     call.respond(
@@ -147,8 +172,13 @@ fun Route.accountManagementRoute() {
     route("/v1/watchTime") {
         authenticate {
             get {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                }
+
                 val email = call.principal<UserIdPrincipal>()!!.name
-                call.respond(HttpStatusCode.OK, AccountManagementOperations.getWatchTime(email))
+                call.respond(HttpStatusCode.OK, AccountManagementController.getWatchTime(email))
             }
 
         }
@@ -157,8 +187,13 @@ fun Route.accountManagementRoute() {
     route("/v1/nickname") {
         authenticate {
             get {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                }
+
                 val email = call.principal<UserIdPrincipal>()!!.name
-                call.respond(HttpStatusCode.OK, SimpleResponse(true, AccountManagementOperations.getNickname(email)))
+                call.respond(HttpStatusCode.OK, SimpleResponse(true, AccountManagementController.getNickname(email)))
             }
         }
     }

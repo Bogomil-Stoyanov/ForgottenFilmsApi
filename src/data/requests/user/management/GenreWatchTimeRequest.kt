@@ -1,4 +1,4 @@
-package data.requests.user.management
+package eu.bbsapps.forgottenfilmsapi.data.requests.user.management
 
 data class GenreWatchTimeRequest(
     val genre: String,

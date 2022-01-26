@@ -48,7 +48,7 @@ interface DataAccessObject {
      * Gets all genres of a user with email
      * @return a list of genres
      */
-    suspend fun getUserInterests(email: String): List<String>
+    suspend fun getUserGenres(email: String): List<String>
 
     /**
      * Adds a filmId to the list of a user with email
