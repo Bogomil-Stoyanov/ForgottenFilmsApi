@@ -1,10 +1,8 @@
 package eu.bbsapps.forgottenfilmsapi.routes
 
-import eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController
+import eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule
 import eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest
 import eu.bbsapps.forgottenfilmsapi.data.requests.user.management.UserGenresRequest
-import eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair
-import eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse
 import eu.bbsapps.forgottenfilmsapi.security.ACCOUNT_MANAGEMENT_API_KEY
 import io.ktor.application.*
 import io.ktor.auth.*
@@ -26,14 +24,8 @@ fun Route.accountManagementRoute() {
                 val newNickname = call.request.queryParameters["newNickname"] ?: ""
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                if (AccountManagementController.changeNickname(email, newNickname)) {
-                    call.respond(HttpStatusCode.OK, SimpleResponse(true, "Успешно смени името си"))
-                } else {
-                    call.respond(
-                        HttpStatusCode.InternalServerError,
-                        SimpleResponse(false, "Възникна неочаквана грешка")
-                    )
-                }
+                val response = AccountManagementModule.updateNickname(newNickname, email)
+                call.respond(response.statusCode, response.data)
             }
         }
     }
@@ -47,8 +39,13 @@ fun Route.accountManagementRoute() {
                     call.respond(HttpStatusCode.BadRequest)
                     return@post
                 }
+
+                if (request.apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                }
+
                 val email = call.principal<UserIdPrincipal>()!!.name
-                AccountManagementController.addUserGenres(email, request.genres)
+                AccountManagementModule.addGenresToUser(request.genres, email)
                 call.respond(HttpStatusCode.NoContent)
             }
 
@@ -64,10 +61,13 @@ fun Route.accountManagementRoute() {
                     call.respond(HttpStatusCode.BadRequest)
                     return@patch
                 }
-                val email = call.principal<UserIdPrincipal>()!!.name
 
-                AccountManagementController.deleteAllUserGenres(email)
-                AccountManagementController.addUserGenres(email, request.genres)
+                if (request.apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                }
+
+                val email = call.principal<UserIdPrincipal>()!!.name
+                AccountManagementModule.updateUserGenres(request.genres, email)
                 call.respond(HttpStatusCode.NoContent)
             }
         }
@@ -82,7 +82,8 @@ fun Route.accountManagementRoute() {
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
-                call.respond(HttpStatusCode.OK, AccountManagementController.getUserGenres(email))
+                val response = AccountManagementModule.getUserGenres(email)
+                call.respond(response.statusCode, response.data)
             }
         }
     }
@@ -95,17 +96,11 @@ fun Route.accountManagementRoute() {
                     call.respond(HttpStatusCode.Forbidden)
                 }
 
-                val movieId = call.request.queryParameters["id"] ?: ""
+                val filmId = call.request.queryParameters["id"] ?: ""
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                if (AccountManagementController.addFilmToUserList(email, movieId)) {
-                    call.respond(HttpStatusCode.OK, SimpleResponse(true, "Филмът е добавен към списъка ти"))
-                } else {
-                    call.respond(
-                        HttpStatusCode.InternalServerError,
-                        SimpleResponse(false, "Възникна неочаквана грешка")
-                    )
-                }
+                val response = AccountManagementModule.addFilmToUserList(filmId, email)
+                call.respond(response.statusCode, response.data)
             }
         }
     }
@@ -118,15 +113,11 @@ fun Route.accountManagementRoute() {
                     call.respond(HttpStatusCode.Forbidden)
                 }
 
-                val movieId = call.request.queryParameters["id"] ?: ""
-
+                val filmId = call.request.queryParameters["id"] ?: ""
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                if (AccountManagementController.removeFilmFromUserList(email, movieId)) {
-                    call.respond(HttpStatusCode.OK, SimpleResponse(true, "Филмът е премахнат от списъка ти"))
-                } else {
-                    call.respond(HttpStatusCode.OK, SimpleResponse(false, "Филмът не е в списъка ти"))
-                }
+                val response = AccountManagementModule.removeFilmFromUserList(filmId, email)
+                call.respond(response.statusCode, response.data)
             }
         }
     }
@@ -140,7 +131,9 @@ fun Route.accountManagementRoute() {
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
-                call.respond(HttpStatusCode.OK, AccountManagementController.getUserFilmList(email))
+
+                val response = AccountManagementModule.getUserFilmList(email)
+                call.respond(response.statusCode, response.data)
             }
         }
     }
@@ -148,7 +141,6 @@ fun Route.accountManagementRoute() {
     route("/v1/watchTime") {
         authenticate {
             post {
-                val email = call.principal<UserIdPrincipal>()!!.name
                 val request = try {
                     call.receive<GenreWatchTimeRequest>()
                 } catch (e: ContentTransformationException) {
@@ -156,15 +148,14 @@ fun Route.accountManagementRoute() {
                     return@post
                 }
 
-                val pair = GenreWatchTimePair(request.genre, request.additionalWatchTimeInSeconds)
-                if (AccountManagementController.addWatchTime(email, pair)) {
-                    call.respond(HttpStatusCode.OK, SimpleResponse(true, "Успешно обновено време за гледане"))
-                } else {
-                    call.respond(
-                        HttpStatusCode.InternalServerError,
-                        SimpleResponse(false, "Възникна неочаквана грешка")
-                    )
+                if (request.apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
                 }
+
+                val email = call.principal<UserIdPrincipal>()!!.name
+
+                val response = AccountManagementModule.addUserWatchTime(request, email)
+                call.respond(response.statusCode, response.data)
             }
         }
     }
@@ -178,7 +169,8 @@ fun Route.accountManagementRoute() {
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
-                call.respond(HttpStatusCode.OK, AccountManagementController.getWatchTime(email))
+                val response = AccountManagementModule.getWatchTime(email)
+                call.respond(response.statusCode, response.data)
             }
 
         }
@@ -193,7 +185,9 @@ fun Route.accountManagementRoute() {
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
-                call.respond(HttpStatusCode.OK, SimpleResponse(true, AccountManagementController.getNickname(email)))
+
+                val response = AccountManagementModule.getNickname(email)
+                call.respond(response.statusCode, response.data)
             }
         }
     }

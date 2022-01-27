@@ -9,6 +9,10 @@ import io.ktor.http.*
 
 object RegisterModule {
 
+    /**
+     * Validates account information and then registers a user
+     * @return SimpleResponse depending if the registering was successful
+     */
     suspend fun register(request: CreateAccountRequest): GenericResponse<SimpleResponse> {
         if (!RegisterController.isEmailValid(request.email)) {
             return GenericResponse(HttpStatusCode.UnprocessableEntity, SimpleResponse(false, "Невалиден имейл"))

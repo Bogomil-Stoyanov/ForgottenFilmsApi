@@ -8,6 +8,10 @@ import io.ktor.http.*
 
 object LoginModule {
 
+    /**
+     * Attempts login
+     * @return SimpleResponse with a message depending if the login attempt was successfull
+     */
     suspend fun login(request: LoginAccountRequest): GenericResponse<SimpleResponse> {
         val isPasswordCorrect = LoginController.isPasswordCorrect(request.email, request.password)
 

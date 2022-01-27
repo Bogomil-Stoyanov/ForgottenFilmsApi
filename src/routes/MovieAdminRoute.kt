@@ -160,7 +160,7 @@ fun Route.movieAdminRoute() {
             get {
 
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
-                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY || apiKey != ADMIN_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
                 }
 
