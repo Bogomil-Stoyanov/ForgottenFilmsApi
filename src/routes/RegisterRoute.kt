@@ -21,6 +21,7 @@ fun Route.registerRoute() {
 
             if (request.apiKey != REGISTER_API_KEY) {
                 call.respond(HttpStatusCode.Forbidden)
+                return@post
             }
 
             val response = RegisterModule.register(request)

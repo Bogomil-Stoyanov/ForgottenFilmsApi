@@ -13,6 +13,14 @@ val validCreateAccountRequest = CreateAccountRequest(
     apiKey = REGISTER_API_KEY
 )
 
+val validAdminAccountRequest = CreateAccountRequest(
+    email = "admin@goldenfilms.gf",
+    password = "GoldenFilms_123",
+    nickname = "Admin",
+    genres = listOf("Genre1", "Genre2", "Genre3"),
+    apiKey = REGISTER_API_KEY
+)
+
 val validLoginRequest = LoginAccountRequest(
     email = validCreateAccountRequest.email,
     password = validCreateAccountRequest.password,

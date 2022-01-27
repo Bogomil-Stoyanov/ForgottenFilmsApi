@@ -21,6 +21,7 @@ fun Route.loginRoute() {
 
             if (request.apiKey != LOGIN_API_KEY) {
                 call.respond(HttpStatusCode.Forbidden)
+                return@post
             }
 
             val response = LoginModule.login(request)

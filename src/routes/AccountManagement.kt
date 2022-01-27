@@ -19,6 +19,7 @@ fun Route.accountManagementRoute() {
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
                 if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@patch
                 }
 
                 val newNickname = call.request.queryParameters["newNickname"] ?: ""
@@ -42,6 +43,7 @@ fun Route.accountManagementRoute() {
 
                 if (request.apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@post
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
@@ -64,6 +66,7 @@ fun Route.accountManagementRoute() {
 
                 if (request.apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@patch
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
@@ -79,6 +82,7 @@ fun Route.accountManagementRoute() {
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
                 if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@get
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
@@ -94,6 +98,7 @@ fun Route.accountManagementRoute() {
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
                 if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@post
                 }
 
                 val filmId = call.request.queryParameters["id"] ?: ""
@@ -111,6 +116,7 @@ fun Route.accountManagementRoute() {
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
                 if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@delete
                 }
 
                 val filmId = call.request.queryParameters["id"] ?: ""
@@ -128,6 +134,7 @@ fun Route.accountManagementRoute() {
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
                 if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@get
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
@@ -150,6 +157,7 @@ fun Route.accountManagementRoute() {
 
                 if (request.apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@post
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
@@ -166,6 +174,7 @@ fun Route.accountManagementRoute() {
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
                 if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@get
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
@@ -182,6 +191,7 @@ fun Route.accountManagementRoute() {
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
                 if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@get
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name

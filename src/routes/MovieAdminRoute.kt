@@ -1,6 +1,7 @@
 package eu.bbsapps.forgottenfilmsapi.routes
 
 import eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController
+import eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule
 import eu.bbsapps.forgottenfilmsapi.data.requests.admin.AddMoviesRequest
 import eu.bbsapps.forgottenfilmsapi.security.ACCOUNT_MANAGEMENT_API_KEY
 import eu.bbsapps.forgottenfilmsapi.security.ADMIN_API_KEY
@@ -13,6 +14,8 @@ import io.ktor.routing.*
 
 const val ADMIN_EMAIL = "admin@goldenfilms.gf"
 val adminEmails = listOf("admin@goldenfilms.gf")
+
+// admin@goldenfilms.gf GoldenFilms_123
 
 fun Route.movieAdminRoute() {
 
@@ -28,11 +31,9 @@ fun Route.movieAdminRoute() {
 
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                // admin@goldenfilms.gf GoldenFilms_123
-                //admin@forgottenfilms.ff ForgottenFilms_123
-                if (email == ADMIN_EMAIL && request.apiKey == ADMIN_API_KEY) {
-                    call.respond(HttpStatusCode.Created, AdminController.insertMovies(request.movies))
-                    return@post
+                if (adminEmails.contains(email) && request.apiKey == ADMIN_API_KEY) {
+                    val response = AdminModule.insertMovies(request.movies)
+                    call.respond(response.statusCode, response.data)
                 } else {
                     call.respond(HttpStatusCode.Forbidden)
                     return@post
@@ -46,16 +47,17 @@ fun Route.movieAdminRoute() {
             delete {
 
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
-                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                if (apiKey != ADMIN_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@delete
                 }
 
                 val movieName = call.request.queryParameters["movieName"] ?: ""
 
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                if (email == ADMIN_EMAIL) {
-                    AdminController.deleteMovieWithName(movieName)
+                if (adminEmails.contains(email)) {
+                    AdminModule.deleteMovieWithName(movieName)
                     call.respond(HttpStatusCode.NoContent)
                     return@delete
                 } else {
@@ -71,14 +73,15 @@ fun Route.movieAdminRoute() {
             delete {
 
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
-                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                if (apiKey != ADMIN_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@delete
                 }
 
                 val userEmail = call.request.queryParameters["email"] ?: ""
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                if (email == ADMIN_EMAIL) {
+                if (adminEmails.contains(email)) {
                     AdminController.deleteUserWithEmail(userEmail)
                     call.respond(HttpStatusCode.NoContent)
                     return@delete
@@ -95,14 +98,16 @@ fun Route.movieAdminRoute() {
             get {
 
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
-                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                if (apiKey != ADMIN_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@get
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                if (email == ADMIN_EMAIL) {
-                    call.respond(HttpStatusCode.OK, AdminController.getMovieCount())
+                if (adminEmails.contains(email)) {
+                    val response = AdminModule.getMovieCount()
+                    call.respond(response.statusCode, response.data)
                     return@get
                 } else {
                     call.respond(HttpStatusCode.Forbidden)
@@ -117,14 +122,16 @@ fun Route.movieAdminRoute() {
             get {
 
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
-                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                if (apiKey != ADMIN_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@get
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                if (email == ADMIN_EMAIL) {
-                    call.respond(HttpStatusCode.OK, AdminController.getUserCount())
+                if (adminEmails.contains(email)) {
+                    val response = AdminModule.getUserCount()
+                    call.respond(response.statusCode, response.data)
                     return@get
                 } else {
                     call.respond(HttpStatusCode.Forbidden)
@@ -139,13 +146,15 @@ fun Route.movieAdminRoute() {
             get {
 
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
-                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                if (apiKey != ADMIN_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@get
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
-                if (email == ADMIN_EMAIL) {
-                    call.respond(HttpStatusCode.OK, AdminController.getAdminStatistics())
+                if (adminEmails.contains(email)) {
+                    val response = AdminModule.getAdminStats()
+                    call.respond(response.statusCode, response.data)
                     return@get
                 } else {
                     call.respond(HttpStatusCode.Forbidden)
@@ -160,14 +169,15 @@ fun Route.movieAdminRoute() {
             get {
 
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
-                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY || apiKey != ADMIN_API_KEY) {
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY && apiKey != ADMIN_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@get
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
-                call.respond(HttpStatusCode.OK, email == ADMIN_EMAIL)
+                val response = AdminModule.isAdmin(email)
+                call.respond(response.statusCode, response.data)
             }
-
         }
     }
 
@@ -176,13 +186,15 @@ fun Route.movieAdminRoute() {
             get {
 
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
-                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                if (apiKey != ADMIN_API_KEY) {
                     call.respond(HttpStatusCode.Forbidden)
+                    return@get
                 }
 
                 val email = call.principal<UserIdPrincipal>()!!.name
-                if (email == ADMIN_EMAIL) {
-                    call.respond(HttpStatusCode.OK, AdminController.getAllUsers())
+                if (adminEmails.contains(email)) {
+                    val response = AdminModule.getAllUsers()
+                    call.respond(response.statusCode, response.data)
                 } else {
                     call.respond(HttpStatusCode.Forbidden)
                     return@get

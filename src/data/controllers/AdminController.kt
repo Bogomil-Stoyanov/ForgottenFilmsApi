@@ -86,12 +86,14 @@ object AdminController {
                     Integer.parseInt((watchTimePair.get("totalWatchTimeInSeconds").toString()))
                 totalWatchTime += totalWatchTimeInSeconds
                 val genreIndex = genres.indexOf(genre)
-                val genreWatchTimePair = watchTimePairs.removeAt(genreIndex)
-                val newPair = GenreWatchTimePair(
-                    genreWatchTimePair.genre,
-                    genreWatchTimePair.totalWatchTimeInSeconds + totalWatchTimeInSeconds
-                )
-                watchTimePairs.add(genreIndex, newPair)
+                if (genreIndex != -1) {
+                    val genreWatchTimePair = watchTimePairs.removeAt(genreIndex)
+                    val newPair = GenreWatchTimePair(
+                        genreWatchTimePair.genre,
+                        genreWatchTimePair.totalWatchTimeInSeconds + totalWatchTimeInSeconds
+                    )
+                    watchTimePairs.add(genreIndex, newPair)
+                }
             }
 
         }
