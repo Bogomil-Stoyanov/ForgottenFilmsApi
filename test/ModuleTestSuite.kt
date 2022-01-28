@@ -1,7 +1,4 @@
-import data.modules.AccountManagementModuleTest
-import data.modules.AdminModuleTest
-import data.modules.LoginModuleTest
-import data.modules.RegisterModuleTest
+import data.modules.*
 import org.junit.runner.RunWith
 import org.junit.runners.Suite
 
@@ -11,6 +8,7 @@ import org.junit.runners.Suite
     RegisterModuleTest::class,
     LoginModuleTest::class,
     AccountManagementModuleTest::class,
-    AdminModuleTest::class
+    AdminModuleTest::class,
+    FilmsModuleTest::class
 )
 class ModuleTestSuite

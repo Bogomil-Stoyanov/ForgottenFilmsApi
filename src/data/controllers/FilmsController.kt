@@ -127,7 +127,11 @@ object FilmsController {
         feed.add(FilmFeedResponse("Може да ти хареса", randomFeedItems))
 
         films = films.sortedByDescending { it.likedBy.size }
-        films = films.subList(0, 10)
+        films = if (films.size < 10) {
+            films.subList(0, films.size)
+        } else {
+            films.subList(0, 10)
+        }
 
         val mostLikedFeedItems = ArrayList<FilmFeedItem>()
 
