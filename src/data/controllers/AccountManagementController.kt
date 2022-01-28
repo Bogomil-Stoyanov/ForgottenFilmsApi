@@ -1,7 +1,7 @@
 package eu.bbsapps.forgottenfilmsapi.data.controllers
 
+import eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem
 import eu.bbsapps.forgottenfilmsapi.data.collections.Movie
-import eu.bbsapps.forgottenfilmsapi.data.collections.MovieFeedItem
 import eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair
 import eu.bbsapps.forgottenfilmsapi.database
 
@@ -41,31 +41,31 @@ object AccountManagementController {
     /**
      * Adds a film to user's film list with email
      */
-    suspend fun addFilmToUserList(email: String, movieId: String): Boolean {
-        return database.addFilmToUserList(email, movieId)
+    suspend fun addFilmToUserList(email: String, filmId: String): Boolean {
+        return database.addFilmToUserList(email, filmId)
     }
 
     /**
      * Removes a film from user's film list with email
      */
-    suspend fun removeFilmFromUserList(email: String, movieId: String): Boolean {
-        return database.removeFilmFromUserList(email, movieId)
+    suspend fun removeFilmFromUserList(email: String, filmId: String): Boolean {
+        return database.removeFilmFromUserList(email, filmId)
     }
 
     /**
      * Gets the user's film list with email
      */
-    suspend fun getUserFilmList(email: String): List<MovieFeedItem> {
-        val movies = ArrayList<Movie>()
+    suspend fun getUserFilmList(email: String): List<FilmFeedItem> {
+        val films = ArrayList<Movie>()
 
         for (id in database.getUserFilmIdsList(email)) {
-            movies.add(database.getMovieWithId(id))
+            films.add(database.getMovieWithId(id))
         }
 
-        var userListMovieItems = emptyList<MovieFeedItem>()
-        if (movies.isNotEmpty()) {
-            userListMovieItems = movies.map {
-                MovieFeedItem(it.name, it.imageUrls[0], it.id)
+        var userListMovieItems = emptyList<FilmFeedItem>()
+        if (films.isNotEmpty()) {
+            userListMovieItems = films.map {
+                FilmFeedItem(it.name, it.imageUrls[0], it.id)
             }
         }
 

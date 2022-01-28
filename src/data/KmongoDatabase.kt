@@ -19,7 +19,7 @@ class KmongoDatabase : DataAccessObject {
     private val client = KMongo.createClient().coroutine
     private val database = client.getDatabase("ForgottenFilmsDatabase")
     private val users = database.getCollection<User>()
-    private val movies = database.getCollection<Movie>()
+    private val films = database.getCollection<Movie>()
 
     override suspend fun registerUser(user: User): Boolean {
         return users.insertOne(user).wasAcknowledged()
@@ -68,16 +68,16 @@ class KmongoDatabase : DataAccessObject {
         return users.findOne(User::email eq email)?.filmList?.toList() ?: emptyList()
     }
 
-    override suspend fun addMovie(movie: Movie): Boolean {
-        return movies.insertOne(movie).wasAcknowledged()
+    override suspend fun addMovie(film: Movie): Boolean {
+        return films.insertOne(film).wasAcknowledged()
     }
 
     override suspend fun deleteMovieWithId(id: String): Boolean {
-        return movies.deleteOneById(id).wasAcknowledged()
+        return films.deleteOneById(id).wasAcknowledged()
     }
 
     override suspend fun getMovieWithId(id: String): Movie {
-        return movies.findOneById(id) ?: Movie(
+        return films.findOneById(id) ?: Movie(
             "null2",
             emptyList(),
             "null",
@@ -89,62 +89,62 @@ class KmongoDatabase : DataAccessObject {
         )
     }
 
-    override suspend fun isMovieLikedBy(movieId: String, userId: String): Boolean {
-        val movie = getMovieWithId(movieId)
-        return movie.likedBy.contains(userId)
+    override suspend fun isMovieLikedBy(filmId: String, userId: String): Boolean {
+        val film = getMovieWithId(filmId)
+        return film.likedBy.contains(userId)
     }
 
-    override suspend fun isMovieDislikedBy(movieId: String, userId: String): Boolean {
-        val movie = getMovieWithId(movieId)
-        return movie.dislikedBy.contains(userId)
+    override suspend fun isMovieDislikedBy(filmId: String, userId: String): Boolean {
+        val film = getMovieWithId(filmId)
+        return film.dislikedBy.contains(userId)
     }
 
     override suspend fun getUserIdByEmail(email: String): String {
         return users.findOne(User::email eq email)?.id ?: ""
     }
 
-    override suspend fun addLikeToMovie(movieId: String, userId: String): Boolean {
-        val movie = getMovieWithId(movieId)
-        return movies.updateOneById(movieId, setValue(Movie::likedBy, movie.likedBy + userId)).wasAcknowledged()
+    override suspend fun addLikeToMovie(filmId: String, userId: String): Boolean {
+        val film = getMovieWithId(filmId)
+        return films.updateOneById(filmId, setValue(Movie::likedBy, film.likedBy + userId)).wasAcknowledged()
     }
 
-    override suspend fun removeLikeFromMovie(movieId: String, userId: String): Boolean {
-        val movie = getMovieWithId(movieId)
-        return movies.updateOneById(movieId, setValue(Movie::likedBy, movie.likedBy - userId)).wasAcknowledged()
+    override suspend fun removeLikeFromMovie(filmId: String, userId: String): Boolean {
+        val film = getMovieWithId(filmId)
+        return films.updateOneById(filmId, setValue(Movie::likedBy, film.likedBy - userId)).wasAcknowledged()
     }
 
-    override suspend fun addDislikeToMovie(movieId: String, userId: String): Boolean {
-        val movie = getMovieWithId(movieId)
-        return movies.updateOneById(movieId, setValue(Movie::dislikedBy, movie.dislikedBy + userId)).wasAcknowledged()
+    override suspend fun addDislikeToMovie(filmId: String, userId: String): Boolean {
+        val film = getMovieWithId(filmId)
+        return films.updateOneById(filmId, setValue(Movie::dislikedBy, film.dislikedBy + userId)).wasAcknowledged()
     }
 
-    override suspend fun removeDislikeFromMovie(movieId: String, userId: String): Boolean {
-        val movie = getMovieWithId(movieId)
-        return movies.updateOneById(movieId, setValue(Movie::dislikedBy, movie.dislikedBy - userId)).wasAcknowledged()
+    override suspend fun removeDislikeFromMovie(filmId: String, userId: String): Boolean {
+        val film = getMovieWithId(filmId)
+        return films.updateOneById(filmId, setValue(Movie::dislikedBy, film.dislikedBy - userId)).wasAcknowledged()
     }
 
-    override suspend fun getLikeCountForMovie(movieId: String): Int {
-        return getMovieWithId(movieId).likedBy.size
+    override suspend fun getLikeCountForMovie(filmId: String): Int {
+        return getMovieWithId(filmId).likedBy.size
     }
 
-    override suspend fun getDislikeCountForMovie(movieId: String): Int {
-        return getMovieWithId(movieId).dislikedBy.size
+    override suspend fun getDislikeCountForMovie(filmId: String): Int {
+        return getMovieWithId(filmId).dislikedBy.size
     }
 
     override suspend fun getMoviesWithGenre(genre: String): List<Movie> {
-        return movies.find(Movie::genres contains genre).toList()
+        return films.find(Movie::genres contains genre).toList()
     }
 
     override suspend fun getAllMovies(): List<Movie> {
-        return movies.collection.find().toList()
+        return films.collection.find().toList()
     }
 
     override suspend fun searchForMovies(query: String): List<Movie> {
-        return movies.find(Movie::name regex Regex("(?i).*$query.*")).toList()
+        return films.find(Movie::name regex Regex("(?i).*$query.*")).toList()
     }
 
-    override suspend fun isMovieAddedToList(movieId: String, email: String): Boolean {
-        return users.findOne(User::email eq email)?.filmList?.contains(movieId) ?: false
+    override suspend fun isMovieAddedToList(filmId: String, email: String): Boolean {
+        return users.findOne(User::email eq email)?.filmList?.contains(filmId) ?: false
     }
 
     override suspend fun getNickname(email: String): String {
@@ -152,19 +152,19 @@ class KmongoDatabase : DataAccessObject {
     }
 
     override suspend fun getRandomMovies(): List<Movie> {
-        return movies.aggregate<Movie>("""[{$sample:{size:5}}]""").toList()
+        return films.aggregate<Movie>("""[{$sample:{size:5}}]""").toList()
     }
 
     override suspend fun getRandomMoviesWithGenre(genre: String): List<Movie> {
-        return movies.find(Movie::genres contains genre).limit(5).toList()
+        return films.find(Movie::genres contains genre).limit(5).toList()
     }
 
     override suspend fun deleteMovieWithName(name: String): Boolean {
-        return movies.deleteOne(Movie::name eq name).wasAcknowledged()
+        return films.deleteOne(Movie::name eq name).wasAcknowledged()
     }
 
     override suspend fun getMovieIdWithName(name: String): String {
-        return movies.findOne(Movie::name eq name)?.id ?: "-1"
+        return films.findOne(Movie::name eq name)?.id ?: "-1"
     }
 
     override suspend fun deleteUserWithEmail(email: String): Boolean {
@@ -202,7 +202,7 @@ class KmongoDatabase : DataAccessObject {
     }
 
     override suspend fun getTotalMovieCount(): Int {
-        return movies.countDocuments().toInt()
+        return films.countDocuments().toInt()
     }
 
     override suspend fun getTotalUserCount(): Int {

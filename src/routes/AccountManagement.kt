@@ -34,15 +34,15 @@ fun Route.accountManagementRoute() {
     route("/v1/genres") {
         authenticate {
             post {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                    return@post
+                }
                 val request = try {
                     call.receive<UserGenresRequest>()
                 } catch (e: ContentTransformationException) {
                     call.respond(HttpStatusCode.BadRequest)
-                    return@post
-                }
-
-                if (request.apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
-                    call.respond(HttpStatusCode.Forbidden)
                     return@post
                 }
 
@@ -57,15 +57,16 @@ fun Route.accountManagementRoute() {
     route("/v1/genres") {
         authenticate {
             patch {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                    return@patch
+                }
+
                 val request = try {
                     call.receive<UserGenresRequest>()
                 } catch (e: ContentTransformationException) {
                     call.respond(HttpStatusCode.BadRequest)
-                    return@patch
-                }
-
-                if (request.apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
-                    call.respond(HttpStatusCode.Forbidden)
                     return@patch
                 }
 
@@ -76,7 +77,7 @@ fun Route.accountManagementRoute() {
         }
     }
 
-    route("/v1/genres") {
+    route("/v1/userGenres") {
         authenticate {
             get {
                 val apiKey = call.request.queryParameters["apiKey"] ?: ""
@@ -148,15 +149,16 @@ fun Route.accountManagementRoute() {
     route("/v1/watchTime") {
         authenticate {
             post {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                    return@post
+                }
+
                 val request = try {
                     call.receive<GenreWatchTimeRequest>()
                 } catch (e: ContentTransformationException) {
                     call.respond(HttpStatusCode.BadRequest)
-                    return@post
-                }
-
-                if (request.apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
-                    call.respond(HttpStatusCode.Forbidden)
                     return@post
                 }
 

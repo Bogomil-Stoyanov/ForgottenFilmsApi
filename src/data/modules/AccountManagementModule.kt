@@ -1,6 +1,6 @@
 package eu.bbsapps.forgottenfilmsapi.data.modules
 
-import eu.bbsapps.forgottenfilmsapi.data.collections.MovieFeedItem
+import eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem
 import eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController
 import eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse
 import eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest
@@ -75,7 +75,7 @@ object AccountManagementModule {
     /**
      * Gets the film list of a user with email
      */
-    suspend fun getUserFilmList(email: String): GenericResponse<List<MovieFeedItem>> {
+    suspend fun getUserFilmList(email: String): GenericResponse<List<FilmFeedItem>> {
         return GenericResponse(HttpStatusCode.OK, AccountManagementController.getUserFilmList(email))
     }
 

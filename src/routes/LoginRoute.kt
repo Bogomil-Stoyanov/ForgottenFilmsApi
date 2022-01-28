@@ -12,15 +12,15 @@ import io.ktor.routing.*
 fun Route.loginRoute() {
     route("/v1/login") {
         post {
+            val apiKey = call.request.queryParameters["apiKey"] ?: ""
+            if (apiKey != LOGIN_API_KEY) {
+                call.respond(HttpStatusCode.Forbidden)
+                return@post
+            }
             val request = try {
                 call.receive<LoginAccountRequest>()
             } catch (e: ContentTransformationException) {
                 call.respond(HttpStatusCode.BadRequest)
-                return@post
-            }
-
-            if (request.apiKey != LOGIN_API_KEY) {
-                call.respond(HttpStatusCode.Forbidden)
                 return@post
             }
 

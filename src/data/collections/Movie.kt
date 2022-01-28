@@ -4,13 +4,13 @@ import org.bson.codecs.pojo.annotations.BsonId
 import org.bson.types.ObjectId
 
 /**
- * A movie entity that is saved in the database
+ * A film entity that is saved in the database
  * @param name Movie title
  * @param description Movie description
  * @param imageUrls a list of image url, the first one is the main image
  * @param genres a list of genres
- * @param likedBy a list of ids of user who have like the movie
- * @param dislikedBy a list of ids of user who have dislike the movie
+ * @param likedBy a list of ids of user who have like the film
+ * @param dislikedBy a list of ids of user who have dislike the film
  * @param url url to the .mp4 file
  * @param id
  */

@@ -12,16 +12,20 @@ import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
 
-const val ADMIN_EMAIL = "admin@goldenfilms.gf"
 val adminEmails = listOf("admin@goldenfilms.gf")
 
 // admin@goldenfilms.gf GoldenFilms_123
 
-fun Route.movieAdminRoute() {
+fun Route.filmAdminRoute() {
 
-    route("/v1/movies") {
+    route("/v1/films") {
         authenticate {
             post {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ADMIN_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                    return@post
+                }
                 val request = try {
                     call.receive<AddMoviesRequest>()
                 } catch (e: ContentTransformationException) {
@@ -31,8 +35,8 @@ fun Route.movieAdminRoute() {
 
                 val email = call.principal<UserIdPrincipal>()!!.name
 
-                if (adminEmails.contains(email) && request.apiKey == ADMIN_API_KEY) {
-                    val response = AdminModule.insertMovies(request.movies)
+                if (adminEmails.contains(email)) {
+                    val response = AdminModule.insertMovies(request.films)
                     call.respond(response.statusCode, response.data)
                 } else {
                     call.respond(HttpStatusCode.Forbidden)
@@ -42,7 +46,7 @@ fun Route.movieAdminRoute() {
         }
     }
 
-    route("/v1/movies") {
+    route("/v1/films") {
         authenticate {
             delete {
 
@@ -52,12 +56,12 @@ fun Route.movieAdminRoute() {
                     return@delete
                 }
 
-                val movieName = call.request.queryParameters["movieName"] ?: ""
+                val filmName = call.request.queryParameters["filmName"] ?: ""
 
                 val email = call.principal<UserIdPrincipal>()!!.name
 
                 if (adminEmails.contains(email)) {
-                    AdminModule.deleteMovieWithName(movieName)
+                    AdminModule.deleteMovieWithName(filmName)
                     call.respond(HttpStatusCode.NoContent)
                     return@delete
                 } else {
@@ -93,7 +97,7 @@ fun Route.movieAdminRoute() {
         }
     }
 
-    route("/v1/moviesCount") {
+    route("/v1/filmsCount") {
         authenticate {
             get {
 

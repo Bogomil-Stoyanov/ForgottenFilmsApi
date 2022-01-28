@@ -7,7 +7,7 @@ import org.bson.types.ObjectId
  * @param name The title of the film
  * @param image The main image of the film
  */
-data class MovieFeedItem(
+data class FilmFeedItem(
     val name: String,
     val image: String,
     @BsonId val id: String = ObjectId().toString()

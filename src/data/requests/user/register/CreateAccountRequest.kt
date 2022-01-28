@@ -4,6 +4,5 @@ data class CreateAccountRequest(
     val email: String,
     val password: String,
     val nickname: String,
-    val genres: List<String>,
-    val apiKey: String
+    val genres: List<String>
 )

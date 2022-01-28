@@ -11,21 +11,21 @@ import io.ktor.http.*
 object AdminModule {
 
     /**
-     * Adds new movies to the database and returns its ids
+     * Adds new films to the database and returns its ids
      */
     suspend fun insertMovies(films: List<Movie>): GenericResponse<List<String>> {
         return GenericResponse(HttpStatusCode.Created, AdminController.insertMovies(films))
     }
 
     /**
-     * Deletes a movie from the database with a given name
+     * Deletes a film from the database with a given name
      */
     suspend fun deleteMovieWithName(filmName: String) {
         AdminController.deleteMovieWithName(filmName)
     }
 
     /**
-     * Gets the count of movies
+     * Gets the count of films
      */
     suspend fun getMovieCount(): GenericResponse<Int> {
         return GenericResponse(HttpStatusCode.OK, AdminController.getMovieCount())

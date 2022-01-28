@@ -12,15 +12,15 @@ import io.ktor.routing.*
 fun Route.registerRoute() {
     route("/v1/register") {
         post {
+            val apiKey = call.request.queryParameters["apiKey"] ?: ""
+            if (apiKey != REGISTER_API_KEY) {
+                call.respond(HttpStatusCode.Forbidden)
+                return@post
+            }
             val request = try {
                 call.receive<CreateAccountRequest>()
             } catch (e: ContentTransformationException) {
                 call.respond(HttpStatusCode.BadRequest)
-                return@post
-            }
-
-            if (request.apiKey != REGISTER_API_KEY) {
-                call.respond(HttpStatusCode.Forbidden)
                 return@post
             }
 

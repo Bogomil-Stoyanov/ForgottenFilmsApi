@@ -9,31 +9,31 @@ import java.util.stream.Collectors
 object AdminController {
 
     /**
-     * Inserts the given list of movies in the database
-     * @return a list of inserted movies id as String
+     * Inserts the given list of films in the database
+     * @return a list of inserted films id as String
      */
-    suspend fun insertMovies(movies: List<Movie>): List<String> {
-        val movieIds = mutableListOf<String>()
-        movies.forEach { movie ->
-            movieIds.add(insertMovie(movie))
+    suspend fun insertMovies(films: List<Movie>): List<String> {
+        val filmIds = mutableListOf<String>()
+        films.forEach { film ->
+            filmIds.add(insertMovie(film))
         }
-        return movieIds
+        return filmIds
     }
 
     /**
-     * Inserts a signle movie in the database
-     * @return inserted movie id as String
+     * Inserts a signle film in the database
+     * @return inserted film id as String
      */
-    private suspend fun insertMovie(movie: Movie): String {
-        database.addMovie(movie)
-        return database.getMovieIdWithName(movie.name)
+    private suspend fun insertMovie(film: Movie): String {
+        database.addMovie(film)
+        return database.getMovieIdWithName(film.name)
     }
 
     /**
-     * Deletes a movie from the database with a given name
+     * Deletes a film from the database with a given name
      */
-    suspend fun deleteMovieWithName(movieName: String) {
-        database.deleteMovieWithName(movieName)
+    suspend fun deleteMovieWithName(filmName: String) {
+        database.deleteMovieWithName(filmName)
     }
 
     /**
@@ -52,7 +52,7 @@ object AdminController {
     }
 
     /**
-     * Get the count of all movies
+     * Get the count of all films
      * @return total user count
      */
     suspend fun getMovieCount(): Int {
@@ -65,7 +65,7 @@ object AdminController {
      */
     suspend fun getAdminStatistics(): List<GenreWatchTimePair> {
         val genres = database.getAllMovies().stream().collect(
-            Collectors.groupingBy { movie -> movie.genres.first() }
+            Collectors.groupingBy { film -> film.genres.first() }
         ).keys.sorted()
 
         val usersWatchStats = database.getTotalWatchStats()
