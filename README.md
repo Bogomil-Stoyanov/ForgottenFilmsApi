@@ -26,7 +26,7 @@ Forgotten Films uses the most modern libraries for backend development with Ktor
 
 The application has several layers.
 
-![Architecture](https://raw.githubusercontent.com/Bogomil-Stoyanov/ForgottenFilmsApi/master/architecture/schema.png?token=GHSAT0AAAAAABPA2UDO3LF2NLM3MSIBKIRCYPVKXQQ)
+![Architecture](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/blob/master/architecture/schema.png)
 
 - Routes - all route files define the endpoints of the API
 - Modules - receive structured data from the routes and performs operations on it, decides what it will return to the client
