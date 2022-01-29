@@ -1,6 +1,6 @@
 package eu.bbsapps.forgottenfilmsapi.data.controllers
 
-import eu.bbsapps.forgottenfilmsapi.data.collections.Movie
+import eu.bbsapps.forgottenfilmsapi.data.collections.Film
 import eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair
 import eu.bbsapps.forgottenfilmsapi.data.responses.UserResponse
 import eu.bbsapps.forgottenfilmsapi.database
@@ -12,10 +12,10 @@ object AdminController {
      * Inserts the given list of films in the database
      * @return a list of inserted films id as String
      */
-    suspend fun insertMovies(films: List<Movie>): List<String> {
+    suspend fun insertFilms(films: List<Film>): List<String> {
         val filmIds = mutableListOf<String>()
         films.forEach { film ->
-            filmIds.add(insertMovie(film))
+            filmIds.add(insertFilm(film))
         }
         return filmIds
     }
@@ -24,16 +24,16 @@ object AdminController {
      * Inserts a signle film in the database
      * @return inserted film id as String
      */
-    private suspend fun insertMovie(film: Movie): String {
-        database.addMovie(film)
-        return database.getMovieIdWithName(film.name)
+    private suspend fun insertFilm(film: Film): String {
+        database.addFilm(film)
+        return database.getFilmIdWithName(film.name)
     }
 
     /**
      * Deletes a film from the database with a given name
      */
-    suspend fun deleteMovieWithName(filmName: String) {
-        database.deleteMovieWithName(filmName)
+    suspend fun deleteFilmWithName(filmName: String) {
+        database.deleteFilmWithName(filmName)
     }
 
     /**
@@ -55,8 +55,8 @@ object AdminController {
      * Get the count of all films
      * @return total user count
      */
-    suspend fun getMovieCount(): Int {
-        return database.getTotalMovieCount()
+    suspend fun getFilmCount(): Int {
+        return database.getTotalFilmCount()
     }
 
     /**
@@ -64,7 +64,7 @@ object AdminController {
      * Also gives total watch time in seconds
      */
     suspend fun getAdminStatistics(): List<GenreWatchTimePair> {
-        val genres = database.getAllMovies().stream().collect(
+        val genres = database.getAllFilms().stream().collect(
             Collectors.groupingBy { film -> film.genres.first() }
         ).keys.sorted()
 

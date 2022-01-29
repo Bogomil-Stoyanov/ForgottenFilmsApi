@@ -2,7 +2,7 @@ package data.modules
 
 import data.validAdminAccountRequest
 import data.validCreateAccountRequest
-import eu.bbsapps.forgottenfilmsapi.data.collections.Movie
+import eu.bbsapps.forgottenfilmsapi.data.collections.Film
 import eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule
 import eu.bbsapps.forgottenfilmsapi.data.modules.RegisterModule
 import eu.bbsapps.forgottenfilmsapi.database
@@ -33,16 +33,16 @@ class AdminModuleTest {
     }
 
     @Test()
-    fun deleteMovieWithTitle() = runBlocking {
+    fun deleteFilmWithTitle() = runBlocking {
 
-        AdminModule.deleteMovieWithName("Title")
-        AdminModule.deleteMovieWithName("Title")
-        AdminModule.deleteMovieWithName("Title")
+        AdminModule.deleteFilmWithName("Title")
+        AdminModule.deleteFilmWithName("Title")
+        AdminModule.deleteFilmWithName("Title")
 
         assertEquals(
             false,
-            testDatabase.getAllMovies().contains(
-                Movie(
+            testDatabase.getAllFilms().contains(
+                Film(
                     "Title",
                     listOf("url"),
                     "description",
@@ -57,11 +57,11 @@ class AdminModuleTest {
     }
 
     @Test
-    fun addMovies() = runBlocking {
-        val response = AdminModule.insertMovies(
+    fun addFilms() = runBlocking {
+        val response = AdminModule.insertFilms(
             listOf(
-                Movie("Title", listOf("url"), "description", listOf("genre"), emptyList(), emptyList(), "url", "id1"),
-                Movie(
+                Film("Title", listOf("url"), "description", listOf("genre"), emptyList(), emptyList(), "url", "id1"),
+                Film(
                     "Title1",
                     listOf("url1"),
                     "description1",
@@ -76,8 +76,8 @@ class AdminModuleTest {
         assertTrue(response.data.contains("id1"))
         assertTrue(response.data.contains("id2"))
         assertTrue(
-            testDatabase.getAllMovies().contains(
-                Movie(
+            testDatabase.getAllFilms().contains(
+                Film(
                     "Title",
                     listOf("url"),
                     "description",
@@ -92,11 +92,11 @@ class AdminModuleTest {
     }
 
     @Test
-    fun getMoviesCount() = runBlocking {
-        AdminModule.insertMovies(
+    fun getFilmsCount() = runBlocking {
+        AdminModule.insertFilms(
             listOf(
-                Movie("Title", listOf("url"), "description", listOf("genre"), emptyList(), emptyList(), "url", "id1"),
-                Movie(
+                Film("Title", listOf("url"), "description", listOf("genre"), emptyList(), emptyList(), "url", "id1"),
+                Film(
                     "Title1",
                     listOf("url1"),
                     "description1",
@@ -109,13 +109,13 @@ class AdminModuleTest {
             )
         )
 
-        val response = AdminModule.getMovieCount()
-        assertEquals(2, response.data)
+        val response = AdminModule.getFilmCount()
+        assertTrue(response.data > 0)
     }
 
     @Test
     fun getUserCount() = runBlocking {
-        val response = AdminModule.getMovieCount()
+        val response = AdminModule.getFilmCount()
         assertTrue(response.data >= 0)
     }
 

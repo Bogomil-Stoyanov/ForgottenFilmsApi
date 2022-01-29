@@ -1,6 +1,6 @@
 package eu.bbsapps.forgottenfilmsapi.data
 
-import eu.bbsapps.forgottenfilmsapi.data.collections.Movie
+import eu.bbsapps.forgottenfilmsapi.data.collections.Film
 import eu.bbsapps.forgottenfilmsapi.data.collections.User
 import eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair
 import eu.bbsapps.forgottenfilmsapi.security.checkHashForPassword
@@ -12,7 +12,7 @@ import eu.bbsapps.forgottenfilmsapi.security.checkHashForPassword
 class TestDatabase : DataAccessObject {
 
     private val users = mutableListOf<User>()
-    private val films = mutableListOf<Movie>()
+    private val films = mutableListOf<Film>()
 
     override suspend fun registerUser(user: User): Boolean {
         return users.add(user)
@@ -89,17 +89,17 @@ class TestDatabase : DataAccessObject {
         }?.filmList ?: emptyList()
     }
 
-    override suspend fun addMovie(film: Movie): Boolean {
+    override suspend fun addFilm(film: Film): Boolean {
         films.add(film)
         return true
     }
 
-    override suspend fun deleteMovieWithId(id: String): Boolean {
+    override suspend fun deleteFilmWithId(id: String): Boolean {
         return films.removeAll { film -> film.id == id }
     }
 
-    override suspend fun getMovieWithId(id: String): Movie {
-        return films.findLast { film -> film.id == id } ?: Movie(
+    override suspend fun getFilmWithId(id: String): Film {
+        return films.findLast { film -> film.id == id } ?: Film(
             "null2",
             emptyList(),
             "null",
@@ -111,13 +111,13 @@ class TestDatabase : DataAccessObject {
         )
     }
 
-    override suspend fun isMovieLikedBy(filmId: String, userId: String): Boolean {
+    override suspend fun isFilmLikedBy(filmId: String, userId: String): Boolean {
         return films.findLast { film ->
             film.id == filmId
         }?.likedBy?.contains(userId) ?: false
     }
 
-    override suspend fun isMovieDislikedBy(filmId: String, userId: String): Boolean {
+    override suspend fun isFilmDislikedBy(filmId: String, userId: String): Boolean {
         return films.findLast { film ->
             film.id == filmId
         }?.dislikedBy?.contains(userId) ?: false
@@ -127,7 +127,7 @@ class TestDatabase : DataAccessObject {
         return users.findLast { user -> user.email == email }?.id ?: ""
     }
 
-    override suspend fun addLikeToMovie(filmId: String, userId: String): Boolean {
+    override suspend fun addLikeToFilm(filmId: String, userId: String): Boolean {
         val film = films.findLast { film ->
             film.id == filmId
         } ?: return false
@@ -136,7 +136,7 @@ class TestDatabase : DataAccessObject {
         return films.add(film.copy(likedBy = film.likedBy + userId))
     }
 
-    override suspend fun removeLikeFromMovie(filmId: String, userId: String): Boolean {
+    override suspend fun removeLikeFromFilm(filmId: String, userId: String): Boolean {
         val film = films.findLast { film ->
             film.id == filmId
         } ?: return false
@@ -145,7 +145,7 @@ class TestDatabase : DataAccessObject {
         return films.add(film.copy(likedBy = film.likedBy - userId))
     }
 
-    override suspend fun addDislikeToMovie(filmId: String, userId: String): Boolean {
+    override suspend fun addDislikeToFilm(filmId: String, userId: String): Boolean {
         val film = films.findLast { film ->
             film.id == filmId
         } ?: return false
@@ -154,7 +154,7 @@ class TestDatabase : DataAccessObject {
         return films.add(film.copy(dislikedBy = film.dislikedBy + userId))
     }
 
-    override suspend fun removeDislikeFromMovie(filmId: String, userId: String): Boolean {
+    override suspend fun removeDislikeFromFilm(filmId: String, userId: String): Boolean {
         val film = films.findLast { film ->
             film.id == filmId
         } ?: return false
@@ -163,31 +163,31 @@ class TestDatabase : DataAccessObject {
         return films.add(film.copy(dislikedBy = film.dislikedBy - userId))
     }
 
-    override suspend fun getLikeCountForMovie(filmId: String): Int {
+    override suspend fun getLikeCountForFilm(filmId: String): Int {
         return films.findLast { film ->
             film.id == filmId
         }?.likedBy?.size ?: 0
     }
 
-    override suspend fun getDislikeCountForMovie(filmId: String): Int {
+    override suspend fun getDislikeCountForFilm(filmId: String): Int {
         return films.findLast { film ->
             film.id == filmId
         }?.dislikedBy?.size ?: 0
     }
 
-    override suspend fun getMoviesWithGenre(genre: String): List<Movie> {
+    override suspend fun getFilmsWithGenre(genre: String): List<Film> {
         return films.filter { film -> film.imageUrls.contains(genre) }
     }
 
-    override suspend fun getAllMovies(): List<Movie> {
+    override suspend fun getAllFilms(): List<Film> {
         return films
     }
 
-    override suspend fun searchForMovies(query: String): List<Movie> {
+    override suspend fun searchForFilms(query: String): List<Film> {
         return films.filter { film -> film.name.contains(query) }
     }
 
-    override suspend fun isMovieAddedToList(filmId: String, email: String): Boolean {
+    override suspend fun isFilmAddedToList(filmId: String, email: String): Boolean {
         return users.findLast { user ->
             user.email == email
         }?.filmList?.contains(filmId) ?: return false
@@ -199,21 +199,21 @@ class TestDatabase : DataAccessObject {
         }?.nickname ?: return ""
     }
 
-    override suspend fun getRandomMovies(): List<Movie> {
+    override suspend fun getRandomFilms(): List<Film> {
         return listOf(films.random(), films.random(), films.random())
     }
 
-    override suspend fun getRandomMoviesWithGenre(genre: String): List<Movie> {
+    override suspend fun getRandomFilmsWithGenre(genre: String): List<Film> {
         return listOf(films.filter { film -> film.genres.contains(genre) }.random())
     }
 
-    override suspend fun deleteMovieWithName(name: String): Boolean {
+    override suspend fun deleteFilmWithName(name: String): Boolean {
         return films.remove(films.findLast { film ->
             film.name == name
         })
     }
 
-    override suspend fun getMovieIdWithName(name: String): String {
+    override suspend fun getFilmIdWithName(name: String): String {
         return films.findLast { film ->
             film.name == name
         }?.id ?: ""
@@ -257,7 +257,7 @@ class TestDatabase : DataAccessObject {
         }?.totalWatchTimeByGenre ?: emptyList()
     }
 
-    override suspend fun getTotalMovieCount(): Int {
+    override suspend fun getTotalFilmCount(): Int {
         return films.size
     }
 

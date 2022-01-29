@@ -1,7 +1,7 @@
 package data.modules
 
 import data.validCreateAccountRequest
-import eu.bbsapps.forgottenfilmsapi.data.collections.Movie
+import eu.bbsapps.forgottenfilmsapi.data.collections.Film
 import eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule
 import eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule
 import eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule
@@ -22,7 +22,7 @@ class FilmsModuleTest {
     fun initialize() {
         database = testDatabase
         runBlocking {
-            val movie = Movie(
+            val film = Film(
                 name = "Film title",
                 imageUrls = listOf("imageUrl1", "imageUrl2"),
                 description = "Description",
@@ -31,7 +31,7 @@ class FilmsModuleTest {
                 dislikedBy = emptyList(),
                 url = "url.mp4"
             )
-            AdminModule.insertMovies(listOf(movie))
+            AdminModule.insertFilms(listOf(film))
             RegisterModule.register(validCreateAccountRequest)
         }
     }
@@ -43,7 +43,7 @@ class FilmsModuleTest {
 
     @Test
     fun filmLiked() = runBlocking {
-        val filmId = database.getMovieIdWithName("Film title")
+        val filmId = database.getFilmIdWithName("Film title")
         var response = FilmsModule.filmLiked(validCreateAccountRequest.email, filmId)
         assertEquals(1, response.data)
         response = FilmsModule.filmLiked(validCreateAccountRequest.email, filmId)
@@ -52,7 +52,7 @@ class FilmsModuleTest {
 
     @Test
     fun filmDisliked() = runBlocking {
-        val filmId = database.getMovieIdWithName("Film title")
+        val filmId = database.getFilmIdWithName("Film title")
         var response = FilmsModule.filmDisliked(validCreateAccountRequest.email, filmId)
         assertEquals(-1, response.data)
         response = FilmsModule.filmDisliked(validCreateAccountRequest.email, filmId)
@@ -61,7 +61,7 @@ class FilmsModuleTest {
 
     @Test
     fun likeCountForFilm() = runBlocking {
-        val filmId = database.getMovieIdWithName("Film title")
+        val filmId = database.getFilmIdWithName("Film title")
         FilmsModule.filmLiked(validCreateAccountRequest.email, filmId)
         val likeCountForFilm = FilmsModule.getLikeCountForFilm(filmId).data
         assertEquals(1, likeCountForFilm)
@@ -72,7 +72,7 @@ class FilmsModuleTest {
 
     @Test
     fun getFilmForUser() = runBlocking {
-        val filmId = database.getMovieIdWithName("Film title")
+        val filmId = database.getFilmIdWithName("Film title")
         FilmsModule.filmLiked(validCreateAccountRequest.email, filmId)
         val film = FilmsModule.getFilmForUser(validCreateAccountRequest.email, filmId)
         assertEquals(1, film.data.isLiked)
@@ -96,7 +96,7 @@ class FilmsModuleTest {
 
     @Test
     fun filmInUserList() = runBlocking {
-        val filmId = database.getMovieIdWithName("Film title")
+        val filmId = database.getFilmIdWithName("Film title")
         AccountManagementModule.addFilmToUserList(filmId, validCreateAccountRequest.email)
         var isFilmInUserList = FilmsModule.isFilmInUserList(validCreateAccountRequest.email, filmId).data
         assertTrue(isFilmInUserList)

@@ -1,6 +1,6 @@
 package eu.bbsapps.forgottenfilmsapi.data
 
-import eu.bbsapps.forgottenfilmsapi.data.collections.Movie
+import eu.bbsapps.forgottenfilmsapi.data.collections.Film
 import eu.bbsapps.forgottenfilmsapi.data.collections.User
 import eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair
 
@@ -72,30 +72,30 @@ interface DataAccessObject {
      * Adds a film to the database
      * @return true if the addition was successful
      */
-    suspend fun addMovie(film: Movie): Boolean
+    suspend fun addFilm(film: Film): Boolean
 
     /**
      * Deletes a film with id
      * @return true if the deletion was successful
      */
-    suspend fun deleteMovieWithId(id: String): Boolean
+    suspend fun deleteFilmWithId(id: String): Boolean
 
     /**
      * Gets a film with id
      */
-    suspend fun getMovieWithId(id: String): Movie
+    suspend fun getFilmWithId(id: String): Film
 
     /**
      * Checks if a film is likde by a user with id
      * @return true if the film is liked by the user else false
      */
-    suspend fun isMovieLikedBy(filmId: String, userId: String): Boolean
+    suspend fun isFilmLikedBy(filmId: String, userId: String): Boolean
 
     /**
      * Checks if a film is disliked by a user with email
      * @return true if the film is disliked by the user else false
      */
-    suspend fun isMovieDislikedBy(filmId: String, userId: String): Boolean
+    suspend fun isFilmDislikedBy(filmId: String, userId: String): Boolean
 
     /**
      * Gets the user with an email
@@ -107,57 +107,57 @@ interface DataAccessObject {
      * Adds a like to a film
      * @return true if the addition is successful
      */
-    suspend fun addLikeToMovie(filmId: String, userId: String): Boolean
+    suspend fun addLikeToFilm(filmId: String, userId: String): Boolean
 
     /**
      * Removes a like from a film
      * @return true if the removal is successful
      */
-    suspend fun removeLikeFromMovie(filmId: String, userId: String): Boolean
+    suspend fun removeLikeFromFilm(filmId: String, userId: String): Boolean
 
     /**
      * Adds a dislike to a film
      * @return true if the addition is successful
      */
-    suspend fun addDislikeToMovie(filmId: String, userId: String): Boolean
+    suspend fun addDislikeToFilm(filmId: String, userId: String): Boolean
 
     /**
      * Removes a like from a film
      * @return true if the removal is successful
      */
-    suspend fun removeDislikeFromMovie(filmId: String, userId: String): Boolean
+    suspend fun removeDislikeFromFilm(filmId: String, userId: String): Boolean
 
     /**
      * Gets the like count of a film with id
      */
-    suspend fun getLikeCountForMovie(filmId: String): Int
+    suspend fun getLikeCountForFilm(filmId: String): Int
 
     /**
      * Gets the dislike count of a film with id
      */
-    suspend fun getDislikeCountForMovie(filmId: String): Int
+    suspend fun getDislikeCountForFilm(filmId: String): Int
 
     /**
      * Gets a list of all films that have the genre
      * @return a list of films with the given genre
      */
-    suspend fun getMoviesWithGenre(genre: String): List<Movie>
+    suspend fun getFilmsWithGenre(genre: String): List<Film>
 
     /**
      * Gets all films from the database
      */
-    suspend fun getAllMovies(): List<Movie>
+    suspend fun getAllFilms(): List<Film>
 
     /**
      * Gets all films that have a title that matches the query
      */
-    suspend fun searchForMovies(query: String): List<Movie>
+    suspend fun searchForFilms(query: String): List<Film>
 
     /**
      * Checks if a film is added to a user's list with email
      * @return true if the film is added in the list
      */
-    suspend fun isMovieAddedToList(filmId: String, email: String): Boolean
+    suspend fun isFilmAddedToList(filmId: String, email: String): Boolean
 
     /**
      * Gets the nickname of a user with the given email
@@ -167,23 +167,23 @@ interface DataAccessObject {
     /**
      * Gets a random list of films
      */
-    suspend fun getRandomMovies(): List<Movie>
+    suspend fun getRandomFilms(): List<Film>
 
     /**
      * Gets a random list of films with a genre
      */
-    suspend fun getRandomMoviesWithGenre(genre: String): List<Movie>
+    suspend fun getRandomFilmsWithGenre(genre: String): List<Film>
 
     /**
      * Deletes a film with a name
      * @return true if the removal was successful
      */
-    suspend fun deleteMovieWithName(name: String): Boolean
+    suspend fun deleteFilmWithName(name: String): Boolean
 
     /**
      * Gets the id of a film with name
      */
-    suspend fun getMovieIdWithName(name: String): String
+    suspend fun getFilmIdWithName(name: String): String
 
     /**
      * Deletes a user with email
@@ -204,7 +204,7 @@ interface DataAccessObject {
     /**
      * Gets the total count of films
      */
-    suspend fun getTotalMovieCount(): Int
+    suspend fun getTotalFilmCount(): Int
 
     /**
      * Gets the total count of users

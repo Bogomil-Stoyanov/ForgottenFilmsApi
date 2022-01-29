@@ -1,6 +1,6 @@
 package eu.bbsapps.forgottenfilmsapi.data.modules
 
-import eu.bbsapps.forgottenfilmsapi.data.collections.Movie
+import eu.bbsapps.forgottenfilmsapi.data.collections.Film
 import eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController
 import eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse
 import eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair
@@ -13,22 +13,22 @@ object AdminModule {
     /**
      * Adds new films to the database and returns its ids
      */
-    suspend fun insertMovies(films: List<Movie>): GenericResponse<List<String>> {
-        return GenericResponse(HttpStatusCode.Created, AdminController.insertMovies(films))
+    suspend fun insertFilms(films: List<Film>): GenericResponse<List<String>> {
+        return GenericResponse(HttpStatusCode.Created, AdminController.insertFilms(films))
     }
 
     /**
      * Deletes a film from the database with a given name
      */
-    suspend fun deleteMovieWithName(filmName: String) {
-        AdminController.deleteMovieWithName(filmName)
+    suspend fun deleteFilmWithName(filmName: String) {
+        AdminController.deleteFilmWithName(filmName)
     }
 
     /**
      * Gets the count of films
      */
-    suspend fun getMovieCount(): GenericResponse<Int> {
-        return GenericResponse(HttpStatusCode.OK, AdminController.getMovieCount())
+    suspend fun getFilmCount(): GenericResponse<Int> {
+        return GenericResponse(HttpStatusCode.OK, AdminController.getFilmCount())
     }
 
     /**

@@ -1,7 +1,7 @@
 package eu.bbsapps.forgottenfilmsapi.data.controllers
 
+import eu.bbsapps.forgottenfilmsapi.data.collections.Film
 import eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem
-import eu.bbsapps.forgottenfilmsapi.data.collections.Movie
 import eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair
 import eu.bbsapps.forgottenfilmsapi.database
 
@@ -56,20 +56,20 @@ object AccountManagementController {
      * Gets the user's film list with email
      */
     suspend fun getUserFilmList(email: String): List<FilmFeedItem> {
-        val films = ArrayList<Movie>()
+        val films = ArrayList<Film>()
 
         for (id in database.getUserFilmIdsList(email)) {
-            films.add(database.getMovieWithId(id))
+            films.add(database.getFilmWithId(id))
         }
 
-        var userListMovieItems = emptyList<FilmFeedItem>()
+        var userListFilmItems = emptyList<FilmFeedItem>()
         if (films.isNotEmpty()) {
-            userListMovieItems = films.map {
+            userListFilmItems = films.map {
                 FilmFeedItem(it.name, it.imageUrls[0], it.id)
             }
         }
 
-        return userListMovieItems
+        return userListFilmItems
     }
 
     /**

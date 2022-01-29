@@ -4,7 +4,7 @@ import eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem
 import eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController
 import eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse
 import eu.bbsapps.forgottenfilmsapi.data.responses.FilmFeedResponse
-import eu.bbsapps.forgottenfilmsapi.data.responses.MovieResponse
+import eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse
 import eu.bbsapps.forgottenfilmsapi.database
 import io.ktor.http.*
 
@@ -21,19 +21,19 @@ object FilmsModule {
         val userId = database.getUserIdByEmail(email)
 
         //remove like if video is already liked
-        if (FilmsController.isMovieLikedBy(filmId, userId)) {
-            FilmsController.removeLikeFromMovie(filmId, userId)
+        if (FilmsController.isFilmLikedBy(filmId, userId)) {
+            FilmsController.removeLikeFromFilm(filmId, userId)
             return GenericResponse(HttpStatusCode.OK, 0)
         }
 
         // remove dislike if video is disliked and add a like
-        if (FilmsController.isMovieDislikedBy(filmId, userId)) {
-            FilmsController.removeDislikeFromMovie(filmId, userId)
-            FilmsController.addLikeToMovie(filmId, userId)
+        if (FilmsController.isFilmDislikedBy(filmId, userId)) {
+            FilmsController.removeDislikeFromFilm(filmId, userId)
+            FilmsController.addLikeToFilm(filmId, userId)
             return GenericResponse(HttpStatusCode.OK, 1)
         }
 
-        FilmsController.addLikeToMovie(filmId, userId)
+        FilmsController.addLikeToFilm(filmId, userId)
         return GenericResponse(HttpStatusCode.OK, 1)
     }
 
@@ -47,20 +47,20 @@ object FilmsModule {
         val userId = database.getUserIdByEmail(email)
 
         //remove dislike if video is already disliked
-        if (FilmsController.isMovieDislikedBy(filmId, userId)) {
-            FilmsController.removeDislikeFromMovie(filmId, userId)
+        if (FilmsController.isFilmDislikedBy(filmId, userId)) {
+            FilmsController.removeDislikeFromFilm(filmId, userId)
             return GenericResponse(HttpStatusCode.OK, 0)
         }
 
         // remove like if video is liked and add a dislike
-        if (FilmsController.isMovieLikedBy(filmId, userId)) {
-            FilmsController.removeLikeFromMovie(filmId, userId)
-            FilmsController.addDislikeToMovie(filmId, userId)
+        if (FilmsController.isFilmLikedBy(filmId, userId)) {
+            FilmsController.removeLikeFromFilm(filmId, userId)
+            FilmsController.addDislikeToFilm(filmId, userId)
             return GenericResponse(HttpStatusCode.OK, -1)
 
         }
 
-        FilmsController.addDislikeToMovie(filmId, userId)
+        FilmsController.addDislikeToFilm(filmId, userId)
         return GenericResponse(HttpStatusCode.OK, -1)
     }
 
@@ -81,7 +81,7 @@ object FilmsModule {
     /**
      * Gets the film for a user, for example if the user has liked the films and all other data
      */
-    suspend fun getFilmForUser(email: String, filmId: String): GenericResponse<MovieResponse> {
+    suspend fun getFilmForUser(email: String, filmId: String): GenericResponse<FilmResponse> {
         val userId = database.getUserIdByEmail(email)
         return GenericResponse(HttpStatusCode.OK, FilmsController.getFilmForUser(filmId, userId))
     }
@@ -98,7 +98,7 @@ object FilmsModule {
      * Returns a list of films with matching title
      */
     suspend fun searchFilmByTitle(filmTitle: String): GenericResponse<List<FilmFeedItem>> {
-        return GenericResponse(HttpStatusCode.OK, FilmsController.searchMovieByTitle(filmTitle))
+        return GenericResponse(HttpStatusCode.OK, FilmsController.searchFilmByTitle(filmTitle))
     }
 
     /**
@@ -112,7 +112,7 @@ object FilmsModule {
      * Gets all films
      */
     suspend fun getAllFilms(): GenericResponse<List<FilmFeedResponse>> {
-        return GenericResponse(HttpStatusCode.OK, FilmsController.getAllMovies())
+        return GenericResponse(HttpStatusCode.OK, FilmsController.getAllFilms())
     }
 
     /**
