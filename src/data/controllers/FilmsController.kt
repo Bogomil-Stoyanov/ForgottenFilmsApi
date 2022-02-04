@@ -104,8 +104,9 @@ object FilmsController {
      * 2. Adds up to 5 random films that the user may like
      * 3. Adds the Top 10 Most Liked Films
      */
-    suspend fun getUserFeed(userId: String): List<FilmFeedResponse> {
-        val interests = database.getUserGenres(userId)
+    suspend fun getUserFeed(email: String): List<FilmFeedResponse> {
+        val interests = database.getUserGenres(email).sorted()
+
 
         val feed = ArrayList<FilmFeedResponse>()
 

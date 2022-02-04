@@ -90,8 +90,7 @@ object FilmsModule {
      * Gets the feed of a user with email
      */
     suspend fun getUserFeed(email: String): GenericResponse<List<FilmFeedResponse>> {
-        val userId = database.getUserIdByEmail(email)
-        return GenericResponse(HttpStatusCode.OK, FilmsController.getUserFeed(userId))
+        return GenericResponse(HttpStatusCode.OK, FilmsController.getUserFeed(email))
     }
 
     /**

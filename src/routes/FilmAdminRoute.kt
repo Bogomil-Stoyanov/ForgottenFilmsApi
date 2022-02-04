@@ -12,7 +12,7 @@ import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.*
 
-val adminEmails = listOf("admin@goldenfilms.gf")
+val adminEmails = listOf("admin_forgotten_films@dir.bg")
 
 // admin@goldenfilms.gf GoldenFilms_123
 

@@ -77,6 +77,7 @@ fun Route.filmsRoute() {
                     return@get
                 }
                 val filmId = call.request.queryParameters["id"] ?: ""
+
                 val email = call.principal<UserIdPrincipal>()!!.name
                 val response = FilmsModule.getFilmForUser(email, filmId)
                 call.respond(response.statusCode, response.data)

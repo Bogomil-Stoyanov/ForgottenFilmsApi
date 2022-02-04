@@ -78,7 +78,7 @@ class KmongoDatabase : DataAccessObject {
 
     override suspend fun getFilmWithId(id: String): Film {
         return films.findOneById(id) ?: Film(
-            "null2",
+            "null",
             emptyList(),
             "null",
             emptyList(),
