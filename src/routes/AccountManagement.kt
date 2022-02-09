@@ -203,4 +203,38 @@ fun Route.accountManagementRoute() {
             }
         }
     }
+
+    route("/v1/forgottenPassword") {
+        post {
+            val apiKey = call.request.queryParameters["apiKey"] ?: ""
+            if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                call.respond(HttpStatusCode.Forbidden)
+                return@post
+            }
+
+            val userEmail = call.request.queryParameters["email"] ?: ""
+
+            val response = AccountManagementModule.forgottenPassword(userEmail)
+            call.respond(response.statusCode, response.data)
+        }
+
+    }
+
+
+    route("/v1/changePassword") {
+        authenticate {
+            post {
+                val apiKey = call.request.queryParameters["apiKey"] ?: ""
+                if (apiKey != ACCOUNT_MANAGEMENT_API_KEY) {
+                    call.respond(HttpStatusCode.Forbidden)
+                    return@post
+                }
+                val password = call.request.queryParameters["password"] ?: ""
+                val email = call.principal<UserIdPrincipal>()!!.name
+
+                val response = AccountManagementModule.changePassword(email, password)
+                call.respond(response.statusCode, response.data)
+            }
+        }
+    }
 }

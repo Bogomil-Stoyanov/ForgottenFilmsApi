@@ -99,4 +99,13 @@ object AccountManagementController {
     suspend fun getNickname(email: String): String {
         return database.getNickname(email)
     }
+
+    suspend fun setNewPassword(email: String, password: String) {
+        val hashedPassword = RegisterController.hashPassword(password)
+        database.updateUserPassword(email, password)
+    }
+
+    suspend fun userExists(email: String): Boolean {
+        return database.checkIfUserExists(email)
+    }
 }

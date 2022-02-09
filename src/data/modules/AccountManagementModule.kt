@@ -2,11 +2,15 @@ package eu.bbsapps.forgottenfilmsapi.data.modules
 
 import eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem
 import eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController
+import eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController
 import eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse
 import eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest
 import eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair
 import eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse
 import io.ktor.http.*
+import org.apache.commons.mail.DefaultAuthenticator
+import org.apache.commons.mail.SimpleEmail
+import kotlin.random.Random
 
 object AccountManagementModule {
 
@@ -110,5 +114,58 @@ object AccountManagementModule {
      */
     suspend fun getNickname(email: String): GenericResponse<SimpleResponse> {
         return GenericResponse(HttpStatusCode.OK, SimpleResponse(true, AccountManagementController.getNickname(email)))
+    }
+
+    /**
+     *
+     */
+    suspend fun forgottenPassword(email: String): GenericResponse<SimpleResponse> {
+        if (!AccountManagementController.userExists(email)) {
+            return GenericResponse(HttpStatusCode.OK, SimpleResponse(false, "Потребител с този имейл не съществува"))
+        }
+
+        val charPool: List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9')
+        val newPassword = (1..8)
+            .map { Random.nextInt(0, charPool.size) }
+            .map(charPool::get)
+            .joinToString("")
+
+        val hashedPassword = RegisterController.hashPassword(newPassword)
+        AccountManagementController.setNewPassword(email, hashedPassword)
+
+        val responseEmail = SimpleEmail()
+        responseEmail.hostName = "smtp.googlemail.com"
+        responseEmail.setSmtpPort(465)
+        responseEmail.setAuthenticator(DefaultAuthenticator("help.bbsapps@gmail.com", "androidsupport"))
+        responseEmail.isSSLOnConnect = true
+        responseEmail.setFrom("help.bbsapps@gmail.com")
+        responseEmail.subject = "Възстановяване на парола - Забравените филми"
+        responseEmail.setMsg(
+            "Здравейте, Влезте в системата на Забравените филми със следната парола: $newPassword. " +
+                    "След това отидете в раздел 'Още' и сменете паролата"
+        )
+        responseEmail.addTo(email)
+        responseEmail.send()
+
+        return GenericResponse(
+            HttpStatusCode.OK, SimpleResponse(
+                true,
+                "Изпратен е имейл на $email, съдържащ инструкции са възстановяване на акаунта"
+            )
+        )
+    }
+
+    suspend fun changePassword(email: String, newPassword: String): GenericResponse<SimpleResponse> {
+        if (!AccountManagementController.userExists(email)) {
+            return GenericResponse(HttpStatusCode.OK, SimpleResponse(false, "Потребител с този имейл не съществува"))
+        }
+
+        val hashedPassword = RegisterController.hashPassword(newPassword)
+        AccountManagementController.setNewPassword(email, hashedPassword)
+
+        return GenericResponse(
+            HttpStatusCode.OK,
+            SimpleResponse(true, "Паролата е сменена, моля излезте и влезте в систамата")
+        )
     }
 }

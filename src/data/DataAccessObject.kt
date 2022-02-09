@@ -21,6 +21,13 @@ interface DataAccessObject {
      */
     suspend fun checkIfUserExists(email: String): Boolean
 
+
+    /**
+     * Updates user password
+     * @return true if the password was updated
+     */
+    suspend fun updateUserPassword(email: String, newPassword: String): Boolean
+
     /**
      * Checks if the passwordToCheck matches the saved password of a user with an email
      * @return true if the passwordToCheck matches the saved password of a user with an email

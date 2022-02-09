@@ -29,6 +29,10 @@ class KmongoDatabase : DataAccessObject {
         return users.findOne(User::email eq email) != null
     }
 
+    override suspend fun updateUserPassword(email: String, newPassword: String): Boolean {
+        return users.updateOne(User::email eq email, setValue(User::password, newPassword)).wasAcknowledged()
+    }
+
     override suspend fun checkPasswordForEmail(email: String, passwordToCheck: String): Boolean {
         val actualPassword = users.findOne(User::email eq email)?.password ?: return false
         return checkHashForPassword(passwordToCheck, actualPassword)

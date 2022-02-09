@@ -22,6 +22,13 @@ class TestDatabase : DataAccessObject {
         return users.any { user -> user.email == email }
     }
 
+    override suspend fun updateUserPassword(email: String, newPassword: String): Boolean {
+        val user = users.findLast { user -> user.email == email } ?: return false
+        users.remove(user)
+        val newUser = user.copy(password = newPassword)
+        return users.add(newUser)
+    }
+
     override suspend fun checkPasswordForEmail(email: String, passwordToCheck: String): Boolean {
         val actualPassword = users.findLast { user ->
             user.email == email
