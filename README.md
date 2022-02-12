@@ -39,6 +39,8 @@ The application has several layers.
 All the business logic is covered by unit tests. For the purpose of testing is created a seperate custom mock database in oreder not to damage the production database.
 Also there are automated tests for the server with Postman (https://www.postman.com/)
 
+![Server test](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/blob/master/architecture/newManTestResults.png)
+
 ## Routes
 
 The API supports versioning. The current version is `v1`. 
