@@ -38,6 +38,7 @@ The application has several layers.
 ## Tests
 All the business logic is covered by unit tests. For the purpose of testing is created a seperate custom mock database in oreder not to damage the production database.
 Unit tests:
+
 ![Module test](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/blob/master/architecture/ModuleTestSuite.png)
 
 Also there are automated tests for the server with Postman (https://www.postman.com/)
