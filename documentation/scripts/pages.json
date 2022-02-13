@@ -1,0 +1,3082 @@
+[
+  {
+    "name": "AddFilmsRequest AddFilmsRequest(List<Film> films)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.admin.AddFilmsRequest.AddFilmsRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.admin/-add-films-request/-add-films-request.html",
+    "searchKeys": [
+      "AddFilmsRequest",
+      "AddFilmsRequest AddFilmsRequest(List<Film> films)",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.admin.AddFilmsRequest.AddFilmsRequest"
+    ]
+  },
+  {
+    "name": "Boolean addDislikeToFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addDislikeToFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/add-dislike-to-film.html",
+    "searchKeys": [
+      "addDislikeToFilm",
+      "Boolean addDislikeToFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addDislikeToFilm"
+    ]
+  },
+  {
+    "name": "Boolean addDislikeToFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addDislikeToFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/add-dislike-to-film.html",
+    "searchKeys": [
+      "addDislikeToFilm",
+      "Boolean addDislikeToFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addDislikeToFilm"
+    ]
+  },
+  {
+    "name": "Boolean addFilm(Film film)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/add-film.html",
+    "searchKeys": [
+      "addFilm",
+      "Boolean addFilm(Film film)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addFilm"
+    ]
+  },
+  {
+    "name": "Boolean addFilm(Film film)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/add-film.html",
+    "searchKeys": [
+      "addFilm",
+      "Boolean addFilm(Film film)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addFilm"
+    ]
+  },
+  {
+    "name": "Boolean addFilmToUserList(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addFilmToUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/add-film-to-user-list.html",
+    "searchKeys": [
+      "addFilmToUserList",
+      "Boolean addFilmToUserList(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addFilmToUserList"
+    ]
+  },
+  {
+    "name": "Boolean addFilmToUserList(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addFilmToUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/add-film-to-user-list.html",
+    "searchKeys": [
+      "addFilmToUserList",
+      "Boolean addFilmToUserList(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addFilmToUserList"
+    ]
+  },
+  {
+    "name": "Boolean addLikeToFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addLikeToFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/add-like-to-film.html",
+    "searchKeys": [
+      "addLikeToFilm",
+      "Boolean addLikeToFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addLikeToFilm"
+    ]
+  },
+  {
+    "name": "Boolean addLikeToFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addLikeToFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/add-like-to-film.html",
+    "searchKeys": [
+      "addLikeToFilm",
+      "Boolean addLikeToFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addLikeToFilm"
+    ]
+  },
+  {
+    "name": "Boolean addUserGenre(String email, String genre)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addUserGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/add-user-genre.html",
+    "searchKeys": [
+      "addUserGenre",
+      "Boolean addUserGenre(String email, String genre)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addUserGenre"
+    ]
+  },
+  {
+    "name": "Boolean addUserGenre(String email, String genre)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addUserGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/add-user-genre.html",
+    "searchKeys": [
+      "addUserGenre",
+      "Boolean addUserGenre(String email, String genre)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addUserGenre"
+    ]
+  },
+  {
+    "name": "Boolean addWatchTime(String email, GenreWatchTimePair watchTimePair)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addWatchTime",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/add-watch-time.html",
+    "searchKeys": [
+      "addWatchTime",
+      "Boolean addWatchTime(String email, GenreWatchTimePair watchTimePair)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.addWatchTime"
+    ]
+  },
+  {
+    "name": "Boolean addWatchTime(String email, GenreWatchTimePair watchTimePair)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addWatchTime",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/add-watch-time.html",
+    "searchKeys": [
+      "addWatchTime",
+      "Boolean addWatchTime(String email, GenreWatchTimePair watchTimePair)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.addWatchTime"
+    ]
+  },
+  {
+    "name": "Boolean changeUserNickname(String email, String newNickname)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.changeUserNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/change-user-nickname.html",
+    "searchKeys": [
+      "changeUserNickname",
+      "Boolean changeUserNickname(String email, String newNickname)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.changeUserNickname"
+    ]
+  },
+  {
+    "name": "Boolean changeUserNickname(String email, String newNickname)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.changeUserNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/change-user-nickname.html",
+    "searchKeys": [
+      "changeUserNickname",
+      "Boolean changeUserNickname(String email, String newNickname)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.changeUserNickname"
+    ]
+  },
+  {
+    "name": "Boolean checkIfUserExists(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.checkIfUserExists",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/check-if-user-exists.html",
+    "searchKeys": [
+      "checkIfUserExists",
+      "Boolean checkIfUserExists(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.checkIfUserExists"
+    ]
+  },
+  {
+    "name": "Boolean checkIfUserExists(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.checkIfUserExists",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/check-if-user-exists.html",
+    "searchKeys": [
+      "checkIfUserExists",
+      "Boolean checkIfUserExists(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.checkIfUserExists"
+    ]
+  },
+  {
+    "name": "Boolean checkPasswordForEmail(String email, String passwordToCheck)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.checkPasswordForEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/check-password-for-email.html",
+    "searchKeys": [
+      "checkPasswordForEmail",
+      "Boolean checkPasswordForEmail(String email, String passwordToCheck)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.checkPasswordForEmail"
+    ]
+  },
+  {
+    "name": "Boolean checkPasswordForEmail(String email, String passwordToCheck)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.checkPasswordForEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/check-password-for-email.html",
+    "searchKeys": [
+      "checkPasswordForEmail",
+      "Boolean checkPasswordForEmail(String email, String passwordToCheck)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.checkPasswordForEmail"
+    ]
+  },
+  {
+    "name": "Boolean deleteFilmWithId(String id)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.deleteFilmWithId",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/delete-film-with-id.html",
+    "searchKeys": [
+      "deleteFilmWithId",
+      "Boolean deleteFilmWithId(String id)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.deleteFilmWithId"
+    ]
+  },
+  {
+    "name": "Boolean deleteFilmWithId(String id)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.deleteFilmWithId",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/delete-film-with-id.html",
+    "searchKeys": [
+      "deleteFilmWithId",
+      "Boolean deleteFilmWithId(String id)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.deleteFilmWithId"
+    ]
+  },
+  {
+    "name": "Boolean deleteFilmWithName(String name)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.deleteFilmWithName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/delete-film-with-name.html",
+    "searchKeys": [
+      "deleteFilmWithName",
+      "Boolean deleteFilmWithName(String name)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.deleteFilmWithName"
+    ]
+  },
+  {
+    "name": "Boolean deleteFilmWithName(String name)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.deleteFilmWithName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/delete-film-with-name.html",
+    "searchKeys": [
+      "deleteFilmWithName",
+      "Boolean deleteFilmWithName(String name)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.deleteFilmWithName"
+    ]
+  },
+  {
+    "name": "Boolean deleteUserWithEmail(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.deleteUserWithEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/delete-user-with-email.html",
+    "searchKeys": [
+      "deleteUserWithEmail",
+      "Boolean deleteUserWithEmail(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.deleteUserWithEmail"
+    ]
+  },
+  {
+    "name": "Boolean deleteUserWithEmail(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.deleteUserWithEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/delete-user-with-email.html",
+    "searchKeys": [
+      "deleteUserWithEmail",
+      "Boolean deleteUserWithEmail(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.deleteUserWithEmail"
+    ]
+  },
+  {
+    "name": "Boolean isFilmAddedToList(String filmId, String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.isFilmAddedToList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/is-film-added-to-list.html",
+    "searchKeys": [
+      "isFilmAddedToList",
+      "Boolean isFilmAddedToList(String filmId, String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.isFilmAddedToList"
+    ]
+  },
+  {
+    "name": "Boolean isFilmAddedToList(String filmId, String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.isFilmAddedToList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/is-film-added-to-list.html",
+    "searchKeys": [
+      "isFilmAddedToList",
+      "Boolean isFilmAddedToList(String filmId, String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.isFilmAddedToList"
+    ]
+  },
+  {
+    "name": "Boolean isFilmDislikedBy(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.isFilmDislikedBy",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/is-film-disliked-by.html",
+    "searchKeys": [
+      "isFilmDislikedBy",
+      "Boolean isFilmDislikedBy(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.isFilmDislikedBy"
+    ]
+  },
+  {
+    "name": "Boolean isFilmDislikedBy(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.isFilmDislikedBy",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/is-film-disliked-by.html",
+    "searchKeys": [
+      "isFilmDislikedBy",
+      "Boolean isFilmDislikedBy(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.isFilmDislikedBy"
+    ]
+  },
+  {
+    "name": "Boolean isFilmLikedBy(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.isFilmLikedBy",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/is-film-liked-by.html",
+    "searchKeys": [
+      "isFilmLikedBy",
+      "Boolean isFilmLikedBy(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.isFilmLikedBy"
+    ]
+  },
+  {
+    "name": "Boolean isFilmLikedBy(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.isFilmLikedBy",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/is-film-liked-by.html",
+    "searchKeys": [
+      "isFilmLikedBy",
+      "Boolean isFilmLikedBy(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.isFilmLikedBy"
+    ]
+  },
+  {
+    "name": "Boolean registerUser(User user)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.registerUser",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/register-user.html",
+    "searchKeys": [
+      "registerUser",
+      "Boolean registerUser(User user)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.registerUser"
+    ]
+  },
+  {
+    "name": "Boolean registerUser(User user)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.registerUser",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/register-user.html",
+    "searchKeys": [
+      "registerUser",
+      "Boolean registerUser(User user)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.registerUser"
+    ]
+  },
+  {
+    "name": "Boolean removeDislikeFromFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.removeDislikeFromFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/remove-dislike-from-film.html",
+    "searchKeys": [
+      "removeDislikeFromFilm",
+      "Boolean removeDislikeFromFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.removeDislikeFromFilm"
+    ]
+  },
+  {
+    "name": "Boolean removeDislikeFromFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.removeDislikeFromFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/remove-dislike-from-film.html",
+    "searchKeys": [
+      "removeDislikeFromFilm",
+      "Boolean removeDislikeFromFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.removeDislikeFromFilm"
+    ]
+  },
+  {
+    "name": "Boolean removeFilmFromUserList(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.removeFilmFromUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/remove-film-from-user-list.html",
+    "searchKeys": [
+      "removeFilmFromUserList",
+      "Boolean removeFilmFromUserList(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.removeFilmFromUserList"
+    ]
+  },
+  {
+    "name": "Boolean removeFilmFromUserList(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.removeFilmFromUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/remove-film-from-user-list.html",
+    "searchKeys": [
+      "removeFilmFromUserList",
+      "Boolean removeFilmFromUserList(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.removeFilmFromUserList"
+    ]
+  },
+  {
+    "name": "Boolean removeLikeFromFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.removeLikeFromFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/remove-like-from-film.html",
+    "searchKeys": [
+      "removeLikeFromFilm",
+      "Boolean removeLikeFromFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.removeLikeFromFilm"
+    ]
+  },
+  {
+    "name": "Boolean removeLikeFromFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.removeLikeFromFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/remove-like-from-film.html",
+    "searchKeys": [
+      "removeLikeFromFilm",
+      "Boolean removeLikeFromFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.removeLikeFromFilm"
+    ]
+  },
+  {
+    "name": "Boolean updateUserPassword(String email, String newPassword)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.updateUserPassword",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/update-user-password.html",
+    "searchKeys": [
+      "updateUserPassword",
+      "Boolean updateUserPassword(String email, String newPassword)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.updateUserPassword"
+    ]
+  },
+  {
+    "name": "Boolean updateUserPassword(String email, String newPassword)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.updateUserPassword",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/update-user-password.html",
+    "searchKeys": [
+      "updateUserPassword",
+      "Boolean updateUserPassword(String email, String newPassword)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.updateUserPassword"
+    ]
+  },
+  {
+    "name": "CreateAccountRequest CreateAccountRequest(String email, String password, String nickname, List<String> genres)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest.CreateAccountRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.register/-create-account-request/-create-account-request.html",
+    "searchKeys": [
+      "CreateAccountRequest",
+      "CreateAccountRequest CreateAccountRequest(String email, String password, String nickname, List<String> genres)",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest.CreateAccountRequest"
+    ]
+  },
+  {
+    "name": "DataAccessObject getDatabase()",
+    "description": "eu.bbsapps.forgottenfilmsapi.ApplicationKt.getDatabase",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi/-application-kt/get-database.html",
+    "searchKeys": [
+      "getDatabase",
+      "DataAccessObject getDatabase()",
+      "eu.bbsapps.forgottenfilmsapi.ApplicationKt.getDatabase"
+    ]
+  },
+  {
+    "name": "DeleteFilmRequest DeleteFilmRequest(List<String> names, String apiKey)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteFilmRequest.DeleteFilmRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.admin/-delete-film-request/-delete-film-request.html",
+    "searchKeys": [
+      "DeleteFilmRequest",
+      "DeleteFilmRequest DeleteFilmRequest(List<String> names, String apiKey)",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteFilmRequest.DeleteFilmRequest"
+    ]
+  },
+  {
+    "name": "DeleteUserRequest DeleteUserRequest(String userEmail, String apiKey)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteUserRequest.DeleteUserRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.admin/-delete-user-request/-delete-user-request.html",
+    "searchKeys": [
+      "DeleteUserRequest",
+      "DeleteUserRequest DeleteUserRequest(String userEmail, String apiKey)",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteUserRequest.DeleteUserRequest"
+    ]
+  },
+  {
+    "name": "FilmFeedItem FilmFeedItem(String name, String image, String id)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem.FilmFeedItem",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film-feed-item/-film-feed-item.html",
+    "searchKeys": [
+      "FilmFeedItem",
+      "FilmFeedItem FilmFeedItem(String name, String image, String id)",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem.FilmFeedItem"
+    ]
+  },
+  {
+    "name": "FilmFeedResponse FilmFeedResponse(String title, List<FilmFeedItem> films)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmFeedResponse.FilmFeedResponse",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-feed-response/-film-feed-response.html",
+    "searchKeys": [
+      "FilmFeedResponse",
+      "FilmFeedResponse FilmFeedResponse(String title, List<FilmFeedItem> films)",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmFeedResponse.FilmFeedResponse"
+    ]
+  },
+  {
+    "name": "FilmResponse FilmResponse(String name, List<String> imageUrls, String description, List<String> categories, Integer likes, Integer dislikes, Integer isLiked, String url, String id)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.FilmResponse",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-response/-film-response.html",
+    "searchKeys": [
+      "FilmResponse",
+      "FilmResponse FilmResponse(String name, List<String> imageUrls, String description, List<String> categories, Integer likes, Integer dislikes, Integer isLiked, String url, String id)",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.FilmResponse"
+    ]
+  },
+  {
+    "name": "Film Film(String name, List<String> imageUrls, String description, List<String> genres, List<String> likedBy, List<String> dislikedBy, String url, String id)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.Film.Film",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film/-film.html",
+    "searchKeys": [
+      "Film",
+      "Film Film(String name, List<String> imageUrls, String description, List<String> genres, List<String> likedBy, List<String> dislikedBy, String url, String id)",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.Film.Film"
+    ]
+  },
+  {
+    "name": "Film getFilmWithId(String id)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getFilmWithId",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-film-with-id.html",
+    "searchKeys": [
+      "getFilmWithId",
+      "Film getFilmWithId(String id)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getFilmWithId"
+    ]
+  },
+  {
+    "name": "Film getFilmWithId(String id)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getFilmWithId",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-film-with-id.html",
+    "searchKeys": [
+      "getFilmWithId",
+      "Film getFilmWithId(String id)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getFilmWithId"
+    ]
+  },
+  {
+    "name": "GenericResponse<T> GenericResponse<T extends Any>(HttpStatusCode statusCode, T data)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse.GenericResponse",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules.util/-generic-response/-generic-response.html",
+    "searchKeys": [
+      "GenericResponse",
+      "GenericResponse<T> GenericResponse<T extends Any>(HttpStatusCode statusCode, T data)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse.GenericResponse"
+    ]
+  },
+  {
+    "name": "GenreWatchTimePair GenreWatchTimePair(String genre, Integer totalWatchTimeInSeconds)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair.GenreWatchTimePair",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-genre-watch-time-pair/-genre-watch-time-pair.html",
+    "searchKeys": [
+      "GenreWatchTimePair",
+      "GenreWatchTimePair GenreWatchTimePair(String genre, Integer totalWatchTimeInSeconds)",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair.GenreWatchTimePair"
+    ]
+  },
+  {
+    "name": "GenreWatchTimeRequest GenreWatchTimeRequest(String genre, Integer additionalWatchTimeInSeconds)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest.GenreWatchTimeRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.management/-genre-watch-time-request/-genre-watch-time-request.html",
+    "searchKeys": [
+      "GenreWatchTimeRequest",
+      "GenreWatchTimeRequest GenreWatchTimeRequest(String genre, Integer additionalWatchTimeInSeconds)",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest.GenreWatchTimeRequest"
+    ]
+  },
+  {
+    "name": "Integer getDislikeCountForFilm(String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getDislikeCountForFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-dislike-count-for-film.html",
+    "searchKeys": [
+      "getDislikeCountForFilm",
+      "Integer getDislikeCountForFilm(String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getDislikeCountForFilm"
+    ]
+  },
+  {
+    "name": "Integer getDislikeCountForFilm(String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getDislikeCountForFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-dislike-count-for-film.html",
+    "searchKeys": [
+      "getDislikeCountForFilm",
+      "Integer getDislikeCountForFilm(String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getDislikeCountForFilm"
+    ]
+  },
+  {
+    "name": "Integer getLikeCountForFilm(String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getLikeCountForFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-like-count-for-film.html",
+    "searchKeys": [
+      "getLikeCountForFilm",
+      "Integer getLikeCountForFilm(String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getLikeCountForFilm"
+    ]
+  },
+  {
+    "name": "Integer getLikeCountForFilm(String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getLikeCountForFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-like-count-for-film.html",
+    "searchKeys": [
+      "getLikeCountForFilm",
+      "Integer getLikeCountForFilm(String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getLikeCountForFilm"
+    ]
+  },
+  {
+    "name": "Integer getTotalFilmCount()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getTotalFilmCount",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-total-film-count.html",
+    "searchKeys": [
+      "getTotalFilmCount",
+      "Integer getTotalFilmCount()",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getTotalFilmCount"
+    ]
+  },
+  {
+    "name": "Integer getTotalFilmCount()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getTotalFilmCount",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-total-film-count.html",
+    "searchKeys": [
+      "getTotalFilmCount",
+      "Integer getTotalFilmCount()",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getTotalFilmCount"
+    ]
+  },
+  {
+    "name": "Integer getTotalUserCount()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getTotalUserCount",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-total-user-count.html",
+    "searchKeys": [
+      "getTotalUserCount",
+      "Integer getTotalUserCount()",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getTotalUserCount"
+    ]
+  },
+  {
+    "name": "Integer getTotalUserCount()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getTotalUserCount",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-total-user-count.html",
+    "searchKeys": [
+      "getTotalUserCount",
+      "Integer getTotalUserCount()",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getTotalUserCount"
+    ]
+  },
+  {
+    "name": "KmongoDatabase KmongoDatabase()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.KmongoDatabase",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/-kmongo-database.html",
+    "searchKeys": [
+      "KmongoDatabase",
+      "KmongoDatabase KmongoDatabase()",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.KmongoDatabase"
+    ]
+  },
+  {
+    "name": "List<Film> getAllFilms()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getAllFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-all-films.html",
+    "searchKeys": [
+      "getAllFilms",
+      "List<Film> getAllFilms()",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getAllFilms"
+    ]
+  },
+  {
+    "name": "List<Film> getAllFilms()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getAllFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-all-films.html",
+    "searchKeys": [
+      "getAllFilms",
+      "List<Film> getAllFilms()",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getAllFilms"
+    ]
+  },
+  {
+    "name": "List<Film> getFilmsWithGenre(String genre)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getFilmsWithGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-films-with-genre.html",
+    "searchKeys": [
+      "getFilmsWithGenre",
+      "List<Film> getFilmsWithGenre(String genre)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getFilmsWithGenre"
+    ]
+  },
+  {
+    "name": "List<Film> getFilmsWithGenre(String genre)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getFilmsWithGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-films-with-genre.html",
+    "searchKeys": [
+      "getFilmsWithGenre",
+      "List<Film> getFilmsWithGenre(String genre)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getFilmsWithGenre"
+    ]
+  },
+  {
+    "name": "List<Film> getRandomFilms()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getRandomFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-random-films.html",
+    "searchKeys": [
+      "getRandomFilms",
+      "List<Film> getRandomFilms()",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getRandomFilms"
+    ]
+  },
+  {
+    "name": "List<Film> getRandomFilms()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getRandomFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-random-films.html",
+    "searchKeys": [
+      "getRandomFilms",
+      "List<Film> getRandomFilms()",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getRandomFilms"
+    ]
+  },
+  {
+    "name": "List<Film> getRandomFilmsWithGenre(String genre)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getRandomFilmsWithGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-random-films-with-genre.html",
+    "searchKeys": [
+      "getRandomFilmsWithGenre",
+      "List<Film> getRandomFilmsWithGenre(String genre)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getRandomFilmsWithGenre"
+    ]
+  },
+  {
+    "name": "List<Film> getRandomFilmsWithGenre(String genre)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getRandomFilmsWithGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-random-films-with-genre.html",
+    "searchKeys": [
+      "getRandomFilmsWithGenre",
+      "List<Film> getRandomFilmsWithGenre(String genre)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getRandomFilmsWithGenre"
+    ]
+  },
+  {
+    "name": "List<Film> searchForFilms(String query)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.searchForFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/search-for-films.html",
+    "searchKeys": [
+      "searchForFilms",
+      "List<Film> searchForFilms(String query)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.searchForFilms"
+    ]
+  },
+  {
+    "name": "List<Film> searchForFilms(String query)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.searchForFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/search-for-films.html",
+    "searchKeys": [
+      "searchForFilms",
+      "List<Film> searchForFilms(String query)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.searchForFilms"
+    ]
+  },
+  {
+    "name": "List<GenreWatchTimePair> getWatchTime(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getWatchTime",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-watch-time.html",
+    "searchKeys": [
+      "getWatchTime",
+      "List<GenreWatchTimePair> getWatchTime(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getWatchTime"
+    ]
+  },
+  {
+    "name": "List<GenreWatchTimePair> getWatchTime(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getWatchTime",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-watch-time.html",
+    "searchKeys": [
+      "getWatchTime",
+      "List<GenreWatchTimePair> getWatchTime(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getWatchTime"
+    ]
+  },
+  {
+    "name": "List<List<GenreWatchTimePair>> getTotalWatchStats()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getTotalWatchStats",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-total-watch-stats.html",
+    "searchKeys": [
+      "getTotalWatchStats",
+      "List<List<GenreWatchTimePair>> getTotalWatchStats()",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getTotalWatchStats"
+    ]
+  },
+  {
+    "name": "List<List<GenreWatchTimePair>> getTotalWatchStats()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getTotalWatchStats",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-total-watch-stats.html",
+    "searchKeys": [
+      "getTotalWatchStats",
+      "List<List<GenreWatchTimePair>> getTotalWatchStats()",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getTotalWatchStats"
+    ]
+  },
+  {
+    "name": "List<String> getUserFilmIdsList(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getUserFilmIdsList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-user-film-ids-list.html",
+    "searchKeys": [
+      "getUserFilmIdsList",
+      "List<String> getUserFilmIdsList(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getUserFilmIdsList"
+    ]
+  },
+  {
+    "name": "List<String> getUserFilmIdsList(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getUserFilmIdsList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-user-film-ids-list.html",
+    "searchKeys": [
+      "getUserFilmIdsList",
+      "List<String> getUserFilmIdsList(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getUserFilmIdsList"
+    ]
+  },
+  {
+    "name": "List<String> getUserGenres(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getUserGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-user-genres.html",
+    "searchKeys": [
+      "getUserGenres",
+      "List<String> getUserGenres(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getUserGenres"
+    ]
+  },
+  {
+    "name": "List<String> getUserGenres(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getUserGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-user-genres.html",
+    "searchKeys": [
+      "getUserGenres",
+      "List<String> getUserGenres(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getUserGenres"
+    ]
+  },
+  {
+    "name": "List<User> getAllUsers()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getAllUsers",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-all-users.html",
+    "searchKeys": [
+      "getAllUsers",
+      "List<User> getAllUsers()",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getAllUsers"
+    ]
+  },
+  {
+    "name": "List<User> getAllUsers()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getAllUsers",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-all-users.html",
+    "searchKeys": [
+      "getAllUsers",
+      "List<User> getAllUsers()",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getAllUsers"
+    ]
+  },
+  {
+    "name": "LoginAccountRequest LoginAccountRequest(String email, String password)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.login.LoginAccountRequest.LoginAccountRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.login/-login-account-request/-login-account-request.html",
+    "searchKeys": [
+      "LoginAccountRequest",
+      "LoginAccountRequest LoginAccountRequest(String email, String password)",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.login.LoginAccountRequest.LoginAccountRequest"
+    ]
+  },
+  {
+    "name": "SimpleResponse SimpleResponse(Boolean successful, String message)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse.SimpleResponse",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-simple-response/-simple-response.html",
+    "searchKeys": [
+      "SimpleResponse",
+      "SimpleResponse SimpleResponse(Boolean successful, String message)",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse.SimpleResponse"
+    ]
+  },
+  {
+    "name": "String getFilmIdWithName(String name)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getFilmIdWithName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-film-id-with-name.html",
+    "searchKeys": [
+      "getFilmIdWithName",
+      "String getFilmIdWithName(String name)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getFilmIdWithName"
+    ]
+  },
+  {
+    "name": "String getFilmIdWithName(String name)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getFilmIdWithName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-film-id-with-name.html",
+    "searchKeys": [
+      "getFilmIdWithName",
+      "String getFilmIdWithName(String name)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getFilmIdWithName"
+    ]
+  },
+  {
+    "name": "String getNickname(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-nickname.html",
+    "searchKeys": [
+      "getNickname",
+      "String getNickname(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getNickname"
+    ]
+  },
+  {
+    "name": "String getNickname(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-nickname.html",
+    "searchKeys": [
+      "getNickname",
+      "String getNickname(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getNickname"
+    ]
+  },
+  {
+    "name": "String getUserIdByEmail(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getUserIdByEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/get-user-id-by-email.html",
+    "searchKeys": [
+      "getUserIdByEmail",
+      "String getUserIdByEmail(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.getUserIdByEmail"
+    ]
+  },
+  {
+    "name": "String getUserIdByEmail(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getUserIdByEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/get-user-id-by-email.html",
+    "searchKeys": [
+      "getUserIdByEmail",
+      "String getUserIdByEmail(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.getUserIdByEmail"
+    ]
+  },
+  {
+    "name": "TestDatabase TestDatabase()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.TestDatabase",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/-test-database.html",
+    "searchKeys": [
+      "TestDatabase",
+      "TestDatabase TestDatabase()",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.TestDatabase"
+    ]
+  },
+  {
+    "name": "Unit deleteAllUserGenres(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.deleteAllUserGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/delete-all-user-genres.html",
+    "searchKeys": [
+      "deleteAllUserGenres",
+      "Unit deleteAllUserGenres(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase.deleteAllUserGenres"
+    ]
+  },
+  {
+    "name": "Unit deleteAllUserGenres(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.deleteAllUserGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/delete-all-user-genres.html",
+    "searchKeys": [
+      "deleteAllUserGenres",
+      "Unit deleteAllUserGenres(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase.deleteAllUserGenres"
+    ]
+  },
+  {
+    "name": "UserGenresRequest UserGenresRequest(List<String> genres)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.UserGenresRequest.UserGenresRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.management/-user-genres-request/-user-genres-request.html",
+    "searchKeys": [
+      "UserGenresRequest",
+      "UserGenresRequest UserGenresRequest(List<String> genres)",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.UserGenresRequest.UserGenresRequest"
+    ]
+  },
+  {
+    "name": "UserResponse UserResponse(String email, String name)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.UserResponse.UserResponse",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-user-response/-user-response.html",
+    "searchKeys": [
+      "UserResponse",
+      "UserResponse UserResponse(String email, String name)",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.UserResponse.UserResponse"
+    ]
+  },
+  {
+    "name": "User User(String email, String password, String nickname, List<String> genres, List<GenreWatchTimePair> totalWatchTimeByGenre, List<String> filmList, String id)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.User.User",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-user/-user.html",
+    "searchKeys": [
+      "User",
+      "User User(String email, String password, String nickname, List<String> genres, List<GenreWatchTimePair> totalWatchTimeByGenre, List<String> filmList, String id)",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.User.User"
+    ]
+  },
+  {
+    "name": "abstract Boolean addDislikeToFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addDislikeToFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/add-dislike-to-film.html",
+    "searchKeys": [
+      "addDislikeToFilm",
+      "abstract Boolean addDislikeToFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addDislikeToFilm"
+    ]
+  },
+  {
+    "name": "abstract Boolean addFilm(Film film)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/add-film.html",
+    "searchKeys": [
+      "addFilm",
+      "abstract Boolean addFilm(Film film)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addFilm"
+    ]
+  },
+  {
+    "name": "abstract Boolean addFilmToUserList(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addFilmToUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/add-film-to-user-list.html",
+    "searchKeys": [
+      "addFilmToUserList",
+      "abstract Boolean addFilmToUserList(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addFilmToUserList"
+    ]
+  },
+  {
+    "name": "abstract Boolean addLikeToFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addLikeToFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/add-like-to-film.html",
+    "searchKeys": [
+      "addLikeToFilm",
+      "abstract Boolean addLikeToFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addLikeToFilm"
+    ]
+  },
+  {
+    "name": "abstract Boolean addUserGenre(String email, String genre)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addUserGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/add-user-genre.html",
+    "searchKeys": [
+      "addUserGenre",
+      "abstract Boolean addUserGenre(String email, String genre)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addUserGenre"
+    ]
+  },
+  {
+    "name": "abstract Boolean addWatchTime(String email, GenreWatchTimePair watchTimePair)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addWatchTime",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/add-watch-time.html",
+    "searchKeys": [
+      "addWatchTime",
+      "abstract Boolean addWatchTime(String email, GenreWatchTimePair watchTimePair)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.addWatchTime"
+    ]
+  },
+  {
+    "name": "abstract Boolean changeUserNickname(String email, String newNickname)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.changeUserNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/change-user-nickname.html",
+    "searchKeys": [
+      "changeUserNickname",
+      "abstract Boolean changeUserNickname(String email, String newNickname)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.changeUserNickname"
+    ]
+  },
+  {
+    "name": "abstract Boolean checkIfUserExists(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.checkIfUserExists",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/check-if-user-exists.html",
+    "searchKeys": [
+      "checkIfUserExists",
+      "abstract Boolean checkIfUserExists(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.checkIfUserExists"
+    ]
+  },
+  {
+    "name": "abstract Boolean checkPasswordForEmail(String email, String passwordToCheck)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.checkPasswordForEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/check-password-for-email.html",
+    "searchKeys": [
+      "checkPasswordForEmail",
+      "abstract Boolean checkPasswordForEmail(String email, String passwordToCheck)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.checkPasswordForEmail"
+    ]
+  },
+  {
+    "name": "abstract Boolean deleteFilmWithId(String id)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.deleteFilmWithId",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/delete-film-with-id.html",
+    "searchKeys": [
+      "deleteFilmWithId",
+      "abstract Boolean deleteFilmWithId(String id)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.deleteFilmWithId"
+    ]
+  },
+  {
+    "name": "abstract Boolean deleteFilmWithName(String name)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.deleteFilmWithName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/delete-film-with-name.html",
+    "searchKeys": [
+      "deleteFilmWithName",
+      "abstract Boolean deleteFilmWithName(String name)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.deleteFilmWithName"
+    ]
+  },
+  {
+    "name": "abstract Boolean deleteUserWithEmail(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.deleteUserWithEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/delete-user-with-email.html",
+    "searchKeys": [
+      "deleteUserWithEmail",
+      "abstract Boolean deleteUserWithEmail(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.deleteUserWithEmail"
+    ]
+  },
+  {
+    "name": "abstract Boolean isFilmAddedToList(String filmId, String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.isFilmAddedToList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/is-film-added-to-list.html",
+    "searchKeys": [
+      "isFilmAddedToList",
+      "abstract Boolean isFilmAddedToList(String filmId, String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.isFilmAddedToList"
+    ]
+  },
+  {
+    "name": "abstract Boolean isFilmDislikedBy(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.isFilmDislikedBy",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/is-film-disliked-by.html",
+    "searchKeys": [
+      "isFilmDislikedBy",
+      "abstract Boolean isFilmDislikedBy(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.isFilmDislikedBy"
+    ]
+  },
+  {
+    "name": "abstract Boolean isFilmLikedBy(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.isFilmLikedBy",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/is-film-liked-by.html",
+    "searchKeys": [
+      "isFilmLikedBy",
+      "abstract Boolean isFilmLikedBy(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.isFilmLikedBy"
+    ]
+  },
+  {
+    "name": "abstract Boolean registerUser(User user)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.registerUser",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/register-user.html",
+    "searchKeys": [
+      "registerUser",
+      "abstract Boolean registerUser(User user)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.registerUser"
+    ]
+  },
+  {
+    "name": "abstract Boolean removeDislikeFromFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.removeDislikeFromFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/remove-dislike-from-film.html",
+    "searchKeys": [
+      "removeDislikeFromFilm",
+      "abstract Boolean removeDislikeFromFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.removeDislikeFromFilm"
+    ]
+  },
+  {
+    "name": "abstract Boolean removeFilmFromUserList(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.removeFilmFromUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/remove-film-from-user-list.html",
+    "searchKeys": [
+      "removeFilmFromUserList",
+      "abstract Boolean removeFilmFromUserList(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.removeFilmFromUserList"
+    ]
+  },
+  {
+    "name": "abstract Boolean removeLikeFromFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.removeLikeFromFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/remove-like-from-film.html",
+    "searchKeys": [
+      "removeLikeFromFilm",
+      "abstract Boolean removeLikeFromFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.removeLikeFromFilm"
+    ]
+  },
+  {
+    "name": "abstract Boolean updateUserPassword(String email, String newPassword)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.updateUserPassword",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/update-user-password.html",
+    "searchKeys": [
+      "updateUserPassword",
+      "abstract Boolean updateUserPassword(String email, String newPassword)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.updateUserPassword"
+    ]
+  },
+  {
+    "name": "abstract Film getFilmWithId(String id)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getFilmWithId",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-film-with-id.html",
+    "searchKeys": [
+      "getFilmWithId",
+      "abstract Film getFilmWithId(String id)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getFilmWithId"
+    ]
+  },
+  {
+    "name": "abstract Integer getDislikeCountForFilm(String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getDislikeCountForFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-dislike-count-for-film.html",
+    "searchKeys": [
+      "getDislikeCountForFilm",
+      "abstract Integer getDislikeCountForFilm(String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getDislikeCountForFilm"
+    ]
+  },
+  {
+    "name": "abstract Integer getLikeCountForFilm(String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getLikeCountForFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-like-count-for-film.html",
+    "searchKeys": [
+      "getLikeCountForFilm",
+      "abstract Integer getLikeCountForFilm(String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getLikeCountForFilm"
+    ]
+  },
+  {
+    "name": "abstract Integer getTotalFilmCount()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getTotalFilmCount",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-total-film-count.html",
+    "searchKeys": [
+      "getTotalFilmCount",
+      "abstract Integer getTotalFilmCount()",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getTotalFilmCount"
+    ]
+  },
+  {
+    "name": "abstract Integer getTotalUserCount()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getTotalUserCount",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-total-user-count.html",
+    "searchKeys": [
+      "getTotalUserCount",
+      "abstract Integer getTotalUserCount()",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getTotalUserCount"
+    ]
+  },
+  {
+    "name": "abstract List<Film> getAllFilms()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getAllFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-all-films.html",
+    "searchKeys": [
+      "getAllFilms",
+      "abstract List<Film> getAllFilms()",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getAllFilms"
+    ]
+  },
+  {
+    "name": "abstract List<Film> getFilmsWithGenre(String genre)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getFilmsWithGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-films-with-genre.html",
+    "searchKeys": [
+      "getFilmsWithGenre",
+      "abstract List<Film> getFilmsWithGenre(String genre)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getFilmsWithGenre"
+    ]
+  },
+  {
+    "name": "abstract List<Film> getRandomFilms()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getRandomFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-random-films.html",
+    "searchKeys": [
+      "getRandomFilms",
+      "abstract List<Film> getRandomFilms()",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getRandomFilms"
+    ]
+  },
+  {
+    "name": "abstract List<Film> getRandomFilmsWithGenre(String genre)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getRandomFilmsWithGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-random-films-with-genre.html",
+    "searchKeys": [
+      "getRandomFilmsWithGenre",
+      "abstract List<Film> getRandomFilmsWithGenre(String genre)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getRandomFilmsWithGenre"
+    ]
+  },
+  {
+    "name": "abstract List<Film> searchForFilms(String query)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.searchForFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/search-for-films.html",
+    "searchKeys": [
+      "searchForFilms",
+      "abstract List<Film> searchForFilms(String query)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.searchForFilms"
+    ]
+  },
+  {
+    "name": "abstract List<GenreWatchTimePair> getWatchTime(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getWatchTime",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-watch-time.html",
+    "searchKeys": [
+      "getWatchTime",
+      "abstract List<GenreWatchTimePair> getWatchTime(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getWatchTime"
+    ]
+  },
+  {
+    "name": "abstract List<List<GenreWatchTimePair>> getTotalWatchStats()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getTotalWatchStats",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-total-watch-stats.html",
+    "searchKeys": [
+      "getTotalWatchStats",
+      "abstract List<List<GenreWatchTimePair>> getTotalWatchStats()",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getTotalWatchStats"
+    ]
+  },
+  {
+    "name": "abstract List<String> getUserFilmIdsList(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getUserFilmIdsList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-user-film-ids-list.html",
+    "searchKeys": [
+      "getUserFilmIdsList",
+      "abstract List<String> getUserFilmIdsList(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getUserFilmIdsList"
+    ]
+  },
+  {
+    "name": "abstract List<String> getUserGenres(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getUserGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-user-genres.html",
+    "searchKeys": [
+      "getUserGenres",
+      "abstract List<String> getUserGenres(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getUserGenres"
+    ]
+  },
+  {
+    "name": "abstract List<User> getAllUsers()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getAllUsers",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-all-users.html",
+    "searchKeys": [
+      "getAllUsers",
+      "abstract List<User> getAllUsers()",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getAllUsers"
+    ]
+  },
+  {
+    "name": "abstract String getFilmIdWithName(String name)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getFilmIdWithName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-film-id-with-name.html",
+    "searchKeys": [
+      "getFilmIdWithName",
+      "abstract String getFilmIdWithName(String name)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getFilmIdWithName"
+    ]
+  },
+  {
+    "name": "abstract String getNickname(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-nickname.html",
+    "searchKeys": [
+      "getNickname",
+      "abstract String getNickname(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getNickname"
+    ]
+  },
+  {
+    "name": "abstract String getUserIdByEmail(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getUserIdByEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/get-user-id-by-email.html",
+    "searchKeys": [
+      "getUserIdByEmail",
+      "abstract String getUserIdByEmail(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.getUserIdByEmail"
+    ]
+  },
+  {
+    "name": "abstract Unit deleteAllUserGenres(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.deleteAllUserGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/delete-all-user-genres.html",
+    "searchKeys": [
+      "deleteAllUserGenres",
+      "abstract Unit deleteAllUserGenres(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject.deleteAllUserGenres"
+    ]
+  },
+  {
+    "name": "final Boolean addDislikeToFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.addDislikeToFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/add-dislike-to-film.html",
+    "searchKeys": [
+      "addDislikeToFilm",
+      "final Boolean addDislikeToFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.addDislikeToFilm"
+    ]
+  },
+  {
+    "name": "final Boolean addFilmToUserList(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.addFilmToUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/add-film-to-user-list.html",
+    "searchKeys": [
+      "addFilmToUserList",
+      "final Boolean addFilmToUserList(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.addFilmToUserList"
+    ]
+  },
+  {
+    "name": "final Boolean addLikeToFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.addLikeToFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/add-like-to-film.html",
+    "searchKeys": [
+      "addLikeToFilm",
+      "final Boolean addLikeToFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.addLikeToFilm"
+    ]
+  },
+  {
+    "name": "final Boolean addWatchTime(String email, GenreWatchTimePair genreWatchTimePair)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.addWatchTime",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/add-watch-time.html",
+    "searchKeys": [
+      "addWatchTime",
+      "final Boolean addWatchTime(String email, GenreWatchTimePair genreWatchTimePair)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.addWatchTime"
+    ]
+  },
+  {
+    "name": "final Boolean changeNickname(String email, String newNickname)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.changeNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/change-nickname.html",
+    "searchKeys": [
+      "changeNickname",
+      "final Boolean changeNickname(String email, String newNickname)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.changeNickname"
+    ]
+  },
+  {
+    "name": "final Boolean getSuccessful()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse.getSuccessful",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-simple-response/get-successful.html",
+    "searchKeys": [
+      "getSuccessful",
+      "final Boolean getSuccessful()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse.getSuccessful"
+    ]
+  },
+  {
+    "name": "final Boolean isEmailValid(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.isEmailValid",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-register-controller/is-email-valid.html",
+    "searchKeys": [
+      "isEmailValid",
+      "final Boolean isEmailValid(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.isEmailValid"
+    ]
+  },
+  {
+    "name": "final Boolean isFilmDislikedBy(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.isFilmDislikedBy",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/is-film-disliked-by.html",
+    "searchKeys": [
+      "isFilmDislikedBy",
+      "final Boolean isFilmDislikedBy(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.isFilmDislikedBy"
+    ]
+  },
+  {
+    "name": "final Boolean isFilmInUserList(String filmId, String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.isFilmInUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/is-film-in-user-list.html",
+    "searchKeys": [
+      "isFilmInUserList",
+      "final Boolean isFilmInUserList(String filmId, String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.isFilmInUserList"
+    ]
+  },
+  {
+    "name": "final Boolean isFilmLikedBy(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.isFilmLikedBy",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/is-film-liked-by.html",
+    "searchKeys": [
+      "isFilmLikedBy",
+      "final Boolean isFilmLikedBy(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.isFilmLikedBy"
+    ]
+  },
+  {
+    "name": "final Boolean isNicknameValid(String nickname)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.isNicknameValid",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-register-controller/is-nickname-valid.html",
+    "searchKeys": [
+      "isNicknameValid",
+      "final Boolean isNicknameValid(String nickname)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.isNicknameValid"
+    ]
+  },
+  {
+    "name": "final Boolean isPasswordCorrect(String email, String password)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.LoginController.isPasswordCorrect",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-login-controller/is-password-correct.html",
+    "searchKeys": [
+      "isPasswordCorrect",
+      "final Boolean isPasswordCorrect(String email, String password)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.LoginController.isPasswordCorrect"
+    ]
+  },
+  {
+    "name": "final Boolean isPasswordValid(String password)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.isPasswordValid",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-register-controller/is-password-valid.html",
+    "searchKeys": [
+      "isPasswordValid",
+      "final Boolean isPasswordValid(String password)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.isPasswordValid"
+    ]
+  },
+  {
+    "name": "final Boolean registerUser(User user)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.registerUser",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-register-controller/register-user.html",
+    "searchKeys": [
+      "registerUser",
+      "final Boolean registerUser(User user)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.registerUser"
+    ]
+  },
+  {
+    "name": "final Boolean removeDislikeFromFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.removeDislikeFromFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/remove-dislike-from-film.html",
+    "searchKeys": [
+      "removeDislikeFromFilm",
+      "final Boolean removeDislikeFromFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.removeDislikeFromFilm"
+    ]
+  },
+  {
+    "name": "final Boolean removeFilmFromUserList(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.removeFilmFromUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/remove-film-from-user-list.html",
+    "searchKeys": [
+      "removeFilmFromUserList",
+      "final Boolean removeFilmFromUserList(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.removeFilmFromUserList"
+    ]
+  },
+  {
+    "name": "final Boolean removeLikeFromFilm(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.removeLikeFromFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/remove-like-from-film.html",
+    "searchKeys": [
+      "removeLikeFromFilm",
+      "final Boolean removeLikeFromFilm(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.removeLikeFromFilm"
+    ]
+  },
+  {
+    "name": "final Boolean userExists(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.userExists",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/user-exists.html",
+    "searchKeys": [
+      "userExists",
+      "final Boolean userExists(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.userExists"
+    ]
+  },
+  {
+    "name": "final Boolean userExists(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.userExists",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-register-controller/user-exists.html",
+    "searchKeys": [
+      "userExists",
+      "final Boolean userExists(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.userExists"
+    ]
+  },
+  {
+    "name": "final DataAccessObject getProductionDatabase()",
+    "description": "eu.bbsapps.forgottenfilmsapi.ApplicationKt.getProductionDatabase",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi/-application-kt/get-production-database.html",
+    "searchKeys": [
+      "getProductionDatabase",
+      "final DataAccessObject getProductionDatabase()",
+      "eu.bbsapps.forgottenfilmsapi.ApplicationKt.getProductionDatabase"
+    ]
+  },
+  {
+    "name": "final DataAccessObject getTestDatabase()",
+    "description": "eu.bbsapps.forgottenfilmsapi.ApplicationKt.getTestDatabase",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi/-application-kt/get-test-database.html",
+    "searchKeys": [
+      "getTestDatabase",
+      "final DataAccessObject getTestDatabase()",
+      "eu.bbsapps.forgottenfilmsapi.ApplicationKt.getTestDatabase"
+    ]
+  },
+  {
+    "name": "final FilmResponse getFilmForUser(String filmId, String userId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getFilmForUser",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/get-film-for-user.html",
+    "searchKeys": [
+      "getFilmForUser",
+      "final FilmResponse getFilmForUser(String filmId, String userId)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getFilmForUser"
+    ]
+  },
+  {
+    "name": "final GenericResponse<Boolean> isAdmin(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.isAdmin",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-admin-module/is-admin.html",
+    "searchKeys": [
+      "isAdmin",
+      "final GenericResponse<Boolean> isAdmin(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.isAdmin"
+    ]
+  },
+  {
+    "name": "final GenericResponse<Boolean> isFilmInUserList(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.isFilmInUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-films-module/is-film-in-user-list.html",
+    "searchKeys": [
+      "isFilmInUserList",
+      "final GenericResponse<Boolean> isFilmInUserList(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.isFilmInUserList"
+    ]
+  },
+  {
+    "name": "final GenericResponse<FilmResponse> getFilmForUser(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getFilmForUser",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-films-module/get-film-for-user.html",
+    "searchKeys": [
+      "getFilmForUser",
+      "final GenericResponse<FilmResponse> getFilmForUser(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getFilmForUser"
+    ]
+  },
+  {
+    "name": "final GenericResponse<Integer> filmDisliked(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.filmDisliked",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-films-module/film-disliked.html",
+    "searchKeys": [
+      "filmDisliked",
+      "final GenericResponse<Integer> filmDisliked(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.filmDisliked"
+    ]
+  },
+  {
+    "name": "final GenericResponse<Integer> filmLiked(String email, String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.filmLiked",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-films-module/film-liked.html",
+    "searchKeys": [
+      "filmLiked",
+      "final GenericResponse<Integer> filmLiked(String email, String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.filmLiked"
+    ]
+  },
+  {
+    "name": "final GenericResponse<Integer> getDislikeCountForFilm(String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getDislikeCountForFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-films-module/get-dislike-count-for-film.html",
+    "searchKeys": [
+      "getDislikeCountForFilm",
+      "final GenericResponse<Integer> getDislikeCountForFilm(String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getDislikeCountForFilm"
+    ]
+  },
+  {
+    "name": "final GenericResponse<Integer> getFilmCount()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.getFilmCount",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-admin-module/get-film-count.html",
+    "searchKeys": [
+      "getFilmCount",
+      "final GenericResponse<Integer> getFilmCount()",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.getFilmCount"
+    ]
+  },
+  {
+    "name": "final GenericResponse<Integer> getLikeCountForFilm(String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getLikeCountForFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-films-module/get-like-count-for-film.html",
+    "searchKeys": [
+      "getLikeCountForFilm",
+      "final GenericResponse<Integer> getLikeCountForFilm(String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getLikeCountForFilm"
+    ]
+  },
+  {
+    "name": "final GenericResponse<Integer> getUserCount()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.getUserCount",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-admin-module/get-user-count.html",
+    "searchKeys": [
+      "getUserCount",
+      "final GenericResponse<Integer> getUserCount()",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.getUserCount"
+    ]
+  },
+  {
+    "name": "final GenericResponse<List<FilmFeedItem>> getUserFilmList(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.getUserFilmList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/get-user-film-list.html",
+    "searchKeys": [
+      "getUserFilmList",
+      "final GenericResponse<List<FilmFeedItem>> getUserFilmList(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.getUserFilmList"
+    ]
+  },
+  {
+    "name": "final GenericResponse<List<FilmFeedItem>> searchFilmByTitle(String filmTitle)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.searchFilmByTitle",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-films-module/search-film-by-title.html",
+    "searchKeys": [
+      "searchFilmByTitle",
+      "final GenericResponse<List<FilmFeedItem>> searchFilmByTitle(String filmTitle)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.searchFilmByTitle"
+    ]
+  },
+  {
+    "name": "final GenericResponse<List<FilmFeedResponse>> getAllFilms()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getAllFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-films-module/get-all-films.html",
+    "searchKeys": [
+      "getAllFilms",
+      "final GenericResponse<List<FilmFeedResponse>> getAllFilms()",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getAllFilms"
+    ]
+  },
+  {
+    "name": "final GenericResponse<List<FilmFeedResponse>> getUserFeed(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getUserFeed",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-films-module/get-user-feed.html",
+    "searchKeys": [
+      "getUserFeed",
+      "final GenericResponse<List<FilmFeedResponse>> getUserFeed(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getUserFeed"
+    ]
+  },
+  {
+    "name": "final GenericResponse<List<GenreWatchTimePair>> getAdminStats()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.getAdminStats",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-admin-module/get-admin-stats.html",
+    "searchKeys": [
+      "getAdminStats",
+      "final GenericResponse<List<GenreWatchTimePair>> getAdminStats()",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.getAdminStats"
+    ]
+  },
+  {
+    "name": "final GenericResponse<List<GenreWatchTimePair>> getWatchTime(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.getWatchTime",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/get-watch-time.html",
+    "searchKeys": [
+      "getWatchTime",
+      "final GenericResponse<List<GenreWatchTimePair>> getWatchTime(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.getWatchTime"
+    ]
+  },
+  {
+    "name": "final GenericResponse<List<String>> getAllGenres()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getAllGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-films-module/get-all-genres.html",
+    "searchKeys": [
+      "getAllGenres",
+      "final GenericResponse<List<String>> getAllGenres()",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule.getAllGenres"
+    ]
+  },
+  {
+    "name": "final GenericResponse<List<String>> getUserGenres(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.getUserGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/get-user-genres.html",
+    "searchKeys": [
+      "getUserGenres",
+      "final GenericResponse<List<String>> getUserGenres(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.getUserGenres"
+    ]
+  },
+  {
+    "name": "final GenericResponse<List<String>> insertFilms(List<Film> films)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.insertFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-admin-module/insert-films.html",
+    "searchKeys": [
+      "insertFilms",
+      "final GenericResponse<List<String>> insertFilms(List<Film> films)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.insertFilms"
+    ]
+  },
+  {
+    "name": "final GenericResponse<List<UserResponse>> getAllUsers()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.getAllUsers",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-admin-module/get-all-users.html",
+    "searchKeys": [
+      "getAllUsers",
+      "final GenericResponse<List<UserResponse>> getAllUsers()",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.getAllUsers"
+    ]
+  },
+  {
+    "name": "final GenericResponse<SimpleResponse> addFilmToUserList(String filmId, String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.addFilmToUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/add-film-to-user-list.html",
+    "searchKeys": [
+      "addFilmToUserList",
+      "final GenericResponse<SimpleResponse> addFilmToUserList(String filmId, String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.addFilmToUserList"
+    ]
+  },
+  {
+    "name": "final GenericResponse<SimpleResponse> addUserWatchTime(GenreWatchTimeRequest genreWatchTimeRequest, String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.addUserWatchTime",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/add-user-watch-time.html",
+    "searchKeys": [
+      "addUserWatchTime",
+      "final GenericResponse<SimpleResponse> addUserWatchTime(GenreWatchTimeRequest genreWatchTimeRequest, String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.addUserWatchTime"
+    ]
+  },
+  {
+    "name": "final GenericResponse<SimpleResponse> changePassword(String email, String newPassword)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.changePassword",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/change-password.html",
+    "searchKeys": [
+      "changePassword",
+      "final GenericResponse<SimpleResponse> changePassword(String email, String newPassword)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.changePassword"
+    ]
+  },
+  {
+    "name": "final GenericResponse<SimpleResponse> forgottenPassword(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.forgottenPassword",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/forgotten-password.html",
+    "searchKeys": [
+      "forgottenPassword",
+      "final GenericResponse<SimpleResponse> forgottenPassword(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.forgottenPassword"
+    ]
+  },
+  {
+    "name": "final GenericResponse<SimpleResponse> getNickname(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.getNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/get-nickname.html",
+    "searchKeys": [
+      "getNickname",
+      "final GenericResponse<SimpleResponse> getNickname(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.getNickname"
+    ]
+  },
+  {
+    "name": "final GenericResponse<SimpleResponse> login(LoginAccountRequest request)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.LoginModule.login",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-login-module/login.html",
+    "searchKeys": [
+      "login",
+      "final GenericResponse<SimpleResponse> login(LoginAccountRequest request)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.LoginModule.login"
+    ]
+  },
+  {
+    "name": "final GenericResponse<SimpleResponse> register(CreateAccountRequest request)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.RegisterModule.register",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-register-module/register.html",
+    "searchKeys": [
+      "register",
+      "final GenericResponse<SimpleResponse> register(CreateAccountRequest request)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.RegisterModule.register"
+    ]
+  },
+  {
+    "name": "final GenericResponse<SimpleResponse> removeFilmFromUserList(String filmId, String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.removeFilmFromUserList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/remove-film-from-user-list.html",
+    "searchKeys": [
+      "removeFilmFromUserList",
+      "final GenericResponse<SimpleResponse> removeFilmFromUserList(String filmId, String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.removeFilmFromUserList"
+    ]
+  },
+  {
+    "name": "final GenericResponse<SimpleResponse> updateNickname(String newNickname, String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.updateNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/update-nickname.html",
+    "searchKeys": [
+      "updateNickname",
+      "final GenericResponse<SimpleResponse> updateNickname(String newNickname, String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.updateNickname"
+    ]
+  },
+  {
+    "name": "final HttpStatusCode getStatusCode()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse.getStatusCode",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules.util/-generic-response/get-status-code.html",
+    "searchKeys": [
+      "getStatusCode",
+      "final HttpStatusCode getStatusCode()",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse.getStatusCode"
+    ]
+  },
+  {
+    "name": "final Integer getAdditionalWatchTimeInSeconds()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest.getAdditionalWatchTimeInSeconds",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.management/-genre-watch-time-request/get-additional-watch-time-in-seconds.html",
+    "searchKeys": [
+      "getAdditionalWatchTimeInSeconds",
+      "final Integer getAdditionalWatchTimeInSeconds()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest.getAdditionalWatchTimeInSeconds"
+    ]
+  },
+  {
+    "name": "final Integer getDislikeCountForFilm(String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getDislikeCountForFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/get-dislike-count-for-film.html",
+    "searchKeys": [
+      "getDislikeCountForFilm",
+      "final Integer getDislikeCountForFilm(String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getDislikeCountForFilm"
+    ]
+  },
+  {
+    "name": "final Integer getDislikes()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getDislikes",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-response/get-dislikes.html",
+    "searchKeys": [
+      "getDislikes",
+      "final Integer getDislikes()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getDislikes"
+    ]
+  },
+  {
+    "name": "final Integer getFilmCount()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.getFilmCount",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-admin-controller/get-film-count.html",
+    "searchKeys": [
+      "getFilmCount",
+      "final Integer getFilmCount()",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.getFilmCount"
+    ]
+  },
+  {
+    "name": "final Integer getIsLiked()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getIsLiked",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-response/get-is-liked.html",
+    "searchKeys": [
+      "getIsLiked",
+      "final Integer getIsLiked()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getIsLiked"
+    ]
+  },
+  {
+    "name": "final Integer getLikeCountForFilm(String filmId)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getLikeCountForFilm",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/get-like-count-for-film.html",
+    "searchKeys": [
+      "getLikeCountForFilm",
+      "final Integer getLikeCountForFilm(String filmId)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getLikeCountForFilm"
+    ]
+  },
+  {
+    "name": "final Integer getLikes()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getLikes",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-response/get-likes.html",
+    "searchKeys": [
+      "getLikes",
+      "final Integer getLikes()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getLikes"
+    ]
+  },
+  {
+    "name": "final Integer getTotalWatchTimeInSeconds()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair.getTotalWatchTimeInSeconds",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-genre-watch-time-pair/get-total-watch-time-in-seconds.html",
+    "searchKeys": [
+      "getTotalWatchTimeInSeconds",
+      "final Integer getTotalWatchTimeInSeconds()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair.getTotalWatchTimeInSeconds"
+    ]
+  },
+  {
+    "name": "final Integer getUserCount()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.getUserCount",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-admin-controller/get-user-count.html",
+    "searchKeys": [
+      "getUserCount",
+      "final Integer getUserCount()",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.getUserCount"
+    ]
+  },
+  {
+    "name": "final List<Film> getFilms()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.admin.AddFilmsRequest.getFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.admin/-add-films-request/get-films.html",
+    "searchKeys": [
+      "getFilms",
+      "final List<Film> getFilms()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.admin.AddFilmsRequest.getFilms"
+    ]
+  },
+  {
+    "name": "final List<FilmFeedItem> getFilms()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmFeedResponse.getFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-feed-response/get-films.html",
+    "searchKeys": [
+      "getFilms",
+      "final List<FilmFeedItem> getFilms()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmFeedResponse.getFilms"
+    ]
+  },
+  {
+    "name": "final List<FilmFeedItem> getUserFilmList(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.getUserFilmList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/get-user-film-list.html",
+    "searchKeys": [
+      "getUserFilmList",
+      "final List<FilmFeedItem> getUserFilmList(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.getUserFilmList"
+    ]
+  },
+  {
+    "name": "final List<FilmFeedItem> searchFilmByTitle(String query)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.searchFilmByTitle",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/search-film-by-title.html",
+    "searchKeys": [
+      "searchFilmByTitle",
+      "final List<FilmFeedItem> searchFilmByTitle(String query)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.searchFilmByTitle"
+    ]
+  },
+  {
+    "name": "final List<FilmFeedResponse> getAllFilms()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getAllFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/get-all-films.html",
+    "searchKeys": [
+      "getAllFilms",
+      "final List<FilmFeedResponse> getAllFilms()",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getAllFilms"
+    ]
+  },
+  {
+    "name": "final List<FilmFeedResponse> getUserFeed(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getUserFeed",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/get-user-feed.html",
+    "searchKeys": [
+      "getUserFeed",
+      "final List<FilmFeedResponse> getUserFeed(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getUserFeed"
+    ]
+  },
+  {
+    "name": "final List<GenreWatchTimePair> getAdminStatistics()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.getAdminStatistics",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-admin-controller/get-admin-statistics.html",
+    "searchKeys": [
+      "getAdminStatistics",
+      "final List<GenreWatchTimePair> getAdminStatistics()",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.getAdminStatistics"
+    ]
+  },
+  {
+    "name": "final List<GenreWatchTimePair> getTotalWatchTimeByGenre()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.User.getTotalWatchTimeByGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-user/get-total-watch-time-by-genre.html",
+    "searchKeys": [
+      "getTotalWatchTimeByGenre",
+      "final List<GenreWatchTimePair> getTotalWatchTimeByGenre()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.User.getTotalWatchTimeByGenre"
+    ]
+  },
+  {
+    "name": "final List<GenreWatchTimePair> getWatchTime(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.getWatchTime",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/get-watch-time.html",
+    "searchKeys": [
+      "getWatchTime",
+      "final List<GenreWatchTimePair> getWatchTime(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.getWatchTime"
+    ]
+  },
+  {
+    "name": "final List<String> getAdminEmails()",
+    "description": "eu.bbsapps.forgottenfilmsapi.routes.FilmAdminRouteKt.getAdminEmails",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.routes/-film-admin-route-kt/get-admin-emails.html",
+    "searchKeys": [
+      "getAdminEmails",
+      "final List<String> getAdminEmails()",
+      "eu.bbsapps.forgottenfilmsapi.routes.FilmAdminRouteKt.getAdminEmails"
+    ]
+  },
+  {
+    "name": "final List<String> getAllGenres()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getAllGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/get-all-genres.html",
+    "searchKeys": [
+      "getAllGenres",
+      "final List<String> getAllGenres()",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController.getAllGenres"
+    ]
+  },
+  {
+    "name": "final List<String> getCategories()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getCategories",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-response/get-categories.html",
+    "searchKeys": [
+      "getCategories",
+      "final List<String> getCategories()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getCategories"
+    ]
+  },
+  {
+    "name": "final List<String> getDislikedBy()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getDislikedBy",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film/get-disliked-by.html",
+    "searchKeys": [
+      "getDislikedBy",
+      "final List<String> getDislikedBy()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getDislikedBy"
+    ]
+  },
+  {
+    "name": "final List<String> getFilmList()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.User.getFilmList",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-user/get-film-list.html",
+    "searchKeys": [
+      "getFilmList",
+      "final List<String> getFilmList()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.User.getFilmList"
+    ]
+  },
+  {
+    "name": "final List<String> getGenres()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film/get-genres.html",
+    "searchKeys": [
+      "getGenres",
+      "final List<String> getGenres()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getGenres"
+    ]
+  },
+  {
+    "name": "final List<String> getGenres()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.User.getGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-user/get-genres.html",
+    "searchKeys": [
+      "getGenres",
+      "final List<String> getGenres()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.User.getGenres"
+    ]
+  },
+  {
+    "name": "final List<String> getGenres()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.UserGenresRequest.getGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.management/-user-genres-request/get-genres.html",
+    "searchKeys": [
+      "getGenres",
+      "final List<String> getGenres()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.UserGenresRequest.getGenres"
+    ]
+  },
+  {
+    "name": "final List<String> getGenres()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest.getGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.register/-create-account-request/get-genres.html",
+    "searchKeys": [
+      "getGenres",
+      "final List<String> getGenres()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest.getGenres"
+    ]
+  },
+  {
+    "name": "final List<String> getImageUrls()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getImageUrls",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film/get-image-urls.html",
+    "searchKeys": [
+      "getImageUrls",
+      "final List<String> getImageUrls()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getImageUrls"
+    ]
+  },
+  {
+    "name": "final List<String> getImageUrls()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getImageUrls",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-response/get-image-urls.html",
+    "searchKeys": [
+      "getImageUrls",
+      "final List<String> getImageUrls()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getImageUrls"
+    ]
+  },
+  {
+    "name": "final List<String> getLikedBy()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getLikedBy",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film/get-liked-by.html",
+    "searchKeys": [
+      "getLikedBy",
+      "final List<String> getLikedBy()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getLikedBy"
+    ]
+  },
+  {
+    "name": "final List<String> getNames()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteFilmRequest.getNames",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.admin/-delete-film-request/get-names.html",
+    "searchKeys": [
+      "getNames",
+      "final List<String> getNames()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteFilmRequest.getNames"
+    ]
+  },
+  {
+    "name": "final List<String> getUserGenres(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.getUserGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/get-user-genres.html",
+    "searchKeys": [
+      "getUserGenres",
+      "final List<String> getUserGenres(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.getUserGenres"
+    ]
+  },
+  {
+    "name": "final List<String> insertFilms(List<Film> films)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.insertFilms",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-admin-controller/insert-films.html",
+    "searchKeys": [
+      "insertFilms",
+      "final List<String> insertFilms(List<Film> films)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.insertFilms"
+    ]
+  },
+  {
+    "name": "final List<UserResponse> getAllUsers()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.getAllUsers",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-admin-controller/get-all-users.html",
+    "searchKeys": [
+      "getAllUsers",
+      "final List<UserResponse> getAllUsers()",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.getAllUsers"
+    ]
+  },
+  {
+    "name": "final String getApiKey()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteFilmRequest.getApiKey",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.admin/-delete-film-request/get-api-key.html",
+    "searchKeys": [
+      "getApiKey",
+      "final String getApiKey()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteFilmRequest.getApiKey"
+    ]
+  },
+  {
+    "name": "final String getApiKey()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteUserRequest.getApiKey",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.admin/-delete-user-request/get-api-key.html",
+    "searchKeys": [
+      "getApiKey",
+      "final String getApiKey()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteUserRequest.getApiKey"
+    ]
+  },
+  {
+    "name": "final String getDescription()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getDescription",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film/get-description.html",
+    "searchKeys": [
+      "getDescription",
+      "final String getDescription()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getDescription"
+    ]
+  },
+  {
+    "name": "final String getDescription()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getDescription",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-response/get-description.html",
+    "searchKeys": [
+      "getDescription",
+      "final String getDescription()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getDescription"
+    ]
+  },
+  {
+    "name": "final String getEmail()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.User.getEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-user/get-email.html",
+    "searchKeys": [
+      "getEmail",
+      "final String getEmail()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.User.getEmail"
+    ]
+  },
+  {
+    "name": "final String getEmail()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.login.LoginAccountRequest.getEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.login/-login-account-request/get-email.html",
+    "searchKeys": [
+      "getEmail",
+      "final String getEmail()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.login.LoginAccountRequest.getEmail"
+    ]
+  },
+  {
+    "name": "final String getEmail()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest.getEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.register/-create-account-request/get-email.html",
+    "searchKeys": [
+      "getEmail",
+      "final String getEmail()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest.getEmail"
+    ]
+  },
+  {
+    "name": "final String getEmail()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.UserResponse.getEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-user-response/get-email.html",
+    "searchKeys": [
+      "getEmail",
+      "final String getEmail()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.UserResponse.getEmail"
+    ]
+  },
+  {
+    "name": "final String getGenre()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest.getGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.management/-genre-watch-time-request/get-genre.html",
+    "searchKeys": [
+      "getGenre",
+      "final String getGenre()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest.getGenre"
+    ]
+  },
+  {
+    "name": "final String getGenre()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair.getGenre",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-genre-watch-time-pair/get-genre.html",
+    "searchKeys": [
+      "getGenre",
+      "final String getGenre()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair.getGenre"
+    ]
+  },
+  {
+    "name": "final String getId()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getId",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film/get-id.html",
+    "searchKeys": [
+      "getId",
+      "final String getId()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getId"
+    ]
+  },
+  {
+    "name": "final String getId()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem.getId",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film-feed-item/get-id.html",
+    "searchKeys": [
+      "getId",
+      "final String getId()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem.getId"
+    ]
+  },
+  {
+    "name": "final String getId()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.User.getId",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-user/get-id.html",
+    "searchKeys": [
+      "getId",
+      "final String getId()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.User.getId"
+    ]
+  },
+  {
+    "name": "final String getId()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getId",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-response/get-id.html",
+    "searchKeys": [
+      "getId",
+      "final String getId()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getId"
+    ]
+  },
+  {
+    "name": "final String getImage()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem.getImage",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film-feed-item/get-image.html",
+    "searchKeys": [
+      "getImage",
+      "final String getImage()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem.getImage"
+    ]
+  },
+  {
+    "name": "final String getMessage()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse.getMessage",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-simple-response/get-message.html",
+    "searchKeys": [
+      "getMessage",
+      "final String getMessage()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse.getMessage"
+    ]
+  },
+  {
+    "name": "final String getName()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film/get-name.html",
+    "searchKeys": [
+      "getName",
+      "final String getName()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getName"
+    ]
+  },
+  {
+    "name": "final String getName()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem.getName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film-feed-item/get-name.html",
+    "searchKeys": [
+      "getName",
+      "final String getName()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem.getName"
+    ]
+  },
+  {
+    "name": "final String getName()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-response/get-name.html",
+    "searchKeys": [
+      "getName",
+      "final String getName()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getName"
+    ]
+  },
+  {
+    "name": "final String getName()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.UserResponse.getName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-user-response/get-name.html",
+    "searchKeys": [
+      "getName",
+      "final String getName()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.UserResponse.getName"
+    ]
+  },
+  {
+    "name": "final String getNickname()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.User.getNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-user/get-nickname.html",
+    "searchKeys": [
+      "getNickname",
+      "final String getNickname()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.User.getNickname"
+    ]
+  },
+  {
+    "name": "final String getNickname()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest.getNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.register/-create-account-request/get-nickname.html",
+    "searchKeys": [
+      "getNickname",
+      "final String getNickname()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest.getNickname"
+    ]
+  },
+  {
+    "name": "final String getNickname(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.getNickname",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/get-nickname.html",
+    "searchKeys": [
+      "getNickname",
+      "final String getNickname(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.getNickname"
+    ]
+  },
+  {
+    "name": "final String getPassword()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.User.getPassword",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-user/get-password.html",
+    "searchKeys": [
+      "getPassword",
+      "final String getPassword()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.User.getPassword"
+    ]
+  },
+  {
+    "name": "final String getPassword()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.login.LoginAccountRequest.getPassword",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.login/-login-account-request/get-password.html",
+    "searchKeys": [
+      "getPassword",
+      "final String getPassword()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.login.LoginAccountRequest.getPassword"
+    ]
+  },
+  {
+    "name": "final String getPassword()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest.getPassword",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.register/-create-account-request/get-password.html",
+    "searchKeys": [
+      "getPassword",
+      "final String getPassword()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest.getPassword"
+    ]
+  },
+  {
+    "name": "final String getTitle()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmFeedResponse.getTitle",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-feed-response/get-title.html",
+    "searchKeys": [
+      "getTitle",
+      "final String getTitle()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmFeedResponse.getTitle"
+    ]
+  },
+  {
+    "name": "final String getUrl()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getUrl",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film/get-url.html",
+    "searchKeys": [
+      "getUrl",
+      "final String getUrl()",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.Film.getUrl"
+    ]
+  },
+  {
+    "name": "final String getUrl()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getUrl",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-response/get-url.html",
+    "searchKeys": [
+      "getUrl",
+      "final String getUrl()",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse.getUrl"
+    ]
+  },
+  {
+    "name": "final String getUserEmail()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteUserRequest.getUserEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.admin/-delete-user-request/get-user-email.html",
+    "searchKeys": [
+      "getUserEmail",
+      "final String getUserEmail()",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteUserRequest.getUserEmail"
+    ]
+  },
+  {
+    "name": "final String hashPassword(String password)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.hashPassword",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-register-controller/hash-password.html",
+    "searchKeys": [
+      "hashPassword",
+      "final String hashPassword(String password)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController.hashPassword"
+    ]
+  },
+  {
+    "name": "final T getData()",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse.getData",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules.util/-generic-response/get-data.html",
+    "searchKeys": [
+      "getData",
+      "final T getData()",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse.getData"
+    ]
+  },
+  {
+    "name": "final Unit addGenresToUser(List<String> genres, String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.addGenresToUser",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/add-genres-to-user.html",
+    "searchKeys": [
+      "addGenresToUser",
+      "final Unit addGenresToUser(List<String> genres, String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.addGenresToUser"
+    ]
+  },
+  {
+    "name": "final Unit addUserGenres(String email, List<String> genres)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.addUserGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/add-user-genres.html",
+    "searchKeys": [
+      "addUserGenres",
+      "final Unit addUserGenres(String email, List<String> genres)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.addUserGenres"
+    ]
+  },
+  {
+    "name": "final Unit deleteAllUserGenres(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.deleteAllUserGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/delete-all-user-genres.html",
+    "searchKeys": [
+      "deleteAllUserGenres",
+      "final Unit deleteAllUserGenres(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.deleteAllUserGenres"
+    ]
+  },
+  {
+    "name": "final Unit deleteFilmWithName(String filmName)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.deleteFilmWithName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-admin-controller/delete-film-with-name.html",
+    "searchKeys": [
+      "deleteFilmWithName",
+      "final Unit deleteFilmWithName(String filmName)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.deleteFilmWithName"
+    ]
+  },
+  {
+    "name": "final Unit deleteFilmWithName(String filmName)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.deleteFilmWithName",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-admin-module/delete-film-with-name.html",
+    "searchKeys": [
+      "deleteFilmWithName",
+      "final Unit deleteFilmWithName(String filmName)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule.deleteFilmWithName"
+    ]
+  },
+  {
+    "name": "final Unit deleteUserWithEmail(String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.deleteUserWithEmail",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-admin-controller/delete-user-with-email.html",
+    "searchKeys": [
+      "deleteUserWithEmail",
+      "final Unit deleteUserWithEmail(String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController.deleteUserWithEmail"
+    ]
+  },
+  {
+    "name": "final Unit setNewPassword(String email, String password)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.setNewPassword",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/set-new-password.html",
+    "searchKeys": [
+      "setNewPassword",
+      "final Unit setNewPassword(String email, String password)",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController.setNewPassword"
+    ]
+  },
+  {
+    "name": "final Unit updateUserGenres(List<String> genres, String email)",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.updateUserGenres",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/update-user-genres.html",
+    "searchKeys": [
+      "updateUserGenres",
+      "final Unit updateUserGenres(List<String> genres, String email)",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule.updateUserGenres"
+    ]
+  },
+  {
+    "name": "final static Boolean checkHashForPassword(String password, String hashWithSalt)",
+    "description": "eu.bbsapps.forgottenfilmsapi.security.PasswordUtilsKt.checkHashForPassword",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.security/-password-utils-kt/check-hash-for-password.html",
+    "searchKeys": [
+      "checkHashForPassword",
+      "final static Boolean checkHashForPassword(String password, String hashWithSalt)",
+      "eu.bbsapps.forgottenfilmsapi.security.PasswordUtilsKt.checkHashForPassword"
+    ]
+  },
+  {
+    "name": "final static String getHashWithSalt(String stringToHash, Integer saltLength)",
+    "description": "eu.bbsapps.forgottenfilmsapi.security.PasswordUtilsKt.getHashWithSalt",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.security/-password-utils-kt/get-hash-with-salt.html",
+    "searchKeys": [
+      "getHashWithSalt",
+      "final static String getHashWithSalt(String stringToHash, Integer saltLength)",
+      "eu.bbsapps.forgottenfilmsapi.security.PasswordUtilsKt.getHashWithSalt"
+    ]
+  },
+  {
+    "name": "final static Unit accountManagementRoute(Route $self)",
+    "description": "eu.bbsapps.forgottenfilmsapi.routes.AccountManagementKt.accountManagementRoute",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.routes/-account-management-kt/account-management-route.html",
+    "searchKeys": [
+      "accountManagementRoute",
+      "final static Unit accountManagementRoute(Route $self)",
+      "eu.bbsapps.forgottenfilmsapi.routes.AccountManagementKt.accountManagementRoute"
+    ]
+  },
+  {
+    "name": "final static Unit filmAdminRoute(Route $self)",
+    "description": "eu.bbsapps.forgottenfilmsapi.routes.FilmAdminRouteKt.filmAdminRoute",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.routes/-film-admin-route-kt/film-admin-route.html",
+    "searchKeys": [
+      "filmAdminRoute",
+      "final static Unit filmAdminRoute(Route $self)",
+      "eu.bbsapps.forgottenfilmsapi.routes.FilmAdminRouteKt.filmAdminRoute"
+    ]
+  },
+  {
+    "name": "final static Unit filmsRoute(Route $self)",
+    "description": "eu.bbsapps.forgottenfilmsapi.routes.FilmsRouteKt.filmsRoute",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.routes/-films-route-kt/films-route.html",
+    "searchKeys": [
+      "filmsRoute",
+      "final static Unit filmsRoute(Route $self)",
+      "eu.bbsapps.forgottenfilmsapi.routes.FilmsRouteKt.filmsRoute"
+    ]
+  },
+  {
+    "name": "final static Unit loginRoute(Route $self)",
+    "description": "eu.bbsapps.forgottenfilmsapi.routes.LoginRouteKt.loginRoute",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.routes/-login-route-kt/login-route.html",
+    "searchKeys": [
+      "loginRoute",
+      "final static Unit loginRoute(Route $self)",
+      "eu.bbsapps.forgottenfilmsapi.routes.LoginRouteKt.loginRoute"
+    ]
+  },
+  {
+    "name": "final static Unit main(Array<String> args)",
+    "description": "eu.bbsapps.forgottenfilmsapi.ApplicationKt.main",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi/-application-kt/main.html",
+    "searchKeys": [
+      "main",
+      "final static Unit main(Array<String> args)",
+      "eu.bbsapps.forgottenfilmsapi.ApplicationKt.main"
+    ]
+  },
+  {
+    "name": "final static Unit module(Application $self, Boolean testing)",
+    "description": "eu.bbsapps.forgottenfilmsapi.ApplicationKt.module",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi/-application-kt/module.html",
+    "searchKeys": [
+      "module",
+      "final static Unit module(Application $self, Boolean testing)",
+      "eu.bbsapps.forgottenfilmsapi.ApplicationKt.module"
+    ]
+  },
+  {
+    "name": "final static Unit registerRoute(Route $self)",
+    "description": "eu.bbsapps.forgottenfilmsapi.routes.RegisterRouteKt.registerRoute",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.routes/-register-route-kt/register-route.html",
+    "searchKeys": [
+      "registerRoute",
+      "final static Unit registerRoute(Route $self)",
+      "eu.bbsapps.forgottenfilmsapi.routes.RegisterRouteKt.registerRoute"
+    ]
+  },
+  {
+    "name": "public class AccountManagementController",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-account-management-controller/index.html",
+    "searchKeys": [
+      "AccountManagementController",
+      "public class AccountManagementController",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AccountManagementController"
+    ]
+  },
+  {
+    "name": "public class AccountManagementModule",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-account-management-module/index.html",
+    "searchKeys": [
+      "AccountManagementModule",
+      "public class AccountManagementModule",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule"
+    ]
+  },
+  {
+    "name": "public class AdminController",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-admin-controller/index.html",
+    "searchKeys": [
+      "AdminController",
+      "public class AdminController",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.AdminController"
+    ]
+  },
+  {
+    "name": "public class AdminModule",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-admin-module/index.html",
+    "searchKeys": [
+      "AdminModule",
+      "public class AdminModule",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.AdminModule"
+    ]
+  },
+  {
+    "name": "public class FilmsController",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-films-controller/index.html",
+    "searchKeys": [
+      "FilmsController",
+      "public class FilmsController",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.FilmsController"
+    ]
+  },
+  {
+    "name": "public class FilmsModule",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-films-module/index.html",
+    "searchKeys": [
+      "FilmsModule",
+      "public class FilmsModule",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.FilmsModule"
+    ]
+  },
+  {
+    "name": "public class LoginController",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.LoginController",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-login-controller/index.html",
+    "searchKeys": [
+      "LoginController",
+      "public class LoginController",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.LoginController"
+    ]
+  },
+  {
+    "name": "public class LoginModule",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.LoginModule",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-login-module/index.html",
+    "searchKeys": [
+      "LoginModule",
+      "public class LoginModule",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.LoginModule"
+    ]
+  },
+  {
+    "name": "public class RegisterController",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.controllers/-register-controller/index.html",
+    "searchKeys": [
+      "RegisterController",
+      "public class RegisterController",
+      "eu.bbsapps.forgottenfilmsapi.data.controllers.RegisterController"
+    ]
+  },
+  {
+    "name": "public class RegisterModule",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.RegisterModule",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules/-register-module/index.html",
+    "searchKeys": [
+      "RegisterModule",
+      "public class RegisterModule",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.RegisterModule"
+    ]
+  },
+  {
+    "name": "public final class AccountManagementKt",
+    "description": "eu.bbsapps.forgottenfilmsapi.routes.AccountManagementKt",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.routes/-account-management-kt/index.html",
+    "searchKeys": [
+      "AccountManagementKt",
+      "public final class AccountManagementKt",
+      "eu.bbsapps.forgottenfilmsapi.routes.AccountManagementKt"
+    ]
+  },
+  {
+    "name": "public final class AddFilmsRequest",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.admin.AddFilmsRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.admin/-add-films-request/index.html",
+    "searchKeys": [
+      "AddFilmsRequest",
+      "public final class AddFilmsRequest",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.admin.AddFilmsRequest"
+    ]
+  },
+  {
+    "name": "public final class ApiKeysKt",
+    "description": "eu.bbsapps.forgottenfilmsapi.security.ApiKeysKt",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.security/-api-keys-kt/index.html",
+    "searchKeys": [
+      "ApiKeysKt",
+      "public final class ApiKeysKt",
+      "eu.bbsapps.forgottenfilmsapi.security.ApiKeysKt"
+    ]
+  },
+  {
+    "name": "public final class ApplicationKt",
+    "description": "eu.bbsapps.forgottenfilmsapi.ApplicationKt",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi/-application-kt/index.html",
+    "searchKeys": [
+      "ApplicationKt",
+      "public final class ApplicationKt",
+      "eu.bbsapps.forgottenfilmsapi.ApplicationKt"
+    ]
+  },
+  {
+    "name": "public final class CreateAccountRequest",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.register/-create-account-request/index.html",
+    "searchKeys": [
+      "CreateAccountRequest",
+      "public final class CreateAccountRequest",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.register.CreateAccountRequest"
+    ]
+  },
+  {
+    "name": "public final class DeleteFilmRequest",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteFilmRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.admin/-delete-film-request/index.html",
+    "searchKeys": [
+      "DeleteFilmRequest",
+      "public final class DeleteFilmRequest",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteFilmRequest"
+    ]
+  },
+  {
+    "name": "public final class DeleteUserRequest",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteUserRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.admin/-delete-user-request/index.html",
+    "searchKeys": [
+      "DeleteUserRequest",
+      "public final class DeleteUserRequest",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.admin.DeleteUserRequest"
+    ]
+  },
+  {
+    "name": "public final class Film",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.Film",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film/index.html",
+    "searchKeys": [
+      "Film",
+      "public final class Film",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.Film"
+    ]
+  },
+  {
+    "name": "public final class FilmAdminRouteKt",
+    "description": "eu.bbsapps.forgottenfilmsapi.routes.FilmAdminRouteKt",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.routes/-film-admin-route-kt/index.html",
+    "searchKeys": [
+      "FilmAdminRouteKt",
+      "public final class FilmAdminRouteKt",
+      "eu.bbsapps.forgottenfilmsapi.routes.FilmAdminRouteKt"
+    ]
+  },
+  {
+    "name": "public final class FilmFeedItem",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-film-feed-item/index.html",
+    "searchKeys": [
+      "FilmFeedItem",
+      "public final class FilmFeedItem",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.FilmFeedItem"
+    ]
+  },
+  {
+    "name": "public final class FilmFeedResponse",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmFeedResponse",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-feed-response/index.html",
+    "searchKeys": [
+      "FilmFeedResponse",
+      "public final class FilmFeedResponse",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmFeedResponse"
+    ]
+  },
+  {
+    "name": "public final class FilmResponse",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-film-response/index.html",
+    "searchKeys": [
+      "FilmResponse",
+      "public final class FilmResponse",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.FilmResponse"
+    ]
+  },
+  {
+    "name": "public final class FilmsRouteKt",
+    "description": "eu.bbsapps.forgottenfilmsapi.routes.FilmsRouteKt",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.routes/-films-route-kt/index.html",
+    "searchKeys": [
+      "FilmsRouteKt",
+      "public final class FilmsRouteKt",
+      "eu.bbsapps.forgottenfilmsapi.routes.FilmsRouteKt"
+    ]
+  },
+  {
+    "name": "public final class GenericResponse<T extends Object>",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.modules.util/-generic-response/index.html",
+    "searchKeys": [
+      "GenericResponse",
+      "public final class GenericResponse<T extends Object>",
+      "eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse"
+    ]
+  },
+  {
+    "name": "public final class GenreWatchTimePair",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-genre-watch-time-pair/index.html",
+    "searchKeys": [
+      "GenreWatchTimePair",
+      "public final class GenreWatchTimePair",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair"
+    ]
+  },
+  {
+    "name": "public final class GenreWatchTimeRequest",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.management/-genre-watch-time-request/index.html",
+    "searchKeys": [
+      "GenreWatchTimeRequest",
+      "public final class GenreWatchTimeRequest",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest"
+    ]
+  },
+  {
+    "name": "public final class KmongoDatabase implements DataAccessObject",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-kmongo-database/index.html",
+    "searchKeys": [
+      "KmongoDatabase",
+      "public final class KmongoDatabase implements DataAccessObject",
+      "eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase"
+    ]
+  },
+  {
+    "name": "public final class LoginAccountRequest",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.login.LoginAccountRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.login/-login-account-request/index.html",
+    "searchKeys": [
+      "LoginAccountRequest",
+      "public final class LoginAccountRequest",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.login.LoginAccountRequest"
+    ]
+  },
+  {
+    "name": "public final class LoginRouteKt",
+    "description": "eu.bbsapps.forgottenfilmsapi.routes.LoginRouteKt",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.routes/-login-route-kt/index.html",
+    "searchKeys": [
+      "LoginRouteKt",
+      "public final class LoginRouteKt",
+      "eu.bbsapps.forgottenfilmsapi.routes.LoginRouteKt"
+    ]
+  },
+  {
+    "name": "public final class PasswordUtilsKt",
+    "description": "eu.bbsapps.forgottenfilmsapi.security.PasswordUtilsKt",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.security/-password-utils-kt/index.html",
+    "searchKeys": [
+      "PasswordUtilsKt",
+      "public final class PasswordUtilsKt",
+      "eu.bbsapps.forgottenfilmsapi.security.PasswordUtilsKt"
+    ]
+  },
+  {
+    "name": "public final class RegisterRouteKt",
+    "description": "eu.bbsapps.forgottenfilmsapi.routes.RegisterRouteKt",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.routes/-register-route-kt/index.html",
+    "searchKeys": [
+      "RegisterRouteKt",
+      "public final class RegisterRouteKt",
+      "eu.bbsapps.forgottenfilmsapi.routes.RegisterRouteKt"
+    ]
+  },
+  {
+    "name": "public final class SimpleResponse",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-simple-response/index.html",
+    "searchKeys": [
+      "SimpleResponse",
+      "public final class SimpleResponse",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse"
+    ]
+  },
+  {
+    "name": "public final class TestDatabase implements DataAccessObject",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.TestDatabase",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-test-database/index.html",
+    "searchKeys": [
+      "TestDatabase",
+      "public final class TestDatabase implements DataAccessObject",
+      "eu.bbsapps.forgottenfilmsapi.data.TestDatabase"
+    ]
+  },
+  {
+    "name": "public final class User",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.collections.User",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.collections/-user/index.html",
+    "searchKeys": [
+      "User",
+      "public final class User",
+      "eu.bbsapps.forgottenfilmsapi.data.collections.User"
+    ]
+  },
+  {
+    "name": "public final class UserGenresRequest",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.UserGenresRequest",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.requests.user.management/-user-genres-request/index.html",
+    "searchKeys": [
+      "UserGenresRequest",
+      "public final class UserGenresRequest",
+      "eu.bbsapps.forgottenfilmsapi.data.requests.user.management.UserGenresRequest"
+    ]
+  },
+  {
+    "name": "public final class UserResponse",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.responses.UserResponse",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data.responses/-user-response/index.html",
+    "searchKeys": [
+      "UserResponse",
+      "public final class UserResponse",
+      "eu.bbsapps.forgottenfilmsapi.data.responses.UserResponse"
+    ]
+  },
+  {
+    "name": "public interface DataAccessObject",
+    "description": "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi.data/-data-access-object/index.html",
+    "searchKeys": [
+      "DataAccessObject",
+      "public interface DataAccessObject",
+      "eu.bbsapps.forgottenfilmsapi.data.DataAccessObject"
+    ]
+  },
+  {
+    "name": "void setDatabase(DataAccessObject database)",
+    "description": "eu.bbsapps.forgottenfilmsapi.ApplicationKt.setDatabase",
+    "location": "forgottenfilms/eu.bbsapps.forgottenfilmsapi/-application-kt/set-database.html",
+    "searchKeys": [
+      "setDatabase",
+      "void setDatabase(DataAccessObject database)",
+      "eu.bbsapps.forgottenfilmsapi.ApplicationKt.setDatabase"
+    ]
+  }
+]

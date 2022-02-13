@@ -1,0 +1,746 @@
+<html>
+<head>
+    <meta charset="UTF-8" content="width=device-width, initial-scale=1" name="viewport">
+    <title>User</title>
+    <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">
+    <script>var pathToRoot = "../../../";</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}
+    </script>
+    <script async="async" src="../../../scripts/sourceset_dependencies.js" type="text/javascript"></script>
+    <link href="../../../styles/style.css" rel="Stylesheet">
+    <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+    <link href="../../../styles/main.css" rel="Stylesheet">
+    <link href="../../../styles/prism.css" rel="Stylesheet">
+    <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+    <script async="async" src="../../../scripts/clipboard.js" type="text/javascript"></script>
+    <script async="async" src="../../../scripts/navigation-loader.js" type="text/javascript"></script>
+    <script async="async" src="../../../scripts/platform-content-handler.js" type="text/javascript"></script>
+    <script defer="defer" src="../../../scripts/main.js" type="text/javascript"></script>
+    <script async="async" src="../../../scripts/prism.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name"><a href="../../../index.html">forgottenfilms</a></div>
+    <div>0.0.1</div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+        <div class="main-content" id="content"
+             pageIds="forgottenfilms::eu.bbsapps.forgottenfilmsapi.data.collections/User///PointingToDeclaration//769193423">
+            <div class="breadcrumbs"><a href="../../../index.html">forgottenfilms</a>/<a href="../index.html">eu.bbsapps.forgottenfilmsapi.data.collections</a>/<a
+                    href="index.html">User</a></div>
+            <div class="cover ">
+                <h1 class="cover"><span><span>User</span></span></h1>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                    <div class="content sourceset-depenent-content" data-active="" data-togglable=":dokkaHtml/main">
+                        <div class="symbol monospace"><span class="token keyword">public </span><span
+                                class="token keyword">final </span><span class="token keyword"></span><span
+                                class="token keyword">class </span><a href="index.html">User</a><span
+                                class="top-right-position"><span class="copy-icon"></span><div
+                                class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                        </div>
+                        <p class="paragraph">A user entity that is saved in the database</p></div>
+                </div>
+            </div>
+            <div class="tabbedcontent">
+                <div class="tabs-section" tabs-section="tabs-section">
+                    <button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button>
+                    <button class="section-tab" data-togglable="Functions">Functions</button>
+                    <button class="section-tab" data-togglable="Properties">Properties</button>
+                    <button class="section-tab" data-togglable="Parameters">Parameters</button>
+                </div>
+                <div class="tabs-section-body">
+                    <h2 class="">Parameters</h2>
+                    <div data-togglable="Parameters">
+                        <div class="platform-hinted WithExtraAttributes" data-platform-hinted="data-platform-hinted"
+                             data-togglable="Parameters">
+                            <div class="content sourceset-depenent-content" data-active=""
+                                 data-togglable=":dokkaHtml/main">
+                                <div data-togglable="Parameters">
+                                    <div class="table" data-togglable="Parameters">
+                                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                                             data-filterable-set=":dokkaHtml/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><span><span>email</span></span></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">user's
+                                                            email</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                                             data-filterable-set=":dokkaHtml/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><span><span>password</span></span></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">user's
+                                                            password</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                                             data-filterable-set=":dokkaHtml/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><span><span>nickname</span></span></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">user's
+                                                            nickname</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                                             data-filterable-set=":dokkaHtml/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><span><span>genres</span></span></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">a list of
+                                                            user's favourite genres</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                                             data-filterable-set=":dokkaHtml/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><span>total</span><wbr></wbr><span>Watch</span><wbr></wbr><span>Time</span><wbr></wbr><span>By</span><wbr></wbr><span><span>Genre</span></span></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">a list of
+                                                            <a href="../../eu.bbsapps.forgottenfilmsapi.data.responses/-genre-watch-time-pair/index.html">GenreWatchTimePair</a>
+                                                            that contains the genre and its watch time in SECONDS</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                                             data-filterable-set=":dokkaHtml/main">
+                                            <div class="main-subrow keyValue WithExtraAttributes">
+                                                <div class=""><span class="inline-flex"><div><span>film</span><wbr></wbr><span><span>List</span></span></div></span>
+                                                </div>
+                                                <div>
+                                                    <div class="title">
+                                                        <div data-togglable="Parameters"><p class="paragraph">user's
+                                                            watch later list</p></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="tabbedcontent">Constructors</h2>
+                    <div class="table" data-togglable="Constructors"><a anchor-label="User"
+                                                                        data-filterable-set=":dokkaHtml/main"
+                                                                        data-name="1817685815%2FConstructors%2F769193423"
+                                                                        id="1817685815%2FConstructors%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue TabbedContent">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="-user.html"><span><span>User</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1817685815%2FConstructors%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main">
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword"></span><a href="index.html">User</a> <a
+                                                        href="-user.html"><span
+                                                        class="token function">User</span></a><span
+                                                        class="token punctuation">(</span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> email<span
+                                                        class="token punctuation">, </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> password<span
+                                                        class="token punctuation">, </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> nickname<span
+                                                        class="token punctuation">, </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a><span
+                                                        class="token operator">&gt;</span> genres<span
+                                                        class="token punctuation">, </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="../../eu.bbsapps.forgottenfilmsapi.data.responses/-genre-watch-time-pair/index.html">GenreWatchTimePair</a><span
+                                                        class="token operator">&gt;</span> totalWatchTimeByGenre<span
+                                                        class="token punctuation">, </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a><span
+                                                        class="token operator">&gt;</span> filmList<span
+                                                        class="token punctuation">, </span><span><span
+                                                        class="token annotation">@</span><span
+                                                        data-unresolved-link="org.bson.codecs.pojo.annotations/BsonId///PointingToDeclaration/"><span
+                                                        class="token annotation">BsonId</span></span><span
+                                                        class="token punctuation">(</span><span
+                                                        class="token punctuation">)</span> </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> id<span
+                                                        class="token punctuation">)</span><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="">Functions</h2>
+                    <div class="table" data-togglable="Functions"><a anchor-label="getEmail"
+                                                                     data-filterable-set=":dokkaHtml/main"
+                                                                     data-name="824766497%2FFunctions%2F769193423"
+                                                                     id="824766497%2FFunctions%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="get-email.html"><span>get</span><wbr></wbr><span><span>Email</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="824766497%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main">
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> <a
+                                                        href="get-email.html"><span
+                                                        class="token function">getEmail</span></a><span
+                                                        class="token punctuation">(</span><span
+                                                        class="token punctuation">)</span><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="getFilmList" data-filterable-set=":dokkaHtml/main"
+                           data-name="-1626474181%2FFunctions%2F769193423" id="-1626474181%2FFunctions%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="get-film-list.html"><span>get</span><wbr></wbr><span>Film</span><wbr></wbr><span><span>List</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1626474181%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main">
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a><span
+                                                        class="token operator">&gt;</span> <a href="get-film-list.html"><span
+                                                        class="token function">getFilmList</span></a><span
+                                                        class="token punctuation">(</span><span
+                                                        class="token punctuation">)</span><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="getGenres" data-filterable-set=":dokkaHtml/main"
+                           data-name="1961678317%2FFunctions%2F769193423" id="1961678317%2FFunctions%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="get-genres.html"><span>get</span><wbr></wbr><span><span>Genres</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1961678317%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main">
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a><span
+                                                        class="token operator">&gt;</span> <a
+                                                        href="get-genres.html"><span
+                                                        class="token function">getGenres</span></a><span
+                                                        class="token punctuation">(</span><span
+                                                        class="token punctuation">)</span><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="getId" data-filterable-set=":dokkaHtml/main"
+                           data-name="-974177662%2FFunctions%2F769193423" id="-974177662%2FFunctions%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="get-id.html"><span>get</span><wbr></wbr><span><span>Id</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-974177662%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main">
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> <a
+                                                        href="get-id.html"><span class="token function">getId</span></a><span
+                                                        class="token punctuation">(</span><span
+                                                        class="token punctuation">)</span><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="getNickname" data-filterable-set=":dokkaHtml/main"
+                           data-name="1387614863%2FFunctions%2F769193423" id="1387614863%2FFunctions%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="get-nickname.html"><span>get</span><wbr></wbr><span><span>Nickname</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1387614863%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main">
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> <a
+                                                        href="get-nickname.html"><span class="token function">getNickname</span></a><span
+                                                        class="token punctuation">(</span><span
+                                                        class="token punctuation">)</span><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="getPassword" data-filterable-set=":dokkaHtml/main"
+                           data-name="483269890%2FFunctions%2F769193423" id="483269890%2FFunctions%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="get-password.html"><span>get</span><wbr></wbr><span><span>Password</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="483269890%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main">
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> <a
+                                                        href="get-password.html"><span class="token function">getPassword</span></a><span
+                                                        class="token punctuation">(</span><span
+                                                        class="token punctuation">)</span><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="getTotalWatchTimeByGenre" data-filterable-set=":dokkaHtml/main"
+                           data-name="1985436617%2FFunctions%2F769193423" id="1985436617%2FFunctions%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="get-total-watch-time-by-genre.html"><span>get</span><wbr></wbr><span>Total</span><wbr></wbr><span>Watch</span><wbr></wbr><span>Time</span><wbr></wbr><span>By</span><wbr></wbr><span><span>Genre</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1985436617%2FFunctions%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main">
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="../../eu.bbsapps.forgottenfilmsapi.data.responses/-genre-watch-time-pair/index.html">GenreWatchTimePair</a><span
+                                                        class="token operator">&gt;</span> <a
+                                                        href="get-total-watch-time-by-genre.html"><span
+                                                        class="token function">getTotalWatchTimeByGenre</span></a><span
+                                                        class="token punctuation">(</span><span
+                                                        class="token punctuation">)</span><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="">Properties</h2>
+                    <div class="table" data-togglable="Properties"><a anchor-label="email"
+                                                                      data-filterable-set=":dokkaHtml/main"
+                                                                      data-name="1753099351%2FProperties%2F769193423"
+                                                                      id="1753099351%2FProperties%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="index.html#1753099351%2FProperties%2F769193423">email</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1753099351%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main"><a anchor-label="email"
+                                                                                     data-filterable-set=":dokkaHtml/main"
+                                                                                     data-name="1753099351%2FProperties%2F769193423"
+                                                                                     id="1753099351%2FProperties%2F769193423"></a>
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">private </span><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> <a
+                                                        href="index.html#1753099351%2FProperties%2F769193423">email</a><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="filmList" data-filterable-set=":dokkaHtml/main"
+                           data-name="-956839611%2FProperties%2F769193423" id="-956839611%2FProperties%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="index.html#-956839611%2FProperties%2F769193423">filmList</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-956839611%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main"><a anchor-label="filmList"
+                                                                                     data-filterable-set=":dokkaHtml/main"
+                                                                                     data-name="-956839611%2FProperties%2F769193423"
+                                                                                     id="-956839611%2FProperties%2F769193423"></a>
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">private </span><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a><span
+                                                        class="token operator">&gt;</span> <a
+                                                        href="index.html#-956839611%2FProperties%2F769193423">filmList</a><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="genres" data-filterable-set=":dokkaHtml/main"
+                           data-name="675225719%2FProperties%2F769193423" id="675225719%2FProperties%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="index.html#675225719%2FProperties%2F769193423">genres</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="675225719%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main"><a anchor-label="genres"
+                                                                                     data-filterable-set=":dokkaHtml/main"
+                                                                                     data-name="675225719%2FProperties%2F769193423"
+                                                                                     id="675225719%2FProperties%2F769193423"></a>
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">private </span><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a><span
+                                                        class="token operator">&gt;</span> <a
+                                                        href="index.html#675225719%2FProperties%2F769193423">genres</a><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="id" data-filterable-set=":dokkaHtml/main"
+                           data-name="1431329292%2FProperties%2F769193423" id="1431329292%2FProperties%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="index.html#1431329292%2FProperties%2F769193423">id</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1431329292%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main"><a anchor-label="id"
+                                                                                     data-filterable-set=":dokkaHtml/main"
+                                                                                     data-name="1431329292%2FProperties%2F769193423"
+                                                                                     id="1431329292%2FProperties%2F769193423"></a>
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">private </span><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> <a
+                                                        href="index.html#1431329292%2FProperties%2F769193423">id</a><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="nickname" data-filterable-set=":dokkaHtml/main"
+                           data-name="2057249433%2FProperties%2F769193423" id="2057249433%2FProperties%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="index.html#2057249433%2FProperties%2F769193423">nickname</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2057249433%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main"><a anchor-label="nickname"
+                                                                                     data-filterable-set=":dokkaHtml/main"
+                                                                                     data-name="2057249433%2FProperties%2F769193423"
+                                                                                     id="2057249433%2FProperties%2F769193423"></a>
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">private </span><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> <a
+                                                        href="index.html#2057249433%2FProperties%2F769193423">nickname</a><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="password" data-filterable-set=":dokkaHtml/main"
+                           data-name="1152904460%2FProperties%2F769193423" id="1152904460%2FProperties%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="index.html#1152904460%2FProperties%2F769193423">password</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1152904460%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main"><a anchor-label="password"
+                                                                                     data-filterable-set=":dokkaHtml/main"
+                                                                                     data-name="1152904460%2FProperties%2F769193423"
+                                                                                     id="1152904460%2FProperties%2F769193423"></a>
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">private </span><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html">String</a> <a
+                                                        href="index.html#1152904460%2FProperties%2F769193423">password</a><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a anchor-label="totalWatchTimeByGenre" data-filterable-set=":dokkaHtml/main"
+                           data-name="931752959%2FProperties%2F769193423" id="931752959%2FProperties%2F769193423"></a>
+                        <div class="table-row" data-filterable-current=":dokkaHtml/main"
+                             data-filterable-set=":dokkaHtml/main">
+                            <div class="main-subrow keyValue ">
+                                <div class=""><span class="inline-flex">
+                        <div><a href="index.html#931752959%2FProperties%2F769193423">totalWatchTimeByGenre</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="931752959%2FProperties%2F769193423"></span>
+                          <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                        </span></span></div>
+                                <div>
+                                    <div class="title">
+                                        <div class="platform-hinted " data-platform-hinted="data-platform-hinted"
+                                             data-togglable="Properties">
+                                            <div class="content sourceset-depenent-content" data-active=""
+                                                 data-togglable=":dokkaHtml/main"><a
+                                                    anchor-label="totalWatchTimeByGenre"
+                                                    data-filterable-set=":dokkaHtml/main"
+                                                    data-name="931752959%2FProperties%2F769193423"
+                                                    id="931752959%2FProperties%2F769193423"></a>
+                                                <div class="symbol monospace block"><span
+                                                        class="token keyword">private </span><span
+                                                        class="token keyword">final </span><span
+                                                        class="token keyword"></span><a
+                                                        href="https://docs.oracle.com/javase/8/docs/api/java/util/List.html">List</a><span
+                                                        class="token operator">&lt;</span><span
+                                                        class="token keyword"></span><a
+                                                        href="../../eu.bbsapps.forgottenfilmsapi.data.responses/-genre-watch-time-pair/index.html">GenreWatchTimePair</a><span
+                                                        class="token operator">&gt;</span> <a
+                                                        href="index.html#931752959%2FProperties%2F769193423">totalWatchTimeByGenre</a><span
+                                                        class="top-right-position"><span class="copy-icon"></span><div
+                                                        class="copy-popup-wrapper popup-to-left"><span
+                                                        class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer"><span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span
+                class="pull-right"><span>Generated by </span><a
+                href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

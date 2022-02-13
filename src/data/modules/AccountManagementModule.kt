@@ -117,7 +117,7 @@ object AccountManagementModule {
     }
 
     /**
-     *
+     * Checks if user with the email exists, generates a new password and sends and email to the user
      */
     suspend fun forgottenPassword(email: String): GenericResponse<SimpleResponse> {
         if (!AccountManagementController.userExists(email)) {
@@ -155,14 +155,27 @@ object AccountManagementModule {
         )
     }
 
+    /**
+     * Check if the new password is valid and saves it
+     */
     suspend fun changePassword(email: String, newPassword: String): GenericResponse<SimpleResponse> {
         if (!AccountManagementController.userExists(email)) {
             return GenericResponse(HttpStatusCode.OK, SimpleResponse(false, "Потребител с този имейл не съществува"))
         }
 
+        if (!RegisterController.isPasswordValid(newPassword)) {
+
+            return GenericResponse(
+                HttpStatusCode.UnprocessableEntity,
+                SimpleResponse(
+                    false,
+                    "Паролата трябва да бъде най-малко 8 знака и трябва да съдържа малки и главни букви, цифри и специални символи (@#\$%^&amp;+=_)"
+                )
+            )
+        }
+
         val hashedPassword = RegisterController.hashPassword(newPassword)
         AccountManagementController.setNewPassword(email, hashedPassword)
-
         return GenericResponse(
             HttpStatusCode.OK,
             SimpleResponse(true, "Паролата е сменена, моля излезте и влезте в систамата")
