@@ -352,7 +352,7 @@ Responses:
     "dislikes": 0,
     "isLiked": 0,
     "url": "testurl",
-    "id": "6207e5e2f6dc4110af492598"
+    "id": "id"
 }
 ```
 
