@@ -9,6 +9,9 @@ Forgotten Films REST API is a Ktor Rest API server for watching selected films f
 - Framework: Ktor (https://ktor.io/)
 - Database: MongoDb
 
+#### Detailed documentation
+[Documentation](https://htmlpreview.github.io/?https://github.com/Bogomil-Stoyanov/ForgottenFilmDocumentation/blob/master/documentation/index.html)
+
 ## Features
 
 - Register a user with email, password, nickname and favourite film genres
