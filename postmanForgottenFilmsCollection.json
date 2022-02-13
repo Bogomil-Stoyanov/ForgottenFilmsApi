@@ -1,0 +1,1970 @@
+{
+	"info": {
+		"_postman_id": "5f1f9de1-47b0-44f6-b2ca-ff7bcf58333e",
+		"name": "Forgotten Films API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"item": [
+						{
+							"name": "Register Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"const response = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Message should be 'Успешно създаден профил'\", () => {\r",
+											"    pm.expect(response.message).to.eql(\"Успешно създаден профил\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Successful should be true\", () => {\r",
+											"    pm.expect(response.successful).to.true;\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"test@example.com\",\r\n    \"password\": \"koDJ_ob34nuHYKs\",\r\n    \"nickname\": \"{{$randomUserName}}\",\r\n    \"genres\": [\"Драма\",\"Комедия\",\"Ужаси\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/register?apiKey={{registerApiKey}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"register"
+									],
+									"query": [
+										{
+											"key": "apiKey",
+											"value": "{{registerApiKey}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register Bad Password",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", () => {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});\r",
+											"\r",
+											"const response = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Message should be 'Паролата трябва да бъде най-малко 8 знака и трябва да съдържа малки и главни букви, цифри и специални символи (@#$%^&amp;+=_)'\", () => {\r",
+											"    pm.expect(response.message).to.eql(\"Паролата трябва да бъде най-малко 8 знака и трябва да съдържа малки и главни букви, цифри и специални символи (@#$%^&amp;+=_)\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Successful should be false\", () => {\r",
+											"    pm.expect(response.successful).to.false;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"{{$randomEmail}}\",\r\n    \"password\": \"badpass\",\r\n    \"nickname\": \"{{$randomUserName}}\",\r\n    \"genres\": [\"Драма\",\"Комедия\",\"Ужаси\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/register?apiKey={{registerApiKey}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"register"
+									],
+									"query": [
+										{
+											"key": "apiKey",
+											"value": "{{registerApiKey}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register Bad Email",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 422\", () => {\r",
+											"    pm.response.to.have.status(422);\r",
+											"});\r",
+											"\r",
+											"const response = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Message should be 'Невалиден имейл'\", () => {\r",
+											"    pm.expect(response.message).to.eql(\"Невалиден имейл\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Successful should be false\", () => {\r",
+											"    pm.expect(response.successful).to.false;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"email\": \"email\",\r\n    \"password\": \"koDJ_ob34nuHYKs\",\r\n    \"nickname\": \"{{$randomUserName}}\",\r\n    \"genres\": [\"Драма\",\"Комедия\",\"Ужаси\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/register?apiKey={{registerApiKey}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"register"
+									],
+									"query": [
+										{
+											"key": "apiKey",
+											"value": "{{registerApiKey}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"item": [
+						{
+							"name": "Login Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"const response = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Message should be 'Влязохте в системата'\", () => {\r",
+											"    pm.expect(response.message).to.eql(\"Влязохте в системата\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"email\":\"test@example.com\",\r\n   \"password\":\"koDJ_ob34nuHYKs\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/login?apiKey={{loginApiKey}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"login"
+									],
+									"query": [
+										{
+											"key": "apiKey",
+											"value": "{{loginApiKey}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Login  NOT Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Status code is 200\", () => {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											"const response = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Message should be 'Грешен имейл или парола'\", () => {\r",
+											"    pm.expect(response.message).to.eql(\"Грешен имейл или парола\");\r",
+											"});\r",
+											"\r",
+											"pm.test(\"Successful should be false\", () => {\r",
+											"    pm.expect(response.successful).to.false;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"email\":\"test@mail.com\",\r\n   \"password\":\"koDJ_ob34nuHYKs\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/v1/login?apiKey={{loginApiKey}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"v1",
+										"login"
+									],
+									"query": [
+										{
+											"key": "apiKey",
+											"value": "{{loginApiKey}}"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Film Admin",
+			"item": [
+				{
+					"name": "Is Admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"pm.test(\"Is Admin\", () => {\r",
+									"    pm.expect(response).to.eql(true);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/isAdmin?apiKey={{adminApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"isAdmin"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{adminApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Users",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"pm.test(\"List length > 1\", () => {\r",
+									"    pm.expect(response).length.greaterThan(1);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/users?apiKey={{adminApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"users"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{adminApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Film",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 201\", () => {\r",
+									"    pm.response.to.have.status(201);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"pm.collectionVariables.set(\"movieID\", response[0]);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"films\": [\r\n        {\r\n            \"name\": \"Test movie\",\r\n            \"imageUrls\": [\r\n                \"url1\",\r\n                \"url2\"\r\n            ],\r\n            \"description\": \"Test desciption\",\r\n            \"genres\": [\r\n                \"Test\"\r\n            ],\r\n            \"likedBy\": [],\r\n            \"dislikedBy\": [],\r\n            \"url\": \"testurl\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/films?apiKey={{adminApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"films"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{adminApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Films Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"pm.test(\"Response is greater than 0\", function () {\r",
+									"     pm.expect(response).greaterThan(0);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/filmsCount?apiKey={{adminApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"filmsCount"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{adminApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Users Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"pm.test(\"Response is greater than 0\", function () {\r",
+									"     pm.expect(response).greaterThan(0);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/usersCount?apiKey={{adminApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"usersCount"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{adminApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stats",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"postman.setNextRequest(\"Change Nickname\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/stats?apiKey={{adminApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{adminApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", function () {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/user?email=test@example.com&apiKey={{adminApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"user"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "test@example.com"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{adminApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Film",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", () => {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									"\r",
+									"postman.setNextRequest(null);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/films?filmName=Test movie&apiKey={{adminApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"films"
+							],
+							"query": [
+								{
+									"key": "filmName",
+									"value": "Test movie"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{adminApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "Admin_forgotten_films_123",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "admin_forgotten_films@dir.bg",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Account Managment",
+			"item": [
+				{
+					"name": "Change Nickname",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Message should be 'Успешно смени името си'\", () => {\r",
+									"    pm.expect(response.message).to.eql(\"Успешно смени името си\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Successful should be true\", () => {\r",
+									"    pm.expect(response.successful).to.true;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/nickname?newNickname=Example Nickname&apiKey={{accountManagementApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"nickname"
+							],
+							"query": [
+								{
+									"key": "newNickname",
+									"value": "Example Nickname"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Genres",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 204\", () => {\r",
+									"    pm.response.to.have.status(204);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"genres\": [\r\n        \"Анимация\",\r\n        \"Романс\",\r\n        \"Биографичен\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/genres?apiKey={{accountManagementApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"genres"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Genres",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Correct Interests\", () => {\r",
+									"    pm.expect(response[0]).to.eql(\"Анимация\");\r",
+									"    pm.expect(response[1]).to.eql(\"Романс\");\r",
+									"    pm.expect(response[2]).to.eql(\"Биографичен\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/userGenres?apiKey={{accountManagementApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"userGenres"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Film Not in Film List Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Message should be 'Филмът не е в списъка ти'\", () => {\r",
+									"    pm.expect(response.message).to.eql(\"Филмът не е в списъка ти\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Successful should be false\", () => {\r",
+									"    pm.expect(response.successful).to.false;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/filmList?id={{movieID}}&apiKey={{accountManagementApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"filmList"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{movieID}}"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add New to Film List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Message should be 'Филмът е добавен към списъка ти'\", () => {\r",
+									"    pm.expect(response.message).to.eql(\"Филмът е добавен към списъка ти\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Successful should be true\", () => {\r",
+									"    pm.expect(response.successful).to.true;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/filmList?id={{movieID}}&apiKey={{accountManagementApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"filmList"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{movieID}}"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Watch Time Duration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Message should be 'Успешно обновено време за гледане'\", () => {\r",
+									"    pm.expect(response.message).to.eql(\"Успешно обновено време за гледане\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Successful should be true\", () => {\r",
+									"    pm.expect(response.successful).to.true;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"genre\": \"Анимация\",\r\n    \"additionalWatchTimeInSeconds\": \"{{$randomInt}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/watchTime?apiKey={{accountManagementApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"watchTime"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Watch Time Duration",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"// const response = pm.response.json();\r",
+									"\r",
+									"// pm.test(\"Message should be 'Успешно обновено време за гледане'\", () => {\r",
+									"//     pm.expect(response.message).to.eql(\"Успешно обновено време за гледане\");\r",
+									"// });\r",
+									"\r",
+									"// pm.test(\"Successful should be true\", () => {\r",
+									"//     pm.expect(response.successful).to.true;\r",
+									"// });"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/watchTime?apiKey={{accountManagementApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"watchTime"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Film from Film List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Message should be 'Филмът е премахнат от списъка ти'\", () => {\r",
+									"    pm.expect(response.message).to.eql(\"Филмът е премахнат от списъка ти\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Successful should be true\", () => {\r",
+									"    pm.expect(response.successful).to.true;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v1/filmList?id={{movieID}}&apiKey={{accountManagementApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"filmList"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{movieID}}"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Nickname",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", () => {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Message should be 'Example Nickname'\", () => {\r",
+									"    pm.expect(response.message).to.eql(\"Example Nickname\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Successful should be true\", () => {\r",
+									"    pm.expect(response.successful).to.true;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/nickname?apiKey={{accountManagementApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"nickname"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Is Admin Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"pm.test(\"Not Admin\", () => {\r",
+									"    pm.expect(response).to.eql(false);\r",
+									"});\r",
+									"\r",
+									"postman.setNextRequest(\"Film Liked\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/isAdmin?apiKey={{accountManagementApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"isAdmin"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Message should be 'Паролата е сменена, моля излезте и влезте в систамата'\", () => {\r",
+									"    pm.expect(response.message).to.eql(\"Паролата е сменена, моля излезте и влезте в систамата\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/changePassword?apiKey={{accountManagementApiKey}}&password=Valid_password_123",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"changePassword"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								},
+								{
+									"key": "password",
+									"value": "Valid_password_123"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forgotten Password",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Message should be 'Изпратен е имейл на test@example.com, съдържащ инструкции са възстановяване на акаунта'\", () => {\r",
+									"    pm.expect(response.message).to.eql(\"Изпратен е имейл на test@example.com, съдържащ инструкции са възстановяване на акаунта\");\r",
+									"});\r",
+									"\r",
+									"postman.setNextRequest(\"Delete User\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/forgottenPassword?apiKey={{accountManagementApiKey}}&email=test@example.com",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"forgottenPassword"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{accountManagementApiKey}}"
+								},
+								{
+									"key": "email",
+									"value": "test@example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "koDJ_ob34nuHYKs",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "test@example.com",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Films",
+			"item": [
+				{
+					"name": "Film Liked",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Response is 1\", function () {\r",
+									"     pm.expect(response).to.eql(1);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/filmLike?id={{movieID}}&apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"filmLike"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{movieID}}"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Film Like Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Likes is 1\", function () {\r",
+									"     pm.expect(response).to.eql(1);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/likes?id={{movieID}}&apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"likes"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{movieID}}"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Film Like Removed",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Response is 0\", function () {\r",
+									"     pm.expect(response).to.eql(0);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/filmLike?id={{movieID}}&apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"filmLike"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{movieID}}"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Film Dislike",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Response is -1\", function () {\r",
+									"     pm.expect(response).to.eql(-1);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/filmDislike?id={{movieID}}&apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"filmDislike"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{movieID}}"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Film Disike Count",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Dislikes is 1\", function () {\r",
+									"     pm.expect(response).to.eql(1);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/dislikes?id={{movieID}}&apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"dislikes"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{movieID}}"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Film Dislike Removed",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Response is 0\", function () {\r",
+									"     pm.expect(response).to.eql(0);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/filmDislike?id={{movieID}}&apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"filmDislike"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{movieID}}"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Film",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Name is 'Test movie'\", function () {\r",
+									"     pm.expect(response.name).to.eql(\"Test movie\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/film?id={{movieID}}&apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"film"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{movieID}}"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Feed",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/feed?apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"feed"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Films",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Name is 'Test movie'\", function () {\r",
+									"     pm.expect(response[0].name).to.eql(\"Test movie\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/search?query=Test movie&apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"search"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "Test movie"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Film not in List",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"const response = pm.response.json();\r",
+									"\r",
+									"pm.test(\"Movie not in list\", function () {\r",
+									"     pm.expect(response).to.be.false;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/filmInList?id={{movieID}}&apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"filmInList"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "{{movieID}}"
+								},
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Genres",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/genres?apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"genres"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Films",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"postman.setNextRequest(\"Change Password\")"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/v1/films?apiKey={{movieApiKey}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v1",
+								"films"
+							],
+							"query": [
+								{
+									"key": "apiKey",
+									"value": "{{movieApiKey}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "basic",
+				"basic": [
+					{
+						"key": "password",
+						"value": "koDJ_ob34nuHYKs",
+						"type": "string"
+					},
+					{
+						"key": "username",
+						"value": "test@example.com",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:8081"
+		},
+		{
+			"key": "movieID",
+			"value": ""
+		},
+		{
+			"key": "adminApiKey",
+			"value": "7a8388ad-eafd-4517-ad47-626de6499fce"
+		},
+		{
+			"key": "registerApiKey",
+			"value": "f8c4a066-5837-416e-886b-ca0b2beac190"
+		},
+		{
+			"key": "loginApiKey",
+			"value": "04eed1b4-8a45-4c7c-b0da-51acb192bb10",
+			"type": "string"
+		},
+		{
+			"key": "accountManagementApiKey",
+			"value": "d0a43657-7a22-43ee-87b3-474ee6c41497",
+			"type": "string"
+		},
+		{
+			"key": "movieApiKey",
+			"value": "6ad31ae3-34be-4481-9e43-27461b8adfb8",
+			"type": "string"
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://157.230.22.117:8081",
+			"type": "string"
+		}
+	]
+}
