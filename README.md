@@ -1,7 +1,10 @@
 # Forgotten Films REST API Documentation
 
-A Ktor Rest API server for watching selected films from the Public Domain
-Tech stack:
+## Overview
+Forgotten Films REST API is a Ktor Rest API server for watching selected films from the Public Domain. It provied everything that you will need to immerse the user in the world of classic films.
+**Get the Android client application here:** [Forgotten Films](http://bbsapps.eu/forgottenfilms/forgottenfilms.html)
+
+#### Tech stack:
 - Language: Kotlin
 - Framework: Ktor (https://ktor.io/)
 - Database: MongoDb
@@ -10,9 +13,10 @@ Tech stack:
 
 - Register a user with email, password, nickname and favourite film genres
 - Login with email and password
+- Forgotten password and change password
 - Get recommended films to watch depending on your favourite genres
 - Search, watch, like, dislike and share films
-- Watch time statistics
+- Watch time statistics - collects user activities in order to provide a great experience and recommend films.
 
 ## Libraries
 
@@ -45,6 +49,8 @@ Also there are automated tests for the server with Postman (https://www.postman.
 
 ![Server test](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/blob/master/architecture/newManTestResults.png)
 
+## Security
+Top most priority for any project is the security. The server is protected agains various attacks. The database is protected from NoSQL Injection attacks, because KMongo is used in the project, which is an extension over the MongoDB Java Driver. This tool uses BSON (Binary JSON) for queries and documents. When a given request is sent it is in String format and is passed directly to as a query, without parsing. This way all kind of NoSQL Innjection attacks are avoided. There is DDoS protection. Each request to the server has `apiKey` attached, which is a secret and unique for every request. Each request has to be authenicated with Basic Auth. If any of these parameters is unauthentic or broken the request is rejected. All traffic is HTTPS encrypted. This way attacks such as Man-In-The-Middle (MITM) are prevented. All sensitive user data are hashed with SHA256 and salted.
 ## Routes
 
 The API supports versioning. The current version is `v1`. 
