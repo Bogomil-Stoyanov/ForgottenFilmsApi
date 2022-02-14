@@ -1,14 +1,14 @@
 # Forgotten Films REST API Documentation
 
 #### Contents
-* [Overview](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/edit/master/README.md#overview)
-* [Features](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/edit/master/README.md#features)
-* [Libraries](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/edit/master/README.md#libraries)
-* [Architecture](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/edit/master/README.md#architecture)
-* [Tests](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/edit/master/README.md#tests)
-* [Security](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/edit/master/README.md#security)
-* [Routes](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/edit/master/README.md#routes)
-* [Installation](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/edit/master/README.md#installation)
+* [Overview](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#overview)
+* [Features](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#features)
+* [Libraries](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#libraries)
+* [Architecture](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#architecture)
+* [Tests](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#tests)
+* [Security](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#security)
+* [Routes](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#routes)
+* [Installation](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#installation)
 
 ## Overview
 Forgotten Films REST API is a Ktor Rest API server for watching selected films from the Public Domain. It provied everything that you will need to immerse the user in the world of classic films.
