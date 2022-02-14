@@ -8,7 +8,7 @@
 * [Tests](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#tests)
 * [Security](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#security)
 * [Routes](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#routes)
-* [Installation](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#installation)
+* [Deployment](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#deployment)
 
 ## Overview
 Forgotten Films REST API is a Ktor Rest API server for watching selected films from the Public Domain. It provied everything that you will need to immerse the user in the world of classic films.
@@ -432,7 +432,7 @@ Response:
 }]
 ```
 
-## Installation
+## Deployment
 To run this Ktor application you need a VPS with root access to deploy it on. 
 1. Clone the repository and  generate a fat jar (`build.gradle`)
 2. Connect to your server with SFTP
