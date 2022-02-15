@@ -37,12 +37,6 @@ fun Application.module(testing: Boolean = false) {
         accountManagementRoute()
         filmAdminRoute()
         filmsRoute()
-
-        route("/") {
-            get {
-                call.respond(HttpStatusCode.OK, "Server is up!")
-            }
-        }
     }
 }
 
