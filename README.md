@@ -1,18 +1,34 @@
 # Forgotten Films REST API Documentation
 
-A Ktor Rest API server for watching selected films from the Public Domain
-Tech stack:
+#### Contents
+* [Overview](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#overview)
+* [Features](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#features)
+* [Libraries](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#libraries)
+* [Architecture](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#architecture)
+* [Tests](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#tests)
+* [Security](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#security)
+* [Routes](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#routes)
+* [Deployment](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#deployment)
+
+## Overview
+Forgotten Films REST API is a Ktor Rest API server for watching selected films from the Public Domain. It provied everything that you will need to immerse the user in the world of classic films.
+**Get the Android client application here:** [Forgotten Films](http://bbsapps.eu/forgottenfilms/forgottenfilms.html)
+
+#### Tech stack:
 - Language: Kotlin
 - Framework: Ktor (https://ktor.io/)
 - Database: MongoDb
+
+#### Detailed documentation: [Documentation](http://bbsapps.eu/forgottenfilms/APIDoc/documentation/index.html)
 
 ## Features
 
 - Register a user with email, password, nickname and favourite film genres
 - Login with email and password
+- Forgotten password and change password
 - Get recommended films to watch depending on your favourite genres
 - Search, watch, like, dislike and share films
-- Watch time statistics
+- Watch time statistics - collects user activities in order to provide a great experience and recommend films.
 
 ## Libraries
 
@@ -37,12 +53,18 @@ The application has several layers.
 
 ## Tests
 All the business logic is covered by unit tests. For the purpose of testing is created a seperate custom mock database in oreder not to damage the production database.
+Unit tests:
+
+![Module test](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/blob/master/architecture/ModuleTestSuite.png)
+
 Also there are automated tests for the server with Postman (https://www.postman.com/)
 
 ![Server test](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/blob/master/architecture/newManTestResults.png)
 
-## Routes
+## Security
+Top most priority for any project is the security. The server is protected agains various attacks. The database is protected from NoSQL Injection attacks, because KMongo is used in the project, which is an extension over the MongoDB Java Driver. This tool uses BSON (Binary JSON) for queries and documents. When a given request is sent it is in String format and is passed directly to as a query, without parsing. This way all kind of NoSQL Innjection attacks are avoided. There is DDoS protection. Each request to the server has `apiKey` attached, which is a secret and unique for every request. Each request has to be authenicated with Basic Auth. If any of these parameters is unauthentic or broken the request is rejected. All traffic is HTTPS encrypted. This way attacks such as Man-In-The-Middle (MITM) are prevented. All sensitive user data are hashed with SHA256 and salted.
 
+## Routes
 The API supports versioning. The current version is `v1`. 
 All endpoints are proceeded with `/currentVersion`, e.g. `/v1/register`
 All endpoints require a secret API key
@@ -342,7 +364,7 @@ Responses:
     "dislikes": 0,
     "isLiked": 0,
     "url": "testurl",
-    "id": "6207e5e2f6dc4110af492598"
+    "id": "id"
 }
 ```
 
@@ -409,3 +431,33 @@ Response:
     }]
 }]
 ```
+
+## Deployment
+To run this Ktor application you need a VPS with root access to deploy it on. 
+1. Clone the repository and  generate a fat jar (`build.gradle`)
+2. Connect to your server with SFTP
+3. Upload the jar file and the keystore
+4. Connect to your server with SSH
+5. Install Java 
+6. Install MongoDB (https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/)
+7. Verify that MongoDB was successfully installed: `sudo systemctl status mongod`
+8. Create a service configuration file for the Ktor Server:
+```
+[Unit]
+Description= Forgotten Films Service
+After=mongod.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+RestartSec=1
+Restart=always
+User=root
+ExecStart=/usr/bin/java -jar /home/app-0.0.1.jar
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+```
+9. Start the service: `sudo systemctl start films` (your service file name may differ)
+10. Check the status of the server: `sudo systemctl status films`
