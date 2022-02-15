@@ -18,7 +18,7 @@ val productionDatabase: DataAccessObject = KmongoDatabase()
 val testDatabase: DataAccessObject = TestDatabase()
 var database: DataAccessObject = productionDatabase
 
-@Suppress("unused") // Referenced in application.conf
+@Suppress("unused")
 @kotlin.jvm.JvmOverloads
 fun Application.module(testing: Boolean = false) {
     install(DefaultHeaders)
