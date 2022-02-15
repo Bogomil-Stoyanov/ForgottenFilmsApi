@@ -101,7 +101,6 @@ object AccountManagementController {
     }
 
     suspend fun setNewPassword(email: String, password: String) {
-        val hashedPassword = RegisterController.hashPassword(password)
         database.updateUserPassword(email, password)
     }
 
