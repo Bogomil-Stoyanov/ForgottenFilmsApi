@@ -53,6 +53,7 @@ The application has several layers.
 - Database - MongoDb
 <br />
 Database schema: 
+
 ![Database schema](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/blob/master/architecture/database_schema.png)
 
 ## Tests
