@@ -11,8 +11,9 @@
 * [Deployment](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi#deployment)
 
 ## Overview
-Forgotten Films REST API is a Ktor Rest API server for watching selected films from the Public Domain. It provied everything that you will need to immerse the user in the world of classic films.
-**Get the Android client application here:** [Forgotten Films](http://bbsapps.eu/forgottenfilms/forgottenfilms.html)
+Forgotten Films REST API is a Ktor Rest API server for watching selected films from the Public Domain. It provied everything that you will need to immerse the user in the world of classic films.<br />
+**Currently the server is running on: https://157.230.22.117:8081**<br />
+**Get the Android client application here:** [Forgotten Films](http://bbsapps.eu/forgottenfilms/forgottenfilms.html)<br />
 
 #### Tech stack:
 - Language: Kotlin
