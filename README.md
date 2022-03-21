@@ -50,7 +50,8 @@ The application has several layers.
 - Modules - receive structured data from the routes and performs operations on it, decides what it will return to the client
 - Controller - structures the return data and communicates to the Data Access Object (DAO)
 - Data Access Object - defines an interface functions to access the database
-- Database - MongoDb<br />
+- Database - MongoDb
+<br />
 Database schema: 
 ![Database schema](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/blob/master/architecture/database_schema.png)
 
