@@ -51,6 +51,8 @@ The application has several layers.
 - Controller - structures the return data and communicates to the Data Access Object (DAO)
 - Data Access Object - defines an interface functions to access the database
 - Database - MongoDb
+Database schema: 
+![Database schema](https://github.com/Bogomil-Stoyanov/ForgottenFilmsApi/blob/master/architecture/database_schema.png)
 
 ## Tests
 All the business logic is covered by unit tests. For the purpose of testing is created a seperate custom mock database in oreder not to damage the production database.
