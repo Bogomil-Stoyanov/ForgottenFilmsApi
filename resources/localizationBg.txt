@@ -1,0 +1,20 @@
+user_already_exists:Потребител със същия имейл вече съществува;
+password_requirements: Паролата трябва да бъде най-малко 8 знака и трябва да съдържа малки и главни букви, цифри и специални символи (@#$%^&amp+=_);
+account_created_successfully:Успешно създаден профил;
+unknown_error:Възникна неочаквана грешка;
+invalid_email:Невалиден имейл;
+name_cannot_be_empty:Името не може да бъде празно;
+successfully_changed_nickname:Успешно смени името си;
+film_added_to_list:Филмът е добавен към списъка ти;
+film_removed_from_list:Филмът е премахнат от списъка ти;
+film_not_in_list:Филмът не е в списъка ти;
+watch_time_updated:Успешно обновено време за гледане;
+user_with_email_does_not_exist:Потребител с този имейл не съществува;
+password_changed:Паролата е сменена, моля излезте и влезте в систамата;
+password_reset_email_topic:Възстановяване на парола - Забравените филми;
+password_reset_email_content_1:Здравейте, Влезте в системата на Забравените филми със следната парола:;
+password_reset_email_content_2:.След това отидете в раздел 'Още' и сменете паролата;
+reset_email_send_1:Изпратен е имейл на;
+reset_email_send_2:, съдържащ инструкции са възстановяване на акаунта;
+logged_in:Влязохте в системата;
+wrong_credentials:Грешен имейл или парола

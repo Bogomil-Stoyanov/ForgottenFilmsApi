@@ -7,6 +7,7 @@ import eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse
 import eu.bbsapps.forgottenfilmsapi.data.requests.user.management.GenreWatchTimeRequest
 import eu.bbsapps.forgottenfilmsapi.data.responses.GenreWatchTimePair
 import eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse
+import eu.bbsapps.forgottenfilmsapi.localizedResponses
 import io.ktor.http.*
 import org.apache.commons.mail.DefaultAuthenticator
 import org.apache.commons.mail.SimpleEmail
@@ -20,11 +21,14 @@ object AccountManagementModule {
      */
     suspend fun updateNickname(newNickname: String, email: String): GenericResponse<SimpleResponse> {
         return if (AccountManagementController.changeNickname(email, newNickname)) {
-            GenericResponse(HttpStatusCode.OK, SimpleResponse(true, "Успешно смени името си"))
+            GenericResponse(
+                HttpStatusCode.OK,
+                SimpleResponse(true, localizedResponses.getLocalisedValue("successfully_changed_nickname"))
+            )
         } else {
             GenericResponse(
                 HttpStatusCode.InternalServerError,
-                SimpleResponse(false, "Възникна неочаквана грешка")
+                SimpleResponse(false, localizedResponses.getLocalisedValue("unknown_error"))
             )
         }
     }
@@ -56,11 +60,14 @@ object AccountManagementModule {
      */
     suspend fun addFilmToUserList(filmId: String, email: String): GenericResponse<SimpleResponse> {
         return if (AccountManagementController.addFilmToUserList(email, filmId)) {
-            GenericResponse(HttpStatusCode.OK, SimpleResponse(true, "Филмът е добавен към списъка ти"))
+            GenericResponse(
+                HttpStatusCode.OK,
+                SimpleResponse(true, localizedResponses.getLocalisedValue("film_added_to_list"))
+            )
         } else {
             GenericResponse(
                 HttpStatusCode.InternalServerError,
-                SimpleResponse(false, "Възникна неочаквана грешка")
+                SimpleResponse(false, localizedResponses.getLocalisedValue("unknown_error"))
             )
         }
     }
@@ -70,9 +77,15 @@ object AccountManagementModule {
      */
     suspend fun removeFilmFromUserList(filmId: String, email: String): GenericResponse<SimpleResponse> {
         return if (AccountManagementController.removeFilmFromUserList(email, filmId)) {
-            GenericResponse(HttpStatusCode.OK, SimpleResponse(true, "Филмът е премахнат от списъка ти"))
+            GenericResponse(
+                HttpStatusCode.OK,
+                SimpleResponse(true, localizedResponses.getLocalisedValue("film_removed_from_list"))
+            )
         } else {
-            GenericResponse(HttpStatusCode.OK, SimpleResponse(false, "Филмът не е в списъка ти"))
+            GenericResponse(
+                HttpStatusCode.OK,
+                SimpleResponse(false, localizedResponses.getLocalisedValue("film_not_in_list"))
+            )
         }
     }
 
@@ -92,11 +105,14 @@ object AccountManagementModule {
     ): GenericResponse<SimpleResponse> {
         val pair = GenreWatchTimePair(genreWatchTimeRequest.genre, genreWatchTimeRequest.additionalWatchTimeInSeconds)
         return if (AccountManagementController.addWatchTime(email, pair)) {
-            GenericResponse(HttpStatusCode.OK, SimpleResponse(true, "Успешно обновено време за гледане"))
+            GenericResponse(
+                HttpStatusCode.OK,
+                SimpleResponse(true, localizedResponses.getLocalisedValue("watch_time_updated"))
+            )
         } else {
             GenericResponse(
                 HttpStatusCode.InternalServerError,
-                SimpleResponse(false, "Възникна неочаквана грешка")
+                SimpleResponse(false, localizedResponses.getLocalisedValue("unknown_error"))
             )
         }
     }
@@ -121,7 +137,12 @@ object AccountManagementModule {
      */
     suspend fun forgottenPassword(email: String): GenericResponse<SimpleResponse> {
         if (!AccountManagementController.userExists(email)) {
-            return GenericResponse(HttpStatusCode.OK, SimpleResponse(false, "Потребител с този имейл не съществува"))
+            return GenericResponse(
+                HttpStatusCode.OK, SimpleResponse(
+                    false,
+                    localizedResponses.getLocalisedValue("user_with_email_does_not_exist")
+                )
+            )
         }
 
         val charPool: List<Char> = ('a'..'z') + ('A'..'Z') + ('0'..'9')
@@ -139,10 +160,10 @@ object AccountManagementModule {
         responseEmail.setAuthenticator(DefaultAuthenticator("help.bbsapps@gmail.com", "androidsupport"))
         responseEmail.isSSLOnConnect = true
         responseEmail.setFrom("help.bbsapps@gmail.com")
-        responseEmail.subject = "Възстановяване на парола - Забравените филми"
+        responseEmail.subject = localizedResponses.getLocalisedValue("password_reset_email_topic")
         responseEmail.setMsg(
-            "Здравейте, Влезте в системата на Забравените филми със следната парола: $newPassword. " +
-                    "След това отидете в раздел 'Още' и сменете паролата"
+            localizedResponses.getLocalisedValue("password_reset_email_content_1") + " $newPassword" +
+                    localizedResponses.getLocalisedValue("password_reset_email_content_2")
         )
         responseEmail.addTo(email)
         responseEmail.send()
@@ -150,7 +171,9 @@ object AccountManagementModule {
         return GenericResponse(
             HttpStatusCode.OK, SimpleResponse(
                 true,
-                "Изпратен е имейл на $email, съдържащ инструкции са възстановяване на акаунта"
+                localizedResponses.getLocalisedValue("reset_email_send_1") + " $email" + localizedResponses.getLocalisedValue(
+                    "reset_email_send_2"
+                )
             )
         )
     }
@@ -160,7 +183,10 @@ object AccountManagementModule {
      */
     suspend fun changePassword(email: String, newPassword: String): GenericResponse<SimpleResponse> {
         if (!AccountManagementController.userExists(email)) {
-            return GenericResponse(HttpStatusCode.OK, SimpleResponse(false, "Потребител с този имейл не съществува"))
+            return GenericResponse(
+                HttpStatusCode.OK,
+                SimpleResponse(false, localizedResponses.getLocalisedValue("user_with_email_does_not_exist"))
+            )
         }
 
         if (!RegisterController.isPasswordValid(newPassword)) {
@@ -169,7 +195,7 @@ object AccountManagementModule {
                 HttpStatusCode.UnprocessableEntity,
                 SimpleResponse(
                     false,
-                    "Паролата трябва да бъде най-малко 8 знака и трябва да съдържа малки и главни букви, цифри и специални символи (@#\$%^&amp;+=_)"
+                    localizedResponses.getLocalisedValue("password_requirements")
                 )
             )
         }
@@ -178,7 +204,7 @@ object AccountManagementModule {
         AccountManagementController.setNewPassword(email, hashedPassword)
         return GenericResponse(
             HttpStatusCode.OK,
-            SimpleResponse(true, "Паролата е сменена, моля излезте и влезте в систамата")
+            SimpleResponse(true, localizedResponses.getLocalisedValue("password_changed"))
         )
     }
 }

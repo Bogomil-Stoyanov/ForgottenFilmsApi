@@ -4,12 +4,11 @@ import eu.bbsapps.forgottenfilmsapi.data.DataAccessObject
 import eu.bbsapps.forgottenfilmsapi.data.KmongoDatabase
 import eu.bbsapps.forgottenfilmsapi.data.TestDatabase
 import eu.bbsapps.forgottenfilmsapi.routes.*
+import eu.bbsapps.forgottenfilmsapi.util.Localization
 import io.ktor.application.*
 import io.ktor.auth.*
 import io.ktor.features.*
 import io.ktor.gson.*
-import io.ktor.http.*
-import io.ktor.response.*
 import io.ktor.routing.*
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
@@ -17,6 +16,7 @@ fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 val productionDatabase: DataAccessObject = KmongoDatabase()
 val testDatabase: DataAccessObject = TestDatabase()
 var database: DataAccessObject = productionDatabase
+var localizedResponses = Localization()
 
 @Suppress("unused")
 @kotlin.jvm.JvmOverloads

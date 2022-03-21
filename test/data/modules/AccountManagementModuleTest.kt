@@ -4,6 +4,7 @@ import data.validCreateAccountRequest
 import eu.bbsapps.forgottenfilmsapi.data.modules.AccountManagementModule
 import eu.bbsapps.forgottenfilmsapi.data.modules.RegisterModule
 import eu.bbsapps.forgottenfilmsapi.database
+import eu.bbsapps.forgottenfilmsapi.localizedResponses
 import eu.bbsapps.forgottenfilmsapi.productionDatabase
 import eu.bbsapps.forgottenfilmsapi.testDatabase
 import kotlinx.coroutines.runBlocking
@@ -32,7 +33,7 @@ class AccountManagementModuleTest {
     @Test
     fun changeNicknameSuccessful() = runBlocking {
         val response = AccountManagementModule.updateNickname("New Nick", validCreateAccountRequest.email)
-        assertEquals("Успешно смени името си", response.data.message)
+        assertEquals(localizedResponses.getLocalisedValue("successfully_changed_nickname"), response.data.message)
     }
 
     @Test
@@ -57,7 +58,7 @@ class AccountManagementModuleTest {
     @Test
     fun addFilmToList() = runBlocking {
         val response = AccountManagementModule.addFilmToUserList("123", validCreateAccountRequest.email)
-        assertEquals("Филмът е добавен към списъка ти", response.data.message)
+        assertEquals(localizedResponses.getLocalisedValue("film_added_to_list"), response.data.message)
         assertTrue(testDatabase.getUserFilmIdsList(validCreateAccountRequest.email).contains("123"))
     }
 
@@ -65,7 +66,7 @@ class AccountManagementModuleTest {
     fun removeFilmInList() = runBlocking {
         AccountManagementModule.addFilmToUserList("123", validCreateAccountRequest.email)
         val response = AccountManagementModule.removeFilmFromUserList("123", validCreateAccountRequest.email)
-        assertEquals("Филмът е премахнат от списъка ти", response.data.message)
+        assertEquals(localizedResponses.getLocalisedValue("film_removed_from_list"), response.data.message)
         assertFalse(!testDatabase.getUserFilmIdsList(validCreateAccountRequest.email).contains("123"))
     }
 
@@ -73,7 +74,7 @@ class AccountManagementModuleTest {
     fun removeFilmNotInList() = runBlocking {
         AccountManagementModule.removeFilmFromUserList("123", validCreateAccountRequest.email)
         AccountManagementModule.removeFilmFromUserList("123", validCreateAccountRequest.email)
-        val response = AccountManagementModule.removeFilmFromUserList("123", validCreateAccountRequest.email)
+        AccountManagementModule.removeFilmFromUserList("123", validCreateAccountRequest.email)
         assertFalse(testDatabase.getUserFilmIdsList(validCreateAccountRequest.email).contains("123"))
     }
 

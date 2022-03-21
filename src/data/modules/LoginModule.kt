@@ -4,6 +4,7 @@ import eu.bbsapps.forgottenfilmsapi.data.controllers.LoginController
 import eu.bbsapps.forgottenfilmsapi.data.modules.util.GenericResponse
 import eu.bbsapps.forgottenfilmsapi.data.requests.user.login.LoginAccountRequest
 import eu.bbsapps.forgottenfilmsapi.data.responses.SimpleResponse
+import eu.bbsapps.forgottenfilmsapi.localizedResponses
 import io.ktor.http.*
 
 object LoginModule {
@@ -16,9 +17,9 @@ object LoginModule {
         val isPasswordCorrect = LoginController.isPasswordCorrect(request.email, request.password)
 
         return if (isPasswordCorrect) {
-            GenericResponse(HttpStatusCode.OK, SimpleResponse(true, "Влязохте в системата"))
+            GenericResponse(HttpStatusCode.OK, SimpleResponse(true, localizedResponses.getLocalisedValue("logged_in")))
         } else {
-            GenericResponse(HttpStatusCode.OK, SimpleResponse(false, "Грешен имейл или парола"))
+            GenericResponse(HttpStatusCode.OK, SimpleResponse(false, localizedResponses.getLocalisedValue("wrong_credentials")))
         }
     }
 }

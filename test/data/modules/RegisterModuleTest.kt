@@ -3,6 +3,7 @@ package data.modules
 import data.validCreateAccountRequest
 import eu.bbsapps.forgottenfilmsapi.data.modules.RegisterModule
 import eu.bbsapps.forgottenfilmsapi.database
+import eu.bbsapps.forgottenfilmsapi.localizedResponses
 import eu.bbsapps.forgottenfilmsapi.productionDatabase
 import eu.bbsapps.forgottenfilmsapi.testDatabase
 import kotlinx.coroutines.runBlocking
@@ -28,7 +29,7 @@ class RegisterModuleTest {
         val response = RegisterModule.register(
             validCreateAccountRequest.copy(email = "invalidEmail")
         )
-        assertEquals("Невалиден имейл", response.data.message)
+        assertEquals(localizedResponses.getLocalisedValue("invalid_email"), response.data.message)
     }
 
     @Test
@@ -37,7 +38,7 @@ class RegisterModuleTest {
             validCreateAccountRequest.copy(password = "badpass")
         )
         assertEquals(
-            "Паролата трябва да бъде най-малко 8 знака и трябва да съдържа малки и главни букви, цифри и специални символи (@#\$%^&amp;+=_)",
+            localizedResponses.getLocalisedValue("password_requirements"),
             response.data.message
         )
     }
@@ -48,7 +49,7 @@ class RegisterModuleTest {
             validCreateAccountRequest.copy(password = "Pass_")
         )
         assertEquals(
-            "Паролата трябва да бъде най-малко 8 знака и трябва да съдържа малки и главни букви, цифри и специални символи (@#\$%^&amp;+=_)",
+            localizedResponses.getLocalisedValue("password_requirements"),
             response.data.message
         )
     }
@@ -58,7 +59,7 @@ class RegisterModuleTest {
         val response = RegisterModule.register(
             validCreateAccountRequest.copy(nickname = "  ")
         )
-        assertEquals("Името не може да бъде празно", response.data.message)
+        assertEquals( localizedResponses.getLocalisedValue("name_cannot_be_empty"), response.data.message)
     }
 
     @Test
@@ -66,7 +67,7 @@ class RegisterModuleTest {
         val response = RegisterModule.register(
             validCreateAccountRequest.copy()
         )
-        assertEquals("Успешно създаден профил", response.data.message)
+        assertEquals(localizedResponses.getLocalisedValue("account_created_successfully"), response.data.message)
     }
 
 }
