@@ -157,9 +157,9 @@ object AccountManagementModule {
         val responseEmail = SimpleEmail()
         responseEmail.hostName = "smtp.googlemail.com"
         responseEmail.setSmtpPort(465)
-        responseEmail.setAuthenticator(DefaultAuthenticator("help.bbsapps@gmail.com", "androidsupport"))
+        responseEmail.setAuthenticator(DefaultAuthenticator("email@example.com", "password"))
         responseEmail.isSSLOnConnect = true
-        responseEmail.setFrom("help.bbsapps@gmail.com")
+        responseEmail.setFrom("email@example.com")
         responseEmail.subject = localizedResponses.getLocalisedValue("password_reset_email_topic")
         responseEmail.setMsg(
             localizedResponses.getLocalisedValue("password_reset_email_content_1") + " $newPassword" +
